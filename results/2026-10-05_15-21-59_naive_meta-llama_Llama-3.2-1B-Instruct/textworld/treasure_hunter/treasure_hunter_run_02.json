@@ -1,0 +1,53 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "inventory: None\n\ngoal: find the key": 1,
+        "You pick up the Microsoft limited edition latchkey from the floor": 1,
+        "inventory: Microsoft limited edition latchkey": 4,
+        "look": 6,
+        "goal: find the key": 1,
+        "look at Microsoft limited edition latchkey on the floor": 2,
+        "inventory: Microsoft limited edition latchkey\nlook": 1,
+        "look\ngo north": 1,
+        "look north": 1,
+        "go north": 35,
+        "inventory: Microsoft limited edition latchkey\ngoal: open Microsoft limited edition hatch\nlook": 5,
+        "inventory: Microsoft limited edition latchkey\ngoal: open Microsoft limited edition hatch\ngo north": 3,
+        "open Microsoft limited edition latchkey": 11,
+        "open Microsoft limited edition hatch": 3,
+        "open": 4,
+        "goal": 1
+    },
+    "input_tokens": 71575,
+    "output_tokens": 471,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": null,
+    "seed": 129901255,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

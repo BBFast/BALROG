@@ -1,0 +1,62 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "inventory:\n\n\n\ngoal: Find the antique music box\n\nLook around and see if you can find the music box The passageway to the east is unblocked and looks like it hasnt been used in a while\n\ngo north": 1,
+        "inventory:\n key\n\nlook: You are currently in the basement": 1,
+        "look": 2,
+        "go north": 37,
+        "take key": 2,
+        "inventory:\n key": 1,
+        "go south": 1,
+        "look\ngo north": 2,
+        "inventory: key": 3,
+        "look\ngo north\ntake key": 1,
+        "inventory: key\nlook": 3,
+        "go north\ninventory: key\nlook": 1,
+        "inventory: key\ngo north": 5,
+        "inventory: key\nlook\ngo north": 1,
+        "inventory: key\ninventory: door\ngo north": 1,
+        "inventory: key\ninventory: door\ninventory: key\ninventory: door\ninventory: key\ninventory: door": 1,
+        "inventory: key\ninventory: door\ninventory: key": 2,
+        "inventory: key\ninventory: door\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: door\ninventory: key": 2,
+        "inventory: key\ninventory: door": 1,
+        "inventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key": 2,
+        "inventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key": 1,
+        "inventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key": 5,
+        "inventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key": 1,
+        "inventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key\ninventory: key": 2,
+        "look\ninventory: key": 1
+    },
+    "input_tokens": 81436,
+    "output_tokens": 958,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": null,
+    "seed": 608191350,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
