@@ -1,0 +1,49 @@
+{
+    "task": "MiniHack-Quest-Easy-v0",
+    "action_frequency": {
+        "north": 34,
+        "west": 30,
+        "east": 21,
+        "south": 14,
+        "northwest": 1
+    },
+    "input_tokens": 412546,
+    "output_tokens": 310,
+    "done": true,
+    "episode_return": -0.3000000000000001,
+    "num_steps": 100,
+    "failed_candidates": [
+        "pickup\n\nNote: Checking if theres anything to pick up at the current location before proceeding",
+        "west\n\nNote: Moving west to see if theres anything of interest or to avoid the newt adjacent to the player",
+        "west\n\nNote: Since moving north resulted in hitting a wall attempting to move west to explore further",
+        "west\n\nNote: Continuing to move west to explore since north is blocked by a wall and to potentially avoid the newt",
+        "kick west\n\nNote: Attempting to kick the newt since it is adjacent and the player just missed attacking it"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-3",
+    "seed": 2327937733,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-14B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

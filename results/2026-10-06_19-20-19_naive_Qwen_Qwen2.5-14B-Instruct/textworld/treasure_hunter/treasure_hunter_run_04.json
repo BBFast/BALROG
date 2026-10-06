@@ -1,0 +1,49 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "look": 2,
+        "go north": 7,
+        "take key from floor\ngo east": 1,
+        "take key from floor": 25,
+        "take key from the floor": 12,
+        "go east": 6,
+        "go west": 7,
+        "go south": 8,
+        "open passageway": 2,
+        "unlock passageway with key": 6,
+        "take key from laundromat floor": 3,
+        "take key from laundromat floor\n\nSince the key is confirmed to be in the laundromat and not here in the basement let me adjust the approach:\n\ngo north\n\nIf Im back in the laundromat Ill take the key properly:\n\ntake key from floor": 1
+    },
+    "input_tokens": 95681,
+    "output_tokens": 433,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 561989669,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-14B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

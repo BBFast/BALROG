@@ -1,0 +1,62 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\ntake raw white tuna from showcase": 1,
+        "take raw white tuna from showcase": 1,
+        "go south": 3,
+        "open sliding door with key\ngo south": 1,
+        "examine showcase\ngo south": 1,
+        "open sliding door\ngo south": 1,
+        "go east": 4,
+        "go west": 1,
+        "go north": 3,
+        "examine front door\nopen front door with key\ngo east": 1,
+        "open front door with key\ngo east": 1,
+        "open front door\ngo east": 1,
+        "open front door": 1,
+        "examine cookbook": 1,
+        "take red apple from counter\ntake tomato from counter\ntake red hot pepper from counter\ntake yellow apple from counter\ntake raw purple potato from counter\ntake cookbook from counter\ntake knife from counter\nchop red apple with knife\nchop raw purple potato with knife\nslice red hot pepper with knife\nslice yellow apple with knife\ncook chopped red apple with stove\ncook sliced raw purple potato with stove\nslice tomato with knife\nslice yellow apple with knife\ncook sliced tomato with bbq\ncook sliced yellow apple with bbq\nprepare meal\neat meal": 1,
+        "take raw purple potato from counter\nchop raw purple potato with knife": 1,
+        "chop raw purple potato with knife": 6,
+        "take knife from counter\nchop raw purple potato with knife": 1,
+        "chopped raw purple potato with knife\ncook chopped raw purple potato with stove\ntake red hot pepper from counter\nslice red hot pepper with knife\ncook sliced red hot pepper with bbq\ntake yellow apple from counter\nslice yellow apple with knife\ncook sliced yellow apple with bbq\nprepare meal\neat meal": 1,
+        "slice red hot pepper with knife": 1,
+        "take yellow apple from counter\nslice yellow apple with knife\ncook sliced yellow apple with bbq\nprepare meal\neat meal": 1,
+        "slice yellow apple with knife": 1,
+        "cook sliced red hot pepper with bbq\ntake yellow apple from counter\nslice yellow apple with knife\ncook sliced yellow apple with bbq\nprepare meal\neat meal": 1,
+        "take yellow apple from counter": 1,
+        "slice red apple with knife": 1
+    },
+    "input_tokens": 60512,
+    "output_tokens": 458,
+    "done": true,
+    "episode_return": 89.0,
+    "num_steps": 37,
+    "failed_candidates": [],
+    "progression": 0.17647058823529413,
+    "process_num": "ForkProcess-7",
+    "seed": 2604936754,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-14B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
