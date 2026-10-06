@@ -1,0 +1,45 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese with hands\ntake raw white tuna with hands\ngo south": 1,
+        "take block of cheese with hands": 2,
+        "take raw white tuna with hands": 68,
+        "open sliding door with hands": 4,
+        "go south": 2,
+        "examine sliding door": 1,
+        "open sliding door with\n\nopen sliding door with hands": 1,
+        "examine showcase": 1
+    },
+    "input_tokens": 109696,
+    "output_tokens": 586,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 1875469947,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-14B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

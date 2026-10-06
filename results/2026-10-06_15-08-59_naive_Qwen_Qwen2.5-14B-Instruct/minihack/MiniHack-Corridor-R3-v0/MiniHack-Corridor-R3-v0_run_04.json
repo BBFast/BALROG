@@ -1,0 +1,49 @@
+{
+    "task": "MiniHack-Corridor-R3-v0",
+    "action_frequency": {
+        "north": 42,
+        "south": 44,
+        "west": 6,
+        "east": 5,
+        "southwest": 1,
+        "northwest": 2
+    },
+    "input_tokens": 348050,
+    "output_tokens": 355,
+    "done": true,
+    "episode_return": -0.08,
+    "num_steps": 100,
+    "failed_candidates": [
+        "search\n\nNote: Since the initial map shows walls and a closed door but no immediate enemies or items its wise to start with a search to uncover any hidden passages or doors before moving around blindly",
+        "south\n\nSince the stairs up are right adjacent to the south moving south will lead me to them However since the goal is to reach the stairs down lets first check if theres anything of interest before going up If there isnt then well proceed up as we dont have enough information to determine if there are more levels below yet But given the instructions lets see what happens when we move south first",
+        "south\n\nSince the stairs up are directly south moving south will take me to the stairs Lets proceed",
+        "open northwest"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-16",
+    "seed": 961927799,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-14B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

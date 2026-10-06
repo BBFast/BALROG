@@ -1,0 +1,63 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase": 1,
+        "take raw white tuna from showcase": 5,
+        "take knife from counter": 1,
+        "examine counter": 5,
+        "look": 2,
+        "go south": 5,
+        "open sliding door": 1,
+        "go east": 4,
+        "go west": 2,
+        "go north": 4,
+        "examine showcase": 8,
+        "examine cookbook": 8,
+        "examine shelf": 3,
+        "examine door": 2,
+        "examine front door": 1,
+        "open front door": 1,
+        "examine patio door": 1,
+        "open patio door": 1,
+        "examine BBQ": 1,
+        "examine wooden door": 1,
+        "open wooden door": 1,
+        "take red onion": 1,
+        "take white onion": 2,
+        "drop white onion": 1,
+        "examine red onion": 2,
+        "eat red onion": 1
+    },
+    "input_tokens": 93637,
+    "output_tokens": 265,
+    "done": true,
+    "episode_return": 136.0,
+    "num_steps": 65,
+    "failed_candidates": [],
+    "progression": 0.17647058823529413,
+    "process_num": "ForkProcess-10",
+    "seed": 2715180603,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase": 2,
+        "take raw white tuna from showcase": 27,
+        "take knife from counter": 1,
+        "examine counter": 1,
+        "examine showcase": 14,
+        "examine sliding door": 2,
+        "go south": 5,
+        "open sliding door": 1,
+        "go east": 1,
+        "go west": 1,
+        "go north": 4,
+        "examine block of cheese": 2,
+        "drop block of cheese in showcase": 1,
+        "drop block of cheese on floor": 1,
+        "look": 5,
+        "examine raw white tuna": 3,
+        "examine raw white tuna in showcase": 9
+    },
+    "input_tokens": 112815,
+    "output_tokens": 441,
+    "done": true,
+    "episode_return": 159.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-16",
+    "seed": 2854196213,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

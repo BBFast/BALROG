@@ -1,0 +1,61 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn right": 24,
+        "go forward": 99,
+        "toggle": 4,
+        "turn left": 1
+    },
+    "input_tokens": 114410,
+    "output_tokens": 563,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "turn left\ngo forward\ntoggle\nturn right\ngo forward\ngo forward\ngo forward\ntoggle",
+        "turn left\ntoggle\nturn right\ngo forward\ngo forward\ntoggle",
+        "turn right\ngo forward\ntoggle",
+        "turn right\ngo forward\ntoggle",
+        "turn right\ngo forward\ngo forward\ntoggle",
+        "turn right\ngo forward\ntoggle",
+        "turn right\ngo forward\ntoggle",
+        "It seems there was a misunderstanding Lets continue from the current observation\n\nObservation:\na wall  step forward\na wall  step left\n\nGiven that toggling didnt work here since there isnt anything directly in front to toggle lets reorient to find the green box again\n\nturn left",
+        "turn right\ngo forward\ngo forward\ngo forward\ngo forward",
+        "go forward\ngo forward\ntoggle",
+        "go forward\ntoggle",
+        "turn right\ngo forward\ntoggle",
+        "turn right\ngo forward\ntoggle",
+        "turn right\ngo forward\ngo forward\ngo forward\ntoggle",
+        "turn right\ngo forward\ngo forward\ngo forward\ntoggle",
+        "go forward\ngo forward\ntoggle",
+        "go forward\ntoggle",
+        "go forward\ntoggle"
+    ],
+    "mission": "pick up a green box, then go to a green box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 2080932596,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-14B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
