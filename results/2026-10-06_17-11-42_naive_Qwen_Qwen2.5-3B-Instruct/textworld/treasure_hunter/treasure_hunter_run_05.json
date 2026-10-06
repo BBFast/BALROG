@@ -1,0 +1,53 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go north": 2,
+        "go south": 4,
+        "look": 23,
+        "open passageway": 3,
+        "unlock passageway with key": 2,
+        "take key": 1,
+        "go east": 15,
+        "take Hendersons limited edition key": 5,
+        "go west": 14,
+        "pick up Hendersons limited edition key": 2,
+        "take plate": 1,
+        "take fork": 3,
+        "pick up plate": 1,
+        "take knife": 2,
+        "take spoon": 1,
+        "take mug": 1
+    },
+    "input_tokens": 103619,
+    "output_tokens": 262,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-16",
+    "seed": 658710081,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "base_url": "http://localhost:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
