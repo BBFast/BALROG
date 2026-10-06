@@ -1,0 +1,59 @@
+{
+    "task": "MiniHack-Quest-Easy-v0",
+    "action_frequency": {
+        "open": 16,
+        "east": 11,
+        "south": 10,
+        "north": 17,
+        "west": 5,
+        "search": 7,
+        "zap": 4,
+        "pickup": 1,
+        "down": 1,
+        "wait": 1
+    },
+    "input_tokens": 304103,
+    "output_tokens": 37572,
+    "done": true,
+    "episode_return": -0.4100000000000002,
+    "num_steps": 73,
+    "failed_candidates": [
+        "c",
+        "open east",
+        "zap c",
+        "open east",
+        "open south",
+        "open east",
+        "open west",
+        "open east",
+        "open east",
+        "open south"
+    ],
+    "progression": 0.0,
+    "end_reason": 1,
+    "process_num": "ForkProcess-2",
+    "seed": 202310768,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

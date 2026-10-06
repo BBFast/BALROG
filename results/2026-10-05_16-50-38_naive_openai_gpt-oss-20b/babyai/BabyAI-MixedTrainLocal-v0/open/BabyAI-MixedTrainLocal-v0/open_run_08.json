@@ -1,0 +1,45 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "turn left": 18,
+        "go forward": 27,
+        "pick up": 1,
+        "turn right": 20,
+        "toggle": 3
+    },
+    "input_tokens": 53582,
+    "output_tokens": 32379,
+    "done": true,
+    "episode_return": 0.51484375,
+    "num_steps": 69,
+    "failed_candidates": [
+        "We must output a single action The best next action seems go forward\ngo forward"
+    ],
+    "mission": "open the door",
+    "progression": 1.0,
+    "process_num": "ForkProcess-29",
+    "seed": 1817601877,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

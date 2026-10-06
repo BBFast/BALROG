@@ -1,0 +1,80 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Move South": 14,
+        "Move West": 17,
+        "Move East": 19,
+        "Do": 84,
+        "Place Table": 12,
+        "Make Wood Pickaxe": 14,
+        "Place Stone": 7,
+        "Move North": 6,
+        "Noop": 7,
+        "Make Wood Sword": 3
+    },
+    "input_tokens": 395391,
+    "output_tokens": 118142,
+    "done": true,
+    "episode_return": 1.1000000000000003,
+    "num_steps": 183,
+    "failed_candidates": [
+        "We will send Move South\nMove South",
+        "Ok\nMove East",
+        "Make Wood Pickaxe\nMove South\nMove West\nMove South\nMove West\nMove South\nMove West\nDo\nMake Wood Sword\nMove East\nMove East\nMove East\nMove North\nMove North\nMove North\nMake Stone Pickaxe\nMake Stone Sword\nMove East\nDo\nMove West\nDo\nMove North\nMove West\nMove North\nMove West\nMove North\nMove West\nMove North\nMove West\nMove North\nMove West\nMove North\nMove West\nDo\nPlace Furnace\nMake Iron Pickaxe\nMake Iron Sword\nMove East\nMove East\nMove South\nMove South\nDo\nSleep\nPlace Stone",
+        "Place Table\nMake Wood Pickaxe\nMake Wood Sword\nMove South\nMove West\nMove South\nMove West\nMove South\nMove West\nDo\nMove East\nMove East\nDo\nMake Stone Pickaxe\nMake Stone Sword\nMove West\nMove West\nDo\nMove North\nMove West\nMove North\nMove West\nMove North\nMove West\nDo\nPlace Furnace\nMake Iron Pickaxe\nMake Iron Sword\nMove South\nMove South\nMove South\nMove South\nMove South\nMove East\nMove East\nMove East\nMove East\nMove East\nDo\nPlace Stone\nDo\nDo",
+        "We need to output only an action Well output Do first\nDo",
+        "We need give a valid action only Provide Move West\nMove West",
+        "Move West\nDo\nMove East\nPlace Table\nMake Wood Pickaxe\nMove West\nMove South\nMove South\nMove South\nMove West\nMove West\nDo\nPlace Stone\nMake Stone Pickaxe\nPlace Furnace\nMove North\nMove North\nMove North\nMove North\nMove West\nMove West\nMove West\nMove West\nDo\nMake Iron Pickaxe\nSleep\nNoop"
+    ],
+    "score": 2.0,
+    "progression": 0.09090909090909091,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 0,
+        "collect_wood": 2,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 1,
+        "eat_cow": 0,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 0,
+        "make_wood_sword": 0,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 0,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-24",
+    "seed": 1818669359,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

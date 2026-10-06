@@ -1,0 +1,46 @@
+{
+    "task": "MiniHack-Boxoban-Medium-v0",
+    "action_frequency": {
+        "east": 23,
+        "north": 31,
+        "west": 27,
+        "south": 19
+    },
+    "input_tokens": 612224,
+    "output_tokens": 225770,
+    "done": true,
+    "episode_return": -0.09900000000000007,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Need to output a single action northeastsouthwest Its the correct next move\nsouth",
+        "We decide to attempt moving north\nnorth",
+        "We need to decide if the north action is viable Lets simulate:\n\nCurrent map: row col  row col  row col  etc\n\nIf we play north: player moves to row col pushing the backtick to row col The new map becomes:\n\nRow:  Actually row col becomes  because player moved away row col  remains row col now  but we leave  Actually the players previous location row col becomes  floor Row col becomes  row col becomes \n\nSo new map shows boulder at row col\n\nIs that a fountain If yes puzzle solved If not we then need to move onto another fountain\n\nBut maybe the boulder at row col is a fountain if it is currently a fountain tile but not marked This seems plausible because row col originally  after push its now backtick but the next time we observe the tile at row col maybe shows a different symbol like f But we cant know without observation\n\nGiven limited information proceed with north action\nnorth"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-32",
+    "seed": 1550289609,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

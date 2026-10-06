@@ -1,0 +1,46 @@
+{
+    "task": "MiniHack-Boxoban-Medium-v0",
+    "action_frequency": {
+        "south": 21,
+        "west": 26,
+        "north": 30,
+        "east": 23
+    },
+    "input_tokens": 607172,
+    "output_tokens": 208671,
+    "done": true,
+    "episode_return": 0.0009999999999999237,
+    "num_steps": 100,
+    "failed_candidates": [
+        "We need to decide action Likely easiest is to push the boulder further\n\nSo output east\neast",
+        "We will decide to output west\nwest",
+        "We choose action south as next guess\nsouth"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-27",
+    "seed": 3137342213,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

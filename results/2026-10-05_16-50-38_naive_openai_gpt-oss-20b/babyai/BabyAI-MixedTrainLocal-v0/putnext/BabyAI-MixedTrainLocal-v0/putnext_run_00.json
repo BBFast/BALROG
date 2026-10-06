@@ -1,0 +1,48 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "turn left": 21,
+        "go forward": 34,
+        "turn right": 22,
+        "drop": 43,
+        "pick up": 7,
+        "toggle": 1
+    },
+    "input_tokens": 105847,
+    "output_tokens": 79411,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "We need to change action\nturn left",
+        "We produce only actions one at a time Lets output drop now\ndrop",
+        "We need to produce the sequence actions but each turn must output an action The test likely expects shortest but we respond to each observation However the environment might keep giving same observation until we change It says you always have to output one of the above actions at a time and no other text until episode ends So we must output just single action string now Since we need sequence we will produce the first action now: toggle\ntoggle"
+    ],
+    "mission": "put the grey box next to the purple box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 895013642,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

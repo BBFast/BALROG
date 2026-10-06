@@ -1,0 +1,53 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "inventory\ngoal: lock the safe": 18,
+        "look\n\n Basement \nYouve entered a basement\n\n\n\ninventory\ngoal: lock the safe": 1,
+        "go north": 40,
+        "inventory\nkey\n\ngoal: lock the safe": 1,
+        "look\n\n Laundromat \nYou find yourself in a laundromat An usual one\ninventory\ngoal: lock the safe\nkey\ncurrent location: Laundromat": 1,
+        "look\n\n Laundromat \nYou find yourself in a laundromat An usual one\ninventory\ngoal: lock the safe\ncurrent location: Laundromat": 1,
+        "look \nLaundromat \nYou find yourself in a laundromat An usual one \ninventory\ngoal: lock the safe": 1,
+        "look": 2,
+        "go north\nlook": 1,
+        "go north\ninventory\ngoal: lock the safe": 2,
+        "inventory\ngo north": 1,
+        "look north\ninventory\ngoal: lock the safe": 7,
+        "look north": 1,
+        "inventory\nlook north": 1,
+        "inventory": 1,
+        "look north\ninventory": 1
+    },
+    "input_tokens": 72872,
+    "output_tokens": 527,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-23",
+    "seed": 3336555474,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

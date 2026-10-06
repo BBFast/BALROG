@@ -1,0 +1,47 @@
+{
+    "task": "MiniHack-Boxoban-Hard-v0",
+    "action_frequency": {
+        "north": 30,
+        "south": 24,
+        "west": 19,
+        "east": 27
+    },
+    "input_tokens": 602459,
+    "output_tokens": 225164,
+    "done": true,
+    "episode_return": 0.0009999999999999237,
+    "num_steps": 100,
+    "failed_candidates": [
+        "We need to produce actions Lets decide: outputs step by step Move north to push the northern boulder Then we might need to push other boulders But we dont know next Lets try a plausible short solution: north north south east north west etc But we might hit walls\n\nGiven unsureness maybe we output just north as initial action That might be fine Episode will continue we will respond with next actions as needed The user states You always have to output an action meaning we must keep responding But this is a singleturn context In interactive environment we would be asked for next\n\nBut the simulator might consider we need to keep given actions iteratively But we cannot see future states However we can still continue outputting actions Since we are ChatGPT and not controlling environment we may need to produce sequence Usually tasks expect we produce one action But the instruction: You always have to output an action until the episode terminates So we produce actions like north But we dont know which eventually produce success\n\nGiven we must output something lets output north\nnorth",
+        "We need to output just east\neast",
+        "We produce action north\nnorth",
+        "We will output south\nsouth"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-22",
+    "seed": 1366806155,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "task": "MiniHack-Quest-Medium-v0",
+    "action_frequency": {
+        "search": 9,
+        "east": 19,
+        "north": 31,
+        "south": 12,
+        "open": 5,
+        "west": 11,
+        "northeast": 1,
+        "force": 1,
+        "down": 1,
+        "pickup": 2,
+        "southeast": 3,
+        "northwest": 1,
+        "kick": 2,
+        "loot": 1,
+        "wait": 1
+    },
+    "input_tokens": 353642,
+    "output_tokens": 52626,
+    "done": true,
+    "episode_return": -0.37000000000000016,
+    "num_steps": 100,
+    "failed_candidates": [
+        "kill",
+        "kick southeast",
+        "kill",
+        "open e",
+        "open east",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill",
+        "kill"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-6",
+    "seed": 3643069967,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

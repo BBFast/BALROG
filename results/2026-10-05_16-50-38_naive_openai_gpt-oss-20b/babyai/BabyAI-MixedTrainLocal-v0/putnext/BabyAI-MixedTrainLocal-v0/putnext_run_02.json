@@ -1,0 +1,55 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "go forward": 52,
+        "turn right": 35,
+        "turn left": 33,
+        "pick up": 4,
+        "drop": 4
+    },
+    "input_tokens": 118440,
+    "output_tokens": 101713,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "We need to output a single action that leads to goal Starting at observation: You carry a green key blue key is  steps right and  steps forward The simplest action: go forward Lets output\ngo forward",
+        "Need to produce a single action go forward\ngo forward",
+        "turn left\n\ngo forward\n\ngo forward\n\nturn right\n\ngo forward\n\ngo forward\n\ngo forward\n\npick up\n\nturn right\n\ngo forward\n\ngo forward\n\nturn right\n\ngo forward\n\ngo forward\n\ndrop",
+        "We should output the first action in the plan: turn left\nturn left",
+        "We need to produce a single action each turn Lets output go forward\ngo forward",
+        "go forward\npick up\nturn left\ngo forward\ngo forward\nturn right\ngo forward\ndrop",
+        "We must respond with one action Well output go forward\ngo forward",
+        "turn left\ngo forward\ngo forward\nturn right\ngo forward\ngo forward\npick up\nturn right\ngo forward\ngo forward\nturn right\ngo forward\nturn left\ngo forward\ndrop",
+        "We need to output one action Well go forward\ngo forward",
+        "We should output only a single action no explanatory\nturn right",
+        "We should produce the first action only: turn left\nturn left"
+    ],
+    "mission": "put the blue key next to the green key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-5",
+    "seed": 3183892781,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

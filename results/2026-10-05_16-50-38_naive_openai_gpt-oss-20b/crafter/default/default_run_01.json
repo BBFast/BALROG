@@ -1,0 +1,79 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Noop": 7,
+        "Move West": 45,
+        "Move North": 35,
+        "Do": 34,
+        "Place Table": 9,
+        "Move East": 16,
+        "Make Wood Pickaxe": 3,
+        "Move South": 23,
+        "Place Plant": 7,
+        "Make Wood Sword": 1,
+        "Sleep": 2
+    },
+    "input_tokens": 307230,
+    "output_tokens": 112220,
+    "done": true,
+    "episode_return": 8.100000000000001,
+    "num_steps": 182,
+    "failed_candidates": [
+        "We need to output one action per turn Since we are at starting observation well pick Move North\nMove North",
+        "We should output only one action So Move North\nMove North",
+        "We need to output a valid action Well keep going\nMove North",
+        "We will produce action Make Wood Sword to earn that achievement\nMake Wood Sword",
+        "We need to output a single action So next action: Move North\nMove North"
+    ],
+    "score": 9.0,
+    "progression": 0.4090909090909091,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 3,
+        "collect_iron": 0,
+        "collect_sapling": 2,
+        "collect_stone": 0,
+        "collect_wood": 8,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 1,
+        "eat_cow": 2,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 1,
+        "make_wood_sword": 1,
+        "place_furnace": 0,
+        "place_plant": 2,
+        "place_stone": 0,
+        "place_table": 2,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-8",
+    "seed": 1303831435,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
