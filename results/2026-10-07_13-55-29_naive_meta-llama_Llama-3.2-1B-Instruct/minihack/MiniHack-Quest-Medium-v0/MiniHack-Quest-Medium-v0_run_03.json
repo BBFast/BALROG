@@ -1,0 +1,57 @@
+{
+    "task": "MiniHack-Quest-Medium-v0",
+    "action_frequency": {
+        "north": 6,
+        "south": 2,
+        "kick": 55,
+        "east": 8,
+        "eat": 11,
+        "northwest": 1,
+        "wait": 4,
+        "apply": 4,
+        "down": 1,
+        "puton": 5,
+        "open": 1,
+        "loot": 1,
+        "more": 1
+    },
+    "input_tokens": 334116,
+    "output_tokens": 211,
+    "done": true,
+    "episode_return": -0.8800000000000006,
+    "num_steps": 100,
+    "failed_candidates": [
+        "prayer",
+        "play",
+        "prayer",
+        "kicks",
+        "quit"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-1",
+    "seed": 2684445986,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

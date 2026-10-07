@@ -1,0 +1,51 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "inventory\n\ngoal: find the keycard": 1,
+        "inventory: keycard\n\nlook: None": 1,
+        "drop inventory": 1,
+        "go north": 32,
+        "inventory: keycard": 1,
+        "inventory: keycard go north": 4,
+        "drop inventory\ngoal: find the keycard": 1,
+        "inventory keycard": 7,
+        "inventory keycard go north": 19,
+        "look": 3,
+        "inventory keycard look": 3,
+        "inventory keycard go south": 4,
+        "go south": 1,
+        "inventory keycard go east": 2
+    },
+    "input_tokens": 76389,
+    "output_tokens": 362,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-7",
+    "seed": 1082776068,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

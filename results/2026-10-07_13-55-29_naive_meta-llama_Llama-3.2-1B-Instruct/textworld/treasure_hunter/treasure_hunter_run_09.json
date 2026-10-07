@@ -1,0 +1,56 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "goal: find the key": 1,
+        "inventory: empty": 2,
+        "look\ngoal: find the key\ninventory: empty\ngate: open the gate to the north": 1,
+        "look\ngoal: find the key\ninventory: empty\ndirection: north": 5,
+        "look\ngoal: find the key\ninventory: empty\ndirection: north\nnorth": 1,
+        "look": 7,
+        "go north": 28,
+        "go": 16,
+        "inventory: empty go north": 1,
+        "inventory: empty look north": 1,
+        "look north": 1,
+        "go south": 2,
+        "inventory: key go": 2,
+        "go east": 3,
+        "go west": 2,
+        "drop key": 1,
+        "insert key into key": 1,
+        "put key into key": 4,
+        "take key": 1
+    },
+    "input_tokens": 83877,
+    "output_tokens": 340,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-11",
+    "seed": 3695268334,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

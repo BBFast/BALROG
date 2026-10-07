@@ -1,0 +1,61 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "look": 2,
+        "inventory: knife cheese": 5,
+        "examine": 3,
+        "look\nexamine\ninventory\nexamine": 1,
+        "take knife": 21,
+        "examine knife": 2,
+        "inventory: knife": 4,
+        "inventory: knife\nexamine\ninventory\nexamine\ntake": 1,
+        "inventory: knife\nexamine\ninventory\nexamine\ntake knife": 1,
+        "                                                                                                                                 Supermarket ": 1,
+        "inventory: knife take": 2,
+        "take knife prepare meal": 14,
+        "drop knife": 2,
+        "put knife on Counter": 8,
+        "put knife on Counter cuttable food with knife": 2,
+        "put knife on Counter cook knife with stovetop": 1,
+        "put knife on Counter\nexamine knife\nexamine stovetop\nexamine stove cuttable food with knife\nexamine stove cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife": 1,
+        "put knife on Counter prepare meal": 2,
+        "take knife\nexamine knife\nexamine stovetop\nexamine stove cuttable food with knife\nexamine stove cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife\nexamine stovetop cuttable food with knife": 1,
+        "put knife on Counter cuttable food with knife\nexamine knife\nexamine stovetop\nexamine stove cuttable food with knife": 1,
+        "put knife on Counter cuttable food with knife cut": 1,
+        "put knife on Counter\nexamine knife\nexamine stovetop\nexamine stove cuttable food with knife": 1,
+        "put knife on Counter\nput knife on Counter\nexamine knife\nexamine stovetop\nexamine stovetop\nexamine stovetop": 1,
+        "put knife on Counter cook cuttable food with knife with stovetop": 2
+    },
+    "input_tokens": 106857,
+    "output_tokens": 788,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-5",
+    "seed": 2654447723,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

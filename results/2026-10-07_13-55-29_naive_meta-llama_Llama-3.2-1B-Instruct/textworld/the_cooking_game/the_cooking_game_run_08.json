@@ -1,0 +1,53 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "look": 2,
+        "put the block of cheese on the counter": 1,
+        "inventory": 3,
+        "take the raw white tuna": 3,
+        "open": 1,
+        "open the sliding door": 1,
+        "put the raw white tuna on the counter": 1,
+        "take the block of cheese": 3,
+        "drop": 1,
+        "take": 1,
+        "prepare meal": 1,
+        "examine": 1,
+        "put on knife": 3,
+        "take knife": 54,
+        "drop knife": 2,
+        "examine the knife": 2
+    },
+    "input_tokens": 101440,
+    "output_tokens": 271,
+    "done": true,
+    "episode_return": 149.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-3",
+    "seed": 2536818376,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
