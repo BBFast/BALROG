@@ -132,8 +132,8 @@ python eval.py \
     eval.num_workers=16 \
     client.client_name=vllm \
     client.model_id="$MODEL" \
-    client.base_url=http://localhost:$PORT/v1
-
+    client.base_url=http://localhost:$PORT/v1 \
+    eval.resume_from=results/2026-10-08_18-10-17_naive_openai_gpt-oss-20b
 echo
 echo "========================================"
 echo "BALROG finished successfully"

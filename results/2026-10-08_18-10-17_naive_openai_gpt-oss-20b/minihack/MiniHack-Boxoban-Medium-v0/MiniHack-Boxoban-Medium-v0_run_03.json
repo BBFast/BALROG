@@ -1,0 +1,46 @@
+{
+    "task": "MiniHack-Boxoban-Medium-v0",
+    "action_frequency": {
+        "east": 24,
+        "north": 34,
+        "south": 28,
+        "west": 14
+    },
+    "input_tokens": 614859,
+    "output_tokens": 218817,
+    "done": true,
+    "episode_return": 0.10099999999999992,
+    "num_steps": 100,
+    "failed_candidates": [
+        "We should output in separate turns actions Since we only need to output one action per turn we should output north first\nnorth",
+        "We need to start moving\neast",
+        "west\nnorth\nwest\nwest"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-4",
+    "seed": 620740892,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8084/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

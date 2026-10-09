@@ -1,0 +1,47 @@
+{
+    "task": "MiniHack-Boxoban-Hard-v0",
+    "action_frequency": {
+        "west": 24,
+        "south": 18,
+        "north": 35,
+        "east": 23
+    },
+    "input_tokens": 619268,
+    "output_tokens": 268450,
+    "done": true,
+    "episode_return": -0.09900000000000007,
+    "num_steps": 100,
+    "failed_candidates": [
+        "We decide to attempt to move south to position below the boulder This may allow the boulder to be pushed north onto the fountain\nsouth",
+        "We dont have something else to decide we need to produce an action The next observed state hasnt changed from earlier: prefix says there is a boulder adjacent north after south versus earlier But maybe new action will shift\n\nWell try south again\nsouth",
+        "We concluded sequence pushing first box onto fountain Now after the last observation the player is at x Actually after moving east the players coordinate changed In the map at that time: row  after step Lets parse: After pushing onto fountain new map would be  player at col Wait after step  we predicted map  No that is earlier But current map shows  Actually last",
+        "Need to output an action Ill choose north\nnorth"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-7",
+    "seed": 1476809586,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8084/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

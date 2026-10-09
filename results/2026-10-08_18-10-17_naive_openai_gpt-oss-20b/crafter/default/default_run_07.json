@@ -1,0 +1,83 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Do": 102,
+        "Noop": 11,
+        "Move West": 28,
+        "Place Table": 10,
+        "Move South": 7,
+        "Make Stone Pickaxe": 4,
+        "Place Stone": 3,
+        "Make Wood Pickaxe": 14,
+        "Move East": 9,
+        "Move North": 3,
+        "Place Plant": 1,
+        "Sleep": 4
+    },
+    "input_tokens": 355249,
+    "output_tokens": 122980,
+    "done": true,
+    "episode_return": 2.1,
+    "num_steps": 196,
+    "failed_candidates": [
+        "Move West\nMove West\nMove West\nMove West\nDo\nPlace Table\nPlace Plant\nDo\nMake Wood Pickaxe\nMake Wood Sword\nMove North\nDo\nMove East\nDo\nMove South\nDo\nMove West\nDo\nMove West\nDo\nMove East\nDo\nMove North\nDo\nMove East\nDo\nMove East\nDo\nMove South\nDo\nMove South\nDo\nMove South\nDo\nMove West\nDo\nMove West\nDo\nMove East\nDo\nMove South\nDo\nMove West\nDo\nMove North\nDo\nMove East\nDo\nMove South\nDo\nMove West\nDo\nMove South\nDo\nMove West\nDo\nMove East\nDo\nMove North\nDo\nMove East\nDo\nMove South\nDo\nMove West\nDo\nMove South\nDo\nMove West\nDo\nMove East\nDo\nMove North\nDo\nMove East\nDo\nMove South\nDo\nMove West\nDo\nMove South\nDo\nMove West\nDo\nMove East\nDo\nMove North\nDo\nMove East\nDo\nMove South\nDo\nMove West\nDo\nMove South\nDo\nMove West\nDo\nMove East\nDo\nMove North\nDo\nMove East\nDo\nMove South\nDo\nMove West\nDo\nMove South\nDo\nMove West\nDo\nMove East\nDo\nMove North\nDo\nMove East\nDo\nMove South\nDo\nMove West\nDo\nMove South\nDo\nMove West\nDo\nMove East\nDo\nMake Stone Pickaxe\nMake Stone Sword\nPlace Stone\nMake Iron Pickaxe\nMake Iron Sword\nPlace Furnace\nSleep\nMake Iron Pickaxe\nMake Iron Sword\nSleep",
+        "We must be careful to get all achievements We have made table but have not Plant We had Place Plant earlier We suspect we have plant Well do a Do on tree\nDo",
+        "We will output the next action: Move South\nMove South",
+        "Do\n\nMove West\n\nMove West\n\nPlace Table\n\nMake Wood Pickaxe\n\nMove South\n\nMove South\n\nMove East\n\nDo\n\nMake Stone Pickaxe\n\nMake Stone Sword\n\nMove West\n\nMove West\n\nMove West\n\nDo\n\nPlace Furnace\n\nMove West\n\nDo\n\nMove East\n\nMove East\n\nMove East\n\nMake Iron Pickaxe\n\nMake Iron Sword\n\nPlace Plant\n\nMove South\n\nMove South\n\nMove South\n\nDo\n\nDo\n\nDo\n\nSleep\n\nMove North\n\nMove North\n\nMove West\n\nMove East\n\nDo\n\nDo\n\nSleep",
+        "We should output next action: Do Lets do it\nDo",
+        "Weve decided to do Place Furnace next\nPlace Furnace",
+        "We need to output actions Well produce a sequence Lets output maybe  actions\nMove East",
+        "Move North West"
+    ],
+    "score": 3.0,
+    "progression": 0.13636363636363635,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 0,
+        "collect_wood": 3,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 1,
+        "eat_cow": 0,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 0,
+        "make_wood_sword": 0,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 1,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-9",
+    "seed": 2535790455,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8084/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

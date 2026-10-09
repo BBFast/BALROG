@@ -1,0 +1,49 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "turn left": 14,
+        "pick up": 13,
+        "go forward": 46,
+        "turn right": 14,
+        "drop": 41
+    },
+    "input_tokens": 104789,
+    "output_tokens": 78946,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "We need to give actions one at a time So we will output go forward\ngo forward",
+        "We should output action for current observation The current observation is same as initial So we must output go forward\ngo forward",
+        "We need to output actions one at a time The last observation after the previous series We had no new observation after last action Actually last action executed was drop Wait didnt output We need to continue We are currently at initial observation: purple ball  step forward yellow ball  step right The plan: start with turn right Lets output that\nturn right",
+        "toggle\n\ndrop",
+        "We need sequence\ngo forward\npick up\nturn left\ngo forward\nturn right\ndrop"
+    ],
+    "mission": "put the yellow ball next to the purple ball",
+    "progression": 0.0,
+    "process_num": "ForkProcess-15",
+    "seed": 3096786545,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8084/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

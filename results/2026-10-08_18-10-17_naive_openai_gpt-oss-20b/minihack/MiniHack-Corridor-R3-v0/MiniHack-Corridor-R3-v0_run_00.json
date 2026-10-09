@@ -1,0 +1,69 @@
+{
+    "task": "MiniHack-Corridor-R3-v0",
+    "action_frequency": {
+        "search": 9,
+        "west": 20,
+        "open": 11,
+        "east": 20,
+        "south": 8,
+        "northeast": 2,
+        "north": 28,
+        "kick": 1,
+        "southeast": 1
+    },
+    "input_tokens": 357868,
+    "output_tokens": 43709,
+    "done": true,
+    "episode_return": -0.4000000000000002,
+    "num_steps": 100,
+    "failed_candidates": [
+        "open west",
+        "open east",
+        "open west",
+        "open west",
+        "open east",
+        "open west",
+        "open east",
+        "kick east",
+        "open west",
+        "open west",
+        "open west",
+        "open east",
+        "open east",
+        "open west",
+        "open west",
+        "open west",
+        "open west",
+        "open east",
+        "open east",
+        "open east",
+        "open east"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-5",
+    "seed": 3548770446,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8084/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

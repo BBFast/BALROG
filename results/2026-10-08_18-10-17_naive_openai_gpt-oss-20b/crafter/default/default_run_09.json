@@ -1,0 +1,83 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Do": 68,
+        "Move West": 33,
+        "Move South": 30,
+        "Place Table": 9,
+        "Make Wood Pickaxe": 10,
+        "Move North": 25,
+        "Make Stone Pickaxe": 5,
+        "Place Stone": 4,
+        "Noop": 7,
+        "Make Wood Sword": 5,
+        "Place Plant": 1,
+        "Move East": 2,
+        "Sleep": 1
+    },
+    "input_tokens": 399458,
+    "output_tokens": 146563,
+    "done": true,
+    "episode_return": 7.099999999999999,
+    "num_steps": 200,
+    "failed_candidates": [
+        "Action: Do aimed at stone That will mine stone Achieve Collect Stone Next step",
+        "We should output Place Stone next\nPlace Stone",
+        "Lets produce action Do now\nDo",
+        "We must choose next action Well do Move South\nMove South",
+        "Place Stone\nLets output maybe Place Stone\nPlace Stone",
+        "Do\n\nMove West\n\nMove West\n\nMake Wood Sword\n\nMove South\n\nMove South\n\nMove South\n\nDo\n\nMake Stone Pickaxe\n\nMove East\n\nDo\n\nPlace Plant\n\nMove North\n\nSleep\n\nPlace Furnace\n\nMove North\n\nMove North\n\nMake Iron Pickaxe\n\nMove East\n\nMake Iron Sword\n\nMove South\n\nMove South\n\nMove South\n\nMove South\n\nMove South\n\nDo\n\nMove South\n\nMove South\n\nMove South\n\nMove South\n\nDo",
+        "Sleep\nMove North\nDo\nMove West\nMove West\nDo\nPlace Table\nMake Stone Pickaxe\nMake Stone Sword\nPlace Furnace\nPlace Stone\nPlace Plant\nMove South\nMove East\nMove East\nMove East\nDo\nMove South\nMove South\nDo\nMove North\nMove North\nDo\nMake Iron Pickaxe\nMake Iron Sword\nDo"
+    ],
+    "score": 8.0,
+    "progression": 0.36363636363636365,
+    "achievements": {
+        "collect_coal": 1,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 7,
+        "collect_wood": 6,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 0,
+        "eat_cow": 1,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 1,
+        "make_wood_sword": 1,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 1,
+        "place_table": 2,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-16",
+    "seed": 1671113632,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8084/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

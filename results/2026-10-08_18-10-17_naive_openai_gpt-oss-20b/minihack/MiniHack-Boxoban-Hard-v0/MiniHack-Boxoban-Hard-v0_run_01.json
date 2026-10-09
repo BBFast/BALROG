@@ -1,0 +1,48 @@
+{
+    "task": "MiniHack-Boxoban-Hard-v0",
+    "action_frequency": {
+        "south": 29,
+        "east": 20,
+        "west": 18,
+        "north": 33
+    },
+    "input_tokens": 601352,
+    "output_tokens": 264482,
+    "done": true,
+    "episode_return": -0.09900000000000007,
+    "num_steps": 100,
+    "failed_candidates": [
+        "We need to output west\nwest",
+        "We should output an action\neast",
+        "We will move north\nnorth",
+        "We doubt but decide to attempt that plan\n\n\nnorth",
+        "We need to output one action per turn until episode ends So we need to output series stepwise Well start with west\nwest"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-1",
+    "seed": 1499487707,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8084/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

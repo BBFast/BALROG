@@ -1,0 +1,47 @@
+{
+    "task": "MiniHack-Boxoban-Medium-v0",
+    "action_frequency": {
+        "north": 27,
+        "south": 16,
+        "east": 30,
+        "west": 27
+    },
+    "input_tokens": 618907,
+    "output_tokens": 196327,
+    "done": true,
+    "episode_return": -0.09900000000000007,
+    "num_steps": 100,
+    "failed_candidates": [
+        "We need to decide final output According to instructions we must output action each turn Well output south first\nsouth",
+        "We need to decide action Likely pushing west is best\nwest",
+        "We will output west\nwest",
+        "We need to give an action Well choose north\nnorth"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-9",
+    "seed": 527514653,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "openai/gpt-oss-20b",
+        "base_url": "http://localhost:8084/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
