@@ -1,0 +1,45 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nThe plan seems logical as we need to proceed towards the American style passageway and the passkey might be necessary later. Taking the block of cheese is a good first step to potentially use it in a recipe.": 1,
+        "go west": 4,
+        "examine sliding door": 1,
+        "go south": 61,
+        "open sliding door": 2,
+        "go east": 3,
+        "go north": 7,
+        "take raw white tuna from showcase": 1
+    },
+    "input_tokens": 120402,
+    "output_tokens": 1198,
+    "done": true,
+    "episode_return": 151.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-4",
+    "seed": 2639092246,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

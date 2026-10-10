@@ -1,0 +1,55 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine block of cheese\nACTION: examine raw white tuna\nACTION: go south": 1,
+        "examine raw white tuna": 2,
+        "go south": 56,
+        "open sliding door": 1,
+        "go east": 1,
+        "go west": 1,
+        "look": 1,
+        "go north": 1,
+        "examine showcase": 3,
+        "examine poster": 1,
+        "examine mailbox": 2,
+        "examine newspaper": 1,
+        "examine bench": 2,
+        "examine street sign": 1,
+        "examine lamp post": 2,
+        "examine trash can": 2,
+        "examine fence": 1,
+        "examine telephone pole": 1
+    },
+    "input_tokens": 109490,
+    "output_tokens": 1181,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 4174553897,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

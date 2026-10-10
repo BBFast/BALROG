@@ -1,0 +1,43 @@
+{
+    "task": "coin_collector",
+    "action_frequency": {
+        "go east": 18,
+        "go west": 15,
+        "go north": 13,
+        "look": 20,
+        "go south": 13,
+        "look\n\nIt seems we are in the wrong location based on the previous observations. Let's follow the hint and try going south from the pantry.\nACTION: go south": 1
+    },
+    "input_tokens": 115973,
+    "output_tokens": 1051,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-5",
+    "seed": 2655030264,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
