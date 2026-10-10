@@ -124,7 +124,7 @@ echo "Running BALROG"
 echo "========================================"
 
 python eval.py \
-    agent.type=custom \
+    agent.type=custom_cot \
     agent.max_image_history=0 \
     agent.max_text_history=16 \
     eval.num_workers=8 \
