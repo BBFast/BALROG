@@ -1,0 +1,54 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go north": 9,
+        "take key from floor": 15,
+        "go south": 10,
+        "go east": 10,
+        "go west": 8,
+        "go up": 1,
+        "look": 4,
+        "go to laundromat": 7,
+        "look for key": 4,
+        "look around": 4,
+        "look carefully on the floor": 2,
+        "look in drawer": 1,
+        "look in shelf": 1,
+        "look in corner": 1,
+        "look in trash can": 1,
+        "look under desk": 1,
+        "look in different areas of the room": 1
+    },
+    "input_tokens": 115810,
+    "output_tokens": 1894,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 3624879828,
+    "agent": {
+        "type": "custom_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

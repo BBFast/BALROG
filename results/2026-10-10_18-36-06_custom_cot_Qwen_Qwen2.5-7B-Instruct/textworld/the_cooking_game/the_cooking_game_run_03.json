@@ -1,0 +1,47 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nThis action aims to take the block of cheese from the showcase, which seems like a logical first step to start gathering ingredients for the recipe.": 1,
+        "go north": 55,
+        "examine sliding door": 1,
+        "go south": 8,
+        "open sliding door": 1,
+        "examine north": 2,
+        "go east": 7,
+        "go west": 1,
+        "take raw white tuna from showcase": 1,
+        "examine showcase": 3
+    },
+    "input_tokens": 119151,
+    "output_tokens": 1181,
+    "done": true,
+    "episode_return": 140.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-8",
+    "seed": 4064102394,
+    "agent": {
+        "type": "custom_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
