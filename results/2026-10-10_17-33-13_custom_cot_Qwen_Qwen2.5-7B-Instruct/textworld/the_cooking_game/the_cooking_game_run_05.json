@@ -1,0 +1,54 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese and raw white tuna from showcase": 1,
+        "examine sliding door south": 13,
+        "go south": 3,
+        "examine floor": 1,
+        "take microsoft limited edition latchkey from floor": 9,
+        "open sliding door south with microsoft limited edition latchkey": 1,
+        "go east": 2,
+        "go west": 1,
+        "take block of cheese and raw white tuna to kitchen": 1,
+        "go north": 1,
+        "take latchkey from floor": 13,
+        "look": 1,
+        "take latchkey from floor south": 13,
+        "use latchkey on sliding door south": 16,
+        "open sliding door south with latchkey": 1,
+        "look south": 2,
+        "look for latchkey south": 1
+    },
+    "input_tokens": 113238,
+    "output_tokens": 2859,
+    "done": true,
+    "episode_return": 160.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-2",
+    "seed": 1543067706,
+    "agent": {
+        "type": "custom_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

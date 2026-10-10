@@ -1,0 +1,77 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Move West": 134,
+        "Do": 21,
+        "Move South": 51,
+        "Move East": 18,
+        "Move North": 2,
+        "Noop": 8
+    },
+    "input_tokens": 455776,
+    "output_tokens": 3254,
+    "done": true,
+    "episode_return": 0.0999999999999999,
+    "num_steps": 234,
+    "failed_candidates": [
+        "Do\n\nThis action will allow us to potentially collect sap from the tree. If we don't have any other resources yet, this is a good use of our turn.",
+        "Do\n\nThis will allow us to attempt to collect sap from the tree, which is necessary for the next steps in our plan.",
+        "Do\n\nWe need to collect sap from the tree to progress further. This will give us more resources and potentially other useful items.",
+        "Do\n\nWe will attempt to collect sap from the tree using the \"Do\" action. This will help us progress and gather more resources.",
+        "Do\n\nWe will attempt to collect sap from the tree using the \"Do\" action. This will help us progress and gather more resources.",
+        "Do\n\nWe will attempt to collect sap from the tree using the \"Do\" action. This will help us progress and gather more resources.",
+        "Do\n\nWe will attempt to collect sap from the tree using the \"Do\" action. This will help us progress and gather more resources.",
+        "Do\n\nWe will use the \"Do\" action to collect wood from the tree. This will help us gather resources and move closer to achieving some of the early game achievements."
+    ],
+    "score": 1.0,
+    "progression": 0.045454545454545456,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 0,
+        "collect_wood": 4,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 0,
+        "eat_cow": 0,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 0,
+        "make_wood_sword": 0,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 0,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-2",
+    "seed": 3331449460,
+    "agent": {
+        "type": "custom_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nThis action aims to take one of the items mentioned in the recipe, assuming the block of cheese is the required ingredient. If the recipe specifies a different ingredient, we will adjust our actions accordingly.": 1,
+        "go south": 20,
+        "examine closed sliding door": 4,
+        "open closed sliding door with key": 2,
+        "inventory": 1,
+        "take key from inventory": 4,
+        "go east": 3,
+        "go north": 3,
+        "go west": 3,
+        "examine counter": 5,
+        "examine fridge": 5,
+        "examine table": 1,
+        "examine locker": 5,
+        "examine wall": 2,
+        "open sliding door": 2,
+        "examine floor": 1,
+        "examine shelves": 4,
+        "take brochure from floor": 3,
+        "examine oven": 2,
+        "examine sliding door": 4,
+        "examine brochure": 1,
+        "examine cookbook": 1,
+        "examine BBQ": 1,
+        "examine produce section": 1,
+        "examine register": 1
+    },
+    "input_tokens": 109316,
+    "output_tokens": 1717,
+    "done": true,
+    "episode_return": 80.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.058823529411764705,
+    "process_num": "ForkProcess-5",
+    "seed": 2414655889,
+    "agent": {
+        "type": "custom_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
