@@ -29,8 +29,12 @@ class CustomCOTAgent(BaseAgent):
 
         planning_instructions = """
 Review the current plan above if present. Decide whether to continue with it or make changes.
+If you want to make changes, follow the following steps by thinking step by step:
+1. Identify new relevant information from the current observation that followed from the previous action.
+2. Identify the objective or goal you want to achieve.
+3. Determine the action that will help achieving the goal based on the new information and the current plan.
+4. Check if the action is valid. 
 If you make changes, provide the updated plan. Then, provide the next action to take.
-Let's think step by step.
 You must output an action at every step.
 Format your answer in the following way:
 PLAN: <your updated plan if changed, or "No changes to the plan." if the current plan is good>
