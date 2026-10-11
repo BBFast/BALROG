@@ -45,7 +45,13 @@ ACTION: <your next action>
 
         messages = self.prompt_builder.get_prompt()
         if messages and messages[-1].role == "user":
-            messages[-1].content += "\n\n" + plan_text + "\n" + planning_instructions
+            previous_action = ""
+
+            if len(messages) >= 2 and messages[-2].role == "assistant":
+                print("Previous action found in messages:", messages[-2].content)
+                previous_action = "\n\n" + "Previous action:\n" + messages[-2].content + "Compare this to the observation to determine if there is progress."
+
+            messages[-1].content += previous_action + "\n\n" + plan_text + "\n" + planning_instructions
 
         response = self.client.generate(messages)
 
