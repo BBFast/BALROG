@@ -1,0 +1,45 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "go south": 13,
+        "unlock door with key": 5,
+        "look": 20,
+        "examine sliding door": 31,
+        "open sliding door": 1,
+        "take key from sliding door": 1,
+        "go north": 8,
+        "take cheese from sliding door": 1
+    },
+    "input_tokens": 147068,
+    "output_tokens": 1387,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 702775219,
+    "agent": {
+        "type": "custom_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "base_url": "http://localhost:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
