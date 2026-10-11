@@ -33,7 +33,9 @@ If you want to make changes, follow the following steps by thinking step by step
 1. Identify new relevant information from the current observation that followed from the previous action.
 2. Identify the objective or goal you want to achieve.
 3. Determine the action that will help achieving the goal based on the new information and the current plan.
-4. Check if the action is valid. 
+4. Before choosing the next action, compare it with the previous action and consider the latest observation.
+If the previous action was the same as the action you are about to take, check whether it would change the outcome based on the new information. If it would not change the outcome, consider choosing a different action.
+5. Check if the action is valid given the list of accepted actions.
 If you make changes, provide the updated plan. Then, provide the next action to take.
 You must output an action at every step.
 Format your answer in the following way:
