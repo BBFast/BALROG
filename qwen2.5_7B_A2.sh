@@ -19,17 +19,11 @@ export OPENBLAS_NUM_THREADS=1
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 
-# ---------------------------------------------------------
-# Hugging Face cache
-# ---------------------------------------------------------
-export HF_HOME=/local/.cache/huggingface
-
 echo "========================================"
 echo "BALROG Qwen2.5-7B"
 echo "========================================"
 echo "Host: $(hostname)"
 echo "Job ID: $SLURM_JOB_ID"
-echo "HF_HOME: $HF_HOME"
 echo "========================================"
 
 echo
@@ -52,6 +46,7 @@ source .venv/bin/activate
 # Model
 # ---------------------------------------------------------
 MODEL="Qwen/Qwen2.5-7B-Instruct"
+PORT=8082
 
 echo
 echo "Model: $MODEL"
@@ -65,7 +60,7 @@ echo "Starting vLLM"
 echo "========================================"
 
 vllm serve "$MODEL" \
-    --port 8082 \
+    --port $PORT \
     > vllm_${SLURM_JOB_ID}.log 2>&1 &
 
 VLLM_PID=$!
@@ -80,7 +75,7 @@ echo "Waiting for vLLM..."
 # ---------------------------------------------------------
 for i in $(seq 1 60); do
 
-    if curl -sf http://localhost:8082/v1/models > /dev/null; then
+    if curl -sf http://localhost:$PORT/v1/models > /dev/null; then
         echo "vLLM is ready!"
         break
     fi
@@ -98,7 +93,7 @@ for i in $(seq 1 60); do
     sleep 5
 done
 
-if ! curl -sf http://localhost:8082/v1/models > /dev/null; then
+if ! curl -sf http://localhost:$PORT/v1/models > /dev/null; then
     echo
     echo "ERROR: vLLM did not become ready within 5 minutes."
     echo
@@ -113,24 +108,82 @@ echo "========================================"
 echo "vLLM model"
 echo "========================================"
 
-curl -s http://localhost:8082/v1/models
+curl -s http://localhost:$PORT/v1/models
 
 # ---------------------------------------------------------
 # Run BALROG
 # ---------------------------------------------------------
 echo
 echo "========================================"
-echo "Running BALROG"
+echo "Running BALROG custom"
 echo "========================================"
 
 python eval.py \
-    agent.type=custom_cot \
+    agent.type=custom \
     agent.max_image_history=0 \
     agent.max_text_history=16 \
     eval.num_workers=8 \
     client.client_name=vllm \
     client.model_id="$MODEL" \
-    client.base_url=http://localhost:8082/v1 \
+    client.base_url=http://localhost:$PORT/v1 \
+    envs.names=babyai-babaisai-textworld-crafter
+
+echo
+echo "========================================"
+echo "BALROG finished successfully"
+echo "========================================"
+
+echo
+echo "========================================"
+echo "Running BALROG custom_cot_sbs"
+echo "========================================"
+
+python eval.py \
+    agent.type=custom_cot_sbs \
+    agent.max_image_history=0 \
+    agent.max_text_history=16 \
+    eval.num_workers=8 \
+    client.client_name=vllm \
+    client.model_id="$MODEL" \
+    client.base_url=http://localhost:$PORT/v1 \
+    envs.names=babyai-babaisai-textworld-crafter
+
+echo
+echo "========================================"
+echo "BALROG finished successfully"
+echo "========================================"
+echo
+echo "========================================"
+echo "Running BALROG custom_cot_4step"
+echo "========================================"
+
+python eval.py \
+    agent.type=custom_cot_4step \
+    agent.max_image_history=0 \
+    agent.max_text_history=16 \
+    eval.num_workers=8 \
+    client.client_name=vllm \
+    client.model_id="$MODEL" \
+    client.base_url=http://localhost:$PORT/v1 \
+    envs.names=babyai-babaisai-textworld-crafter
+
+echo
+echo "========================================"
+echo "BALROG finished successfully"
+echo "========================================"
+echo
+echo "========================================"
+echo "Running BALROG custom_cot_prevact"
+echo "========================================"
+
+python eval.py \
+    agent.type=custom_cot_prevact \
+    agent.max_image_history=0 \
+    agent.max_text_history=16 \
+    eval.num_workers=8 \
+    client.client_name=vllm \
+    client.model_id="$MODEL" \
+    client.base_url=http://localhost:$PORT/v1 \
     envs.names=babyai-babaisai-textworld-crafter
 
 echo
