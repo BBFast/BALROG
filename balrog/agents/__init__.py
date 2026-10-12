@@ -8,7 +8,9 @@ from .few_shot import FewShotAgent
 from .naive import NaiveAgent
 from .robust_naive import RobustNaiveAgent
 from .robust_cot import RobustCoTAgent
-from .custom_cot import CustomCOTAgent
+from .custom_cot_prevact import CotPrevActAgent
+from .custom_cot_sbs import StepByStepAgent
+from .custom_cot_4step import FourStepAgent
 
 
 class AgentFactory:
@@ -58,6 +60,10 @@ class AgentFactory:
         elif self.config.agent.type == "robust_cot":
             return RobustCoTAgent(client_factory, prompt_builder, config=self.config)
         elif self.config.agent.type == "custom_cot":
-            return CustomCOTAgent(client_factory, prompt_builder)
+            return CotPrevActAgent(client_factory, prompt_builder)
+        elif self.config.agent.type == "custom_cot_sbs":
+            return StepByStepAgent(client_factory, prompt_builder)
+        elif self.config.agent.type == "custom_cot_4step":
+            return FourStepAgent(client_factory, prompt_builder)
         else:
             raise ValueError(f"Unknown agent type: {self.config.agent}")
