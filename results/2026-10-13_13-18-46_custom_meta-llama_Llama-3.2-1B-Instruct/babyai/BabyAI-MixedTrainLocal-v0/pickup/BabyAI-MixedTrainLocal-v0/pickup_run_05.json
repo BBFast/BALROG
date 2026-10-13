@@ -1,0 +1,53 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pickup",
+    "action_frequency": {
+        "go forward": 16,
+        "turn right": 9,
+        "turn left": 6,
+        "pick up": 4
+    },
+    "input_tokens": 32029,
+    "output_tokens": 1230,
+    "done": true,
+    "episode_return": 0.5078125,
+    "num_steps": 35,
+    "failed_candidates": [
+        "Go forward\n\nI will go forward as planned. Here's the updated position:\n\na wall 4 steps forward\na wall 1 step right\n\nNext, I will turn left. The wall to the right becomes visible, and I see a piece of paper lying on it.",
+        "turn right\n\nI will turn right as planned. The wall to the left is now visible, and I see a yellow key lying on the wall.",
+        "turn left\n\nI will turn left as planned. Here's the updated position:\n\na wall 2 steps forward\na wall 1 step right\nyellow key 1 step forward\nthe wall 1 step right",
+        "go forward\n\nI will go forward as planned. Here's the updated position:\n\na wall 1 step forward\na wall 1 step right\nyellow key 1 step forward",
+        "go forward\n\nI will go forward as planned. Here's the updated position:\n\na wall 1 step forward\na wall 2 steps left\n\nNo changes to the plan.",
+        "go forward\n\nI will continue taking the same action until I reach the goal.\n\nACTION: go forward",
+        "go forward\n\nCurrent Observation:\n\n\nMy current plan follows the ideal structure, and the current action is valid. I will continue with it.\n\nI will take the current action:\n\ngo forward",
+        null,
+        "ACTION: go forward",
+        null
+    ],
+    "mission": "pick up the yellow key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-7",
+    "seed": 1185187224,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

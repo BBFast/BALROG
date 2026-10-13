@@ -1,0 +1,71 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "go forward": 51,
+        "pick up": 35,
+        "turn left": 24,
+        "toggle": 2,
+        "drop": 3,
+        "turn right": 13
+    },
+    "input_tokens": 128866,
+    "output_tokens": 5891,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "go forward\n\nThe current plan seems reasonable, as it directly addresses the wall and will then continue with the desired direction (right) once the object is picked up.\n\nNext action:\nright",
+        "turn right\n\nNext action:\n(a wall 2 steps left and 2 steps forward, and an unknown object in front of you)\n toggle",
+        "go forward\n\nThe current plan still appears to be a direct and logical approach to navigating the environment, taking into consideration the wall directions and the objective of picking up the key.",
+        "turn left\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step right\na green key 3 steps left",
+        "turn right\n\nThe current plan is trying to find a way around the remaining left wall, pick up the key, and then manipulate the key. The plan seems to be structured in a way that makes sense to me. It looks like it should lead to a successful outcome with the key.",
+        null,
+        null,
+        "go forward\n\nThe plan so far seems to be a bit awkward, but it's doable. It involves initially dropping the key and picking it up, then toggling it to open the door, and finally going forward to potentially unlock or enter the door.",
+        "go forward\n\nIt's a good plan so far, but we haven't reached the door yet. The current plan doesn't have a clear next step to take.",
+        "pick up\n\nCurrent Observation:\nYou carry a green key\na wall 3 steps forward\na wall 3 steps right\n\nI noticed that we've already picked up the green key and are now standing right next to the locked door. The door can now be opened without taking extra steps.",
+        null,
+        null,
+        "pick up\n\nThe current plan is working well, as we've successfully picked up the key and now we're standing right in front of the locked door. We can now try to unlock it.",
+        "drop\n\nThe current plan seems to be a good approach. By dropping the key, we'll be able to open the door without having to go through the lock first.",
+        "pick up\n\nWe've already picked up the green key, so we'll continue with the drop action. The next step is to drop the key.",
+        "pick up\n\nIt seems like the current plan has repeated the \"pick up\" action multiple times. It might be more efficient to pick up the key only once. We can modify the plan by dropping the key and picking it up only once.\n\nPLAN: go forward, drop, pick up, pick up\nACTION: drop, pick up",
+        null,
+        "drop\n\nThis is because I don't see any objects to pick up or drop, except for the wall and the key. I'll make sure to interact with the objects in front of me from now on.",
+        "go forward\n\nCurrent Observation:\na wall 3 steps forward\na wall 2 steps left\n\nCurrent Plan:\ngo forward, pick up, drop, turn right, go forward, turn left, drop, go forward, go forward, turn right\nPLAN: No changes to the plan.\nACTION: turn left",
+        "pick up\n\nCurrent Observation:\na wall 1 step forward\na wall 2 steps left\n\nCurrent Plan:\nturn right, go forward, turn right, drop\n\nPLAN: No changes to the plan.\n\nACTION: turn left",
+        "turn left\n\nCurrent Observation:\na wall 1 step forward\na wall 2 steps left\n\nCurrent Plan:\nturn right, drop, turn left, pick up, turn right, go forward, turn left\nPLAN: No changes to the plan.\nACTION: turn right\n\nObservation:\na wall 1 step forward\na wall 2 steps left",
+        "go forward\n\nCurrent Observation:\na wall 1 step forward\na wall 2 steps left\n\nCurrent Plan:\nturn left, go forward, pick up, turn right, drop, turn left, pick up, turn right, go forward, turn left\nPLAN: No changes to the plan.\nACTION: go forward\n\nObservation:\na wall 1 step forward\na wall 2 steps left\n\nCurrent Plan:\nturn left, go forward, pick up, turn right, drop, turn left, pick up, turn right, go forward, turn left\nPLAN: No changes to the plan.\nACTION: go forward",
+        "pick up\n\nCurrent Observation:\na wall 5 steps forward\na wall 1 step left\n\nCurrent Plan:\nturn right, drop, go forward, turn left, pick up, turn right, go forward, turn left, go forward, go forward, turn left\n\nPLAN: No changes to the plan.\n\n ACTION: turn right",
+        "go left",
+        "go forward\n\nObservation:\na wall 1 step forward\na wall 3 steps right\n\nCurrent Plan:\ngo forward, pick up, turn right, pick up, turn right, go forward, turn left, go forward, pick up, turn right, go forward, pick up, turn right, go forward, turn left, go forward\n\nPLAN: No changes to the plan.\n\nACTION: go forward",
+        "pick up\n\nThis plan seems good, so I'll stick with it.\n\nACTION: turn left"
+    ],
+    "mission": "open the door",
+    "progression": 0.0,
+    "process_num": "ForkProcess-8",
+    "seed": 3202961322,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

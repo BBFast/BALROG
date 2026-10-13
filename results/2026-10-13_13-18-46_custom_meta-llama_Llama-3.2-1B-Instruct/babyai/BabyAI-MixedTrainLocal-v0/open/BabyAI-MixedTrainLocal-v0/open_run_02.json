@@ -1,0 +1,64 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "go forward": 45,
+        "pick up": 35,
+        "turn left": 24,
+        "turn right": 22,
+        "drop": 2
+    },
+    "input_tokens": 125060,
+    "output_tokens": 3139,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "go forward, turn left, pick up, go forward, drop",
+        "pick up\n\nCurrent Observation:\na wall 4 steps forward\na wall 2 steps left\n\nCurrent Plan:\ngo forward, turn left, pick up, go forward, turn right, drop\n\nThe current plan seems good. Next, I will take the next step. \n\nPLAN: go forward, drop\nACTION: turn left",
+        "go forward\n\nThe door is in sight, but I'll still need to pick it up or interact with it to progress further.",
+        "go forward, turn right",
+        "go forward\n\nThe current plan is:\npick up, turn right, drop, turn right, drop, turn right, drop\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step right\n\nPLAN: go forward, turn left, pick up, go forward, turn right, drop\n\nACTION: turn left",
+        "go forward\n\nCurrent Observation:\na wall 1 step forward",
+        "turn right\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step right\n\nThe current plan seems good.",
+        "turn left\n\nCurrent Observation:\na wall 5 steps forward\na wall 2 steps left\na locked yellow door 3 steps right and 5 steps forward\n\nThe current plan seems good, so we will proceed with it.",
+        "turn right\n\nCurrent Observation:\na wall 3 steps left\na locked yellow door 3 steps left and 3 steps forward\na yellow key 1 step left and 4 steps forward",
+        "turn right\n\nCurrent Observation:\na wall 1 step forward\na yellow key 1 step left\n\nI will continue with the current plan, as it seems to be the most logical course of action given the situation.",
+        "pick up\n\nCurrent Observation:\na wall 1 step right\na locked yellow door 1 step left and 3 steps forward\na yellow key 1 step forward",
+        "go forward\n\nAs we continue, the lock should now be open, allowing us to proceed with the goal.",
+        "pick up\n\nCurrent Observation:\nYou carry a yellow key\na wall 5 steps forward\na locked yellow door 3 steps right\n\nThe goal of the game is to open the locked yellow door. Following the current plan, the best next step is to pick up the yellow key.",
+        "pick up\n\nCurrent Observation:\nYou carry a yellow key\na wall 1 step forward\na wall 3 steps right\na locked yellow door 1 step right and 1 step forward",
+        null,
+        "go forward\n\nI made a change to the current plan by picking up the key to manipulate it.",
+        "drop\n\nThe current plan is still sufficient to reach the door.",
+        "go forward\n\nThis is a valid plan that reaches the door. The plan still adheres to the observation: carrying a yellow key, a wall 5 steps forward, and a wall 2 steps right.",
+        null,
+        null
+    ],
+    "mission": "open the door",
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 878863547,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

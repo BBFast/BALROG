@@ -1,0 +1,63 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "turn right": 16,
+        "turn left": 14,
+        "go forward": 26
+    },
+    "input_tokens": 61069,
+    "output_tokens": 1888,
+    "done": true,
+    "episode_return": 0.21250000000000002,
+    "num_steps": 56,
+    "failed_candidates": [
+        "go forward\n\nCurrent Observation:\na wall 6 steps forward\na wall 1 step right\n\nCurrent Plan:\ngo forward\n\nConsidering the observation, I will change the plan to go forward only and make another action once a step.\n\nPLAN: go forward\nACTION: turn right",
+        "turn right\n\nReviewing the plan, it seems to be looking at a straight path forward.\n\nHowever, I noticed that I haven't picked up or dropped anything yet. Let's make a move.\n\nPLAN: turn left, go forward\nACTION: turn left",
+        "turn left\n\nCurrent Observation:\na wall 1 step forward\na wall 2 steps right\n\nCurrent Plan:\ngo forward, turn left\nACTION: turn left\n\nNo changes to the plan.",
+        "turn right\n\nIt seems like we're still at the starting point. Let's make a slight adjustment to the plan.\n\nPLAN: go forward, turn left\nACTION: go forward",
+        "turn left\n\nSince we're facing a wall, I'll use the 'turn left' action.\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step left\n\nCurrent Plan:\nturn right, go forward\nACTION: turn right\n\nReviewing the plan, it seems to be looking at a straight path forward and turning right.\n\nPLAN: No changes to the plan\nACTION: turn left",
+        "go forward\n\nCurrent Observation:\na wall 4 steps forward\na wall 1 step left\n\nCurrent Plan:\ngo forward, turn right, turn right, turn left",
+        "pick up the green key",
+        "turn left\n\nAs we're now moving in a zigzag pattern, I'll take a closer look at the current situation.\n\nPLAN: go forward, turn left, turn left, turn right, turn left\nACTION: turn right\n\n Reviewing the plan, it seems to be looking at a zigzag pattern and making a right turn when the goal is reached.",
+        "pick up the green key\n\nReviewing the current plan, it seems that it is still looking at the goal and making a series of turns to get there. Since we have reached the goal, I'll update the plan.\n\nPLAN: No changes to the plan\nACTION: turn right\n\nCurrent Observation:\na green key 2 steps left and 3 steps forward\n\nReviewing the plan, it seems to be looking at the green key and making a right turn when the goal is reached.",
+        "turn left\n\nReviewing the plan, it seems to be looking at the wall and making a left turn when the goal is reached.",
+        "turn left\n\nReviewing the current plan, it seems to be correct. I'll continue with it.\n\nPLAN: turn left, go forward, turn left\nACTION: turn left\n\nThe current plan still looks good, so I'll continue with it.\n\nPLAN: turn left, go forward, turn left, turn right, turn left\nACTION: turn right\n\n Reviewing the current plan, it seems to be correct. I'll continue with it.\n\nPLAN: turn left, go forward, turn left, turn right, turn left\nACTION: turn right\n\nThe current plan is looking good. I'll keep it in mind.",
+        "pick up the green key\n\nSince the current plan was looking at the goal and making a right turn when the goal is reached, I will change it by turning right.\n\nPLAN: no changes to the plan\nACTION: turn left",
+        "turn right\n\nReviewing the current plan above, it looks correct.",
+        "turn right\n\nLet's review the current plan. It seems to be correct. We're making a right turn, then a left turn, then a forward move. The goal is still 3 steps right from the current position.\n\nPLAN: go forward, turn left, turn right, turn right\nACTION: turn left",
+        "turn left\n\nLet's review the current plan. It seems to be correct. We're making a right turn, then a left turn, then a forward move.",
+        "pick up the green key\n\nLet's analyze the current plan. We have a forward move, a left turn, then a right turn, and another forward move.\n\nPLAN: go forward, turn left, turn right\nACTION: turn right\n\n Reviewing the current plan, it seems to be correct. We're making a right turn, then a left turn, and then a right turn. The goal is still 3 steps right from the current position.\n\n PLAN: go forward, turn left, turn right\nACTION: turn right\n\nThe current plan is correct, and we should continue it.",
+        "pick up the green key",
+        "turn left\n\nReviewing the current plan, it looks good. We're making a right turn, then two more right turns, and then a left turn.",
+        "turn right\n\nReviewing the current plan, it looks good. It seems to be correct, and it should take us to the goal.",
+        "turn right\n\nReviewing the current plan, it seems to be correct. We're making a right turn, then a right turn, then two more right turns, and finally a left turn.",
+        "turn left\n\nReviewing the current plan, it looks good. The left turn should lead us to the wall."
+    ],
+    "mission": "go to the green key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-7",
+    "seed": 841221130,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

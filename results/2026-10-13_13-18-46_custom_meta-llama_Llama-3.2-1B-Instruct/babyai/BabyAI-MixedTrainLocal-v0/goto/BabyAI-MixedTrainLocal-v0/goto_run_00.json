@@ -1,0 +1,59 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 26,
+        "turn left": 17,
+        "turn right": 7,
+        "pick up": 11,
+        "drop": 2,
+        "toggle": 1
+    },
+    "input_tokens": 56912,
+    "output_tokens": 2069,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 64,
+    "failed_candidates": [
+        "Turn right\n\nI am currently facing a wall 4 steps forward. My plan is to move 4 steps to the right.",
+        null,
+        "pick up\n\nI am 2 steps to the right and 1 step forward, and I'm now standing on the wall 1 step forward.",
+        null,
+        "pick up\n\nI am 4 steps forward and 1 step to the left, and I have the yellow key 2 steps right and 2 steps forward. I now have the yellow key in front of me.",
+        "turn left\n\nI will turn left. I am currently standing on the wall 3 steps forward, and I'm 1 step to the left.",
+        "turn left\n\nI am 5 steps forward and 1 step to the right, and I have the yellow key 2 steps left. I will now turn left.",
+        null,
+        "turn right\n\nI am 4 steps forward and 2 steps to the right. I will turn right.",
+        "go forward\n\nI will proceed with the current plan, continuing to move forward. I am 1 step forward and 2 steps to the right.",
+        null,
+        null,
+        "turn right\n\nI will proceed with the current plan, but I will alternate between turning right and left from now on to avoid repetition.\n\nThe current position is: 1 step forward, 2 steps right\n\nObservation:\na wall 3 steps right",
+        "pick up\n\nAs for making changes to the current plan, I notice that there are two parts to the plan that are unnecessary and could be combined for efficiency. Here is a revised plan that removes the extra turn:\n\nPLAN: turn right, go forward, turn left, go forward, go forward, go forward, go forward, turn right\n\n ACTION: turn left"
+    ],
+    "mission": "go to the yellow key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 3610461505,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

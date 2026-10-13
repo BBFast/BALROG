@@ -1,0 +1,55 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn right": 18,
+        "go forward": 25,
+        "turn left": 16,
+        "pick up": 4
+    },
+    "input_tokens": 57632,
+    "output_tokens": 2997,
+    "done": true,
+    "episode_return": 0.55703125,
+    "num_steps": 63,
+    "failed_candidates": [
+        "turn left\n\nMy current observation is a wall 1 step forward and a wall 2 steps right. This means I still need to move towards the wall 2 steps right to pick up the key.",
+        "turn right\n\nMy current observation is a wall 2 steps forward and a wall 1 step left. I'm still facing the grey box.",
+        "turn right\n\nMy current observation is a wall 6 steps forward and a wall 1 step right. This means I need to move towards the grey box, which is now directly in front of me.",
+        "turn right\n\nAs per your observation, I have a wall 1 step forward and a wall 1 step left. I need to move towards the grey box, which is now directly in front of me. To do that, I need to turn right.",
+        "turn right\n\nObservation:\na wall 5 steps forward\na wall 1 step left\n\nSince the current plan is good, I will stick to it.",
+        "pick up the grey box",
+        "turn left\n\nSince turning left might interfere with our current movement, I will instead go forward and pick up the key.",
+        "pick up the grey box",
+        "pick up the grey box",
+        "pick up the green key",
+        "go forward\n\nThe current plan appears to be correct. However, I see a potential issue with the plan. Since the goal is to go to the grey box, the current plan is currently going backwards. The plan should go forward instead of going backwards. Therefore, I recommend making a change to the plan.\n\nPLAN: go forward, turn right, turn right, turn right, go forward, pick up, turn left, go forward, pick up, turn left, go forward, pick up, turn left, drop, turn left\nACTION: go forward",
+        "go forward\n\nUpon reviewing the current plan, I think it looks good. I'll make the changes and provide the next action.\n\nPLAN: turn right, go forward, pick up, turn left, go forward, pick up, drop, turn left, go forward, pick up, turn left, drop, turn left, pick up, drop, turn left, go forward, pick up, turn left, go forward, pick up\nACTION: go forward"
+    ],
+    "mission": "go to the grey box after you pick up the green key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-5",
+    "seed": 1692265626,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

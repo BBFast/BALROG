@@ -1,0 +1,56 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pickup",
+    "action_frequency": {
+        "go forward": 17,
+        "turn left": 8,
+        "turn right": 3,
+        "pick up": 5
+    },
+    "input_tokens": 30323,
+    "output_tokens": 1127,
+    "done": true,
+    "episode_return": 0.5359375,
+    "num_steps": 33,
+    "failed_candidates": [
+        null,
+        "turn left\n\nThe plan remains the same because turning left doesn't move us forward or backward. We're still facing the wall 2 steps to the right.",
+        "pick up\n\nWe've successfully picked up the yellow key. Let's continue.",
+        "pick up\n\nThe current plan seems good. With this action, we're now in position to take another step forward.",
+        "go forward\n\nWe've successfully picked up the yellow key. Now, we're 2 steps to the right of the wall. Our current plan looks good. Let's continue.",
+        "go forward\n\nWe need to move the yellow key 1 step right to account for the current position.",
+        "go forward\n\nIt seems our current plan is actually good, so we'll stick with it.",
+        null,
+        "pick up\n\nSince we've picked up the yellow key, our current plan is already good. There's no need to make any changes to it.",
+        "turn left\n\nThe current plan looks good, and turning left will help us get into position to pick up the yellow key.",
+        "turn left\n\nWe've decided to turn left. The current plan is: go forward, pick up, go forward, turn left, pick up.",
+        "turn left\n\nThe current plan is correct and safe. We're getting into position to pick up the yellow key.",
+        "go forward\n\nWe've been on the ground for some time, and it's time to get closer to the yellow key. The current plan is safe and looks good."
+    ],
+    "mission": "pick up the yellow key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-4",
+    "seed": 4243539122,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

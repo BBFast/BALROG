@@ -1,0 +1,70 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pickup",
+    "action_frequency": {
+        "turn right": 6,
+        "pick up": 14,
+        "go forward": 31,
+        "turn left": 9,
+        "drop": 4
+    },
+    "input_tokens": 63666,
+    "output_tokens": 2820,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 64,
+    "failed_candidates": [
+        "pick up\n\nThe current plan is working fine, and it's getting us closer to the purple key. However, let's check the wall ahead. It's 3 steps forward and 2 steps left, so we should first head towards the wall. Let's update the plan accordingly.\n\nPLAN: turn left, go forward, turn right\nACTION: pick up",
+        "go forward\n\nLet's update the plan based on the observation. Since we're currently 2 steps forward, we should head towards the wall. We need to turn right first.\n\nPLAN: turn left, go forward, turn right, go forward, turn left, pick up, drop",
+        "pick up\n\nWe're still one step forward and two steps left. The plan looks good, and we can continue with it.",
+        "pick up\n\nWe're currently standing near the wall, and we've picked up the purple key. The wall is still in front of us, so we should head towards it.\n\nACTION: turn left",
+        "pick up\n\nWe're still going forward, and we've picked up the purple key. Our current plan looks good, so we can stick with it.",
+        null,
+        "pick up\n\nOur current plan was \"go forward, turn left, pick up, drop\". Since we've already picked up the purple key, we don't need to pick it up anymore. The action of dropping the key is also no longer necessary. The updated plan is:\n\nPLAN: go forward, turn left",
+        null,
+        "turn right\n\nWe're currently facing a wall in front of us. Let's check our plan:\n\nPLAN: turn left, go forward, turn right, go forward, turn left, pick up, drop\n\nOur current plan looks good, and we can continue with it.",
+        "drop\n\nLet's stick with the plan.",
+        null,
+        "pick up\n\nCurrent Observation:\na wall 3 steps left\n\nOur current plan is looking good.",
+        "pick up\n\nThe current plan looks good.",
+        "pick up\n\nWe're standing in front of the object. Let's pick it up.",
+        "pick up\n\nPLAN: pick up",
+        "pick up\n\nWe've reached the wall. Now it's time to pick it up.",
+        "pick up\n\nWe can continue the current plan.",
+        "pick up\n\nWe have found the purple key.",
+        "pick up\n\nOur current plan seems solid. Let's proceed with the plan.",
+        "turn left\n\nOur current plan is as it is, so no changes are needed.",
+        null,
+        "turn right\n\nAfter reviewing the plan, I decided to make a change to the plan. \n\nPLAN: pick up, turn left, pick up, turn left, pick up, turn left, go forward, drop\nACTION: turn right",
+        null,
+        "go forward\n\nOur current plan seems solid.",
+        "pick up\n\nOur current plan is checking all objects. I think it's time to find the purple key.",
+        "go forward\n\nOur plan is considering dropping the purple key if we get it."
+    ],
+    "mission": "pick up the purple key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 1001284320,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "go forward": 34,
+        "turn right": 14,
+        "drop": 1,
+        "turn left": 9,
+        "pick up": 10
+    },
+    "input_tokens": 71111,
+    "output_tokens": 2396,
+    "done": true,
+    "episode_return": 0.521875,
+    "num_steps": 68,
+    "failed_candidates": [
+        "turn right to avoid the wall 1 step left, as it is in the way to move towards the grey box.\n\nPLAN: turn right, pick up, go forward, pick up\nACTION: turn right",
+        "go right",
+        "go left",
+        "turn left\n\nUpon reviewing the current plan, I notice that I'm not following the correct sequence. The current plan seems to be an overly complicated series of actions, which may not lead to the desired outcome.\n\nPLAN: turn left, go left, drop, pick up, go forward, pick up, drop, go forward, pick up\nACTION: go left",
+        "turn right\n\nSince the current observation says I have 3 steps left and I am standing on the second wall, the correct action is to move 1 step to the left, which is 1 step left.\n\nPLAN: turn right, pick up, go forward, turn right, pick up, turn left\nACTION: turn left",
+        "go left",
+        "turn left\n\nThe current plan seems to be correct, so I'll proceed with the next step.\n\nCurrent Observation:\nYou carry a purple key\na wall 1 step forward\na wall 3 steps left\n\nThe plan is to turn left, then pick up, then go forward, and then turn left again. Since the current plan is good, I'll proceed with the next step.\n\nPLAN: turn left, pick up, go forward, turn left, pick up\nACTION: pick up",
+        "go left",
+        "go forward\n\nCurrent Observation:\nYou carry a purple key\na wall 1 step forward\na wall 3 steps left\n\nThe current plan seems to be correct, so I'll proceed with the next step.\n\nPLAN: pick up, go forward, turn left, pick up, go forward\nACTION: go forward",
+        "pick up\n\nCurrent Observation:\nYou carry a purple key\na wall 1 step forward\na wall 3 steps left\n\nIt seems I need to continue the plan, so I'll pick up the purple key and proceed.",
+        "go forward\n\n Current Observation:\nYou carry a purple key\na wall 1 step forward\na wall 3 steps left\n\nThe current plan appears to be correct, so I'll proceed with the next step.\n\nPLAN: go forward, pick up, go forward, turn left, pick up, turn left\nACTION: go forward\n\nThe plan is good, so I'll proceed with the next step.",
+        "go forward\n\nThe current plan appears to be well-structured and covers all necessary steps. I'll stick with it.",
+        "pick up\n\nI'll remove the turning turns and proceed with the updated plan.",
+        null,
+        null,
+        "turn left\n\nCurrent Observation:\nYou carry a purple key\na wall 1 step forward\na wall 2 steps right\n\nThe current plan remains well-structured and covers all necessary steps, so I'll stick with it.",
+        "go forward\n\nUpon reviewing the plan, I realize that the current plan is good and doesn't require any significant changes. Therefore, I will stick with it and continue with it.",
+        "pick up\n\nThe current plan remains well-structured and covers all necessary steps. I'll continue with it.",
+        "go forward\n\nThe current plan appears to be well-structured and covers all necessary steps. I'll stick with it and proceed with the next step."
+    ],
+    "mission": "go to the grey box after you pick up the purple key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-6",
+    "seed": 3400030259,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

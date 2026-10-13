@@ -1,0 +1,50 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 6,
+        "turn right": 7,
+        "toggle": 4,
+        "turn left": 4,
+        "drop": 3,
+        "pick up": 2
+    },
+    "input_tokens": 21040,
+    "output_tokens": 751,
+    "done": true,
+    "episode_return": 0.6343749999999999,
+    "num_steps": 26,
+    "failed_candidates": [
+        "toggle (front object)",
+        "toggle (left object)",
+        "turn left\n\nLet's analyze the current plan. We're trying to go forward but first we need to pick up the object, which is the purple box. Our current plan doesn't have a step that explicitly states we need to pick up the object. To fix this, we should add a step to pick up the object before proceeding. Here's the updated plan:\n\nPLAN: go forward, pick up, turn right, go forward\nACTION: turn left",
+        "turn right\n\nCurrent Observation:\na wall 3 steps forward\na wall 1 step right\na purple box 1 step left and 2 steps forward\n\nCurrent Plan:\ngo forward, pick up, turn left, turn left\n\nThe current plan seems to be incorrect. There are two right turns that need to be made to go forward, but since we can't turn right twice in one step, we need to revisit our plan.\n\nPLAN: go forward, pick up\nACTION: turn left",
+        "pick up\n\nThe current plan seems good, so we will stick to it. Now that we have the object in front of us (the purple box), our goal is to move forward and pick it up."
+    ],
+    "mission": "go to the purple box",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 1249173586,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
