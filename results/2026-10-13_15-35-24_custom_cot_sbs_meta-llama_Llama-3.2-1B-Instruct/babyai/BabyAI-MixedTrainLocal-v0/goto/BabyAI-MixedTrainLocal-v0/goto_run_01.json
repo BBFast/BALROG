@@ -1,0 +1,56 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 15,
+        "pick up": 3,
+        "turn left": 7,
+        "turn right": 3
+    },
+    "input_tokens": 23666,
+    "output_tokens": 687,
+    "done": true,
+    "episode_return": 0.60625,
+    "num_steps": 28,
+    "failed_candidates": [
+        "turn left\n\nI have added a wall to the current situation. Now I need to choose which wall to interact with.",
+        "drop the wall",
+        "drop the wall",
+        "turn left\n\nI have moved 1 step forward and changed the orientation of the wall, so now I need to choose a new action to move in this new direction.",
+        "toggle the wall",
+        "toggle the wall",
+        null,
+        "toggle the wall",
+        "pick up, go forward, drop the wall, toggle the wall, toggle the wall, turn left",
+        "toggle the wall",
+        "toggle the wall",
+        "turn right\n\nCurrent Plan:\nturn right\n\nNext, I will pick up the wall 3 steps left, since that's the action that should be next given the wall's current position.",
+        "pick up the wall"
+    ],
+    "mission": "go to the green key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 2458997119,
+    "agent": {
+        "type": "custom_cot_sbs",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

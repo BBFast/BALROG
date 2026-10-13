@@ -1,0 +1,156 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,"turn left
+
+I have added a wall to the current situation. Now I need to choose which wall to interact with.",drop the wall,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a green key 2 steps right",0,False
+1,pick up,"drop the wall, go forward","a wall 2 steps forward
+a green key 2 steps right",0,False
+2,drop the wall,No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right",0,False
+3,drop the wall,"No changes to the plan.
+
+As per the current plan, I will choose to drop the wall.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right",0,False
+4,pick up,No changes to the plan.,"a wall 1 step forward
+a wall 3 steps right",0,False
+5,"turn left
+
+I have moved 1 step forward and changed the orientation of the wall, so now I need to choose a new action to move in this new direction.",No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right",0,False
+6,toggle the wall,No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right",0,False
+7,pick up,No changes to the plan.,"a wall 1 step forward
+a wall 3 steps right",0,False
+8,toggle the wall,"go forward, turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right",0,False
+9,,"go forward, turn right
+
+Turn right
+
+I have turned 90 degrees to the right and moved 1 step forward, so now I am facing a new direction. Next, I need to interact with something in front of me, as this object has been stationary since the turn.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right",0,False
+10,turn left,turn left,"a wall 4 steps forward
+a wall 1 step right",0,False
+11,toggle the wall,No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 1 step right",0,False
+12,turn left,turn left,"a wall 6 steps forward
+a wall 3 steps right
+a green key 3 steps left and 1 step forward",0,False
+13,"pick up, go forward, drop the wall, toggle the wall, toggle the wall, turn left","turn left, go forward, pick up, drop the wall, pick up, drop the wall, toggle the wall, turn left
+
+I have made a change to the plan. I want to go forward instead of picking up the object, and I want to toggle the wall after picking up the object.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 3 steps right
+a green key 3 steps left",0,False
+14,go forward,"toggle the wall, turn left","a wall 4 steps forward
+a wall 3 steps right",0,False
+15,toggle the wall,"turn left, go forward","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 3 steps right",0,False
+16,turn left,"turn left, go forward","a wall 4 steps forward
+a wall 3 steps right
+a green key 2 steps left and 3 steps forward",0,False
+17,go forward,"turn left, go forward","a wall 3 steps forward
+a wall 3 steps right
+a green key 2 steps left and 2 steps forward",0,False
+18,turn left,"turn left, go forward","a wall 4 steps forward
+a wall 3 steps right
+a green key 2 steps right and 2 steps forward",0,False
+19,toggle the wall,"turn left, go forward","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 3 steps right
+a green key 2 steps right and 1 step forward",0,False
+20,turn right,"turn left, go forward","a wall 3 steps forward
+a wall 3 steps left
+a green key 1 step left and 2 steps forward",0,False
+21,turn left,"turn right, go forward","a wall 3 steps forward
+a wall 3 steps right
+a green key 2 steps right and 1 step forward",0,False
+22,turn right,go forward,"a wall 3 steps forward
+a wall 3 steps left
+a green key 1 step left and 2 steps forward",0,False
+23,turn left,no changes to the plan.,"a wall 3 steps forward
+a wall 3 steps right
+a green key 2 steps right and 1 step forward",0,False
+24,turn right,turn right,"a wall 3 steps forward
+a wall 3 steps left
+a green key 1 step left and 2 steps forward",0,False
+25,"turn right
+
+Current Plan:
+turn right
+
+Next, I will pick up the wall 3 steps left, since that's the action that should be next given the wall's current position.",turn right,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps left
+a green key 1 step left and 1 step forward",0,False
+26,pick up the wall,"turn right, pick up the wall 3 steps left","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a green key 1 step left",0,False
+27,turn left,"No changes to the plan.
+
+Now that we have our plan, let's proceed with it. Our plan is:
+turn right, pick up the wall 3 steps left, pick up the wall 1 step forward, turn left
+
+Since we already picked up the wall 1 step forward, our next step should be to turn left. So, the next action is:","a wall 1 step right
+a green key 1 step forward",0.60625,True
