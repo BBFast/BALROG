@@ -59,7 +59,7 @@ class AgentFactory:
             return RobustNaiveAgent(client_factory, prompt_builder)
         elif self.config.agent.type == "robust_cot":
             return RobustCoTAgent(client_factory, prompt_builder, config=self.config)
-        elif self.config.agent.type == "custom_cot":
+        elif self.config.agent.type == "custom_cot_prevact":
             return CotPrevActAgent(client_factory, prompt_builder)
         elif self.config.agent.type == "custom_cot_sbs":
             return StepByStepAgent(client_factory, prompt_builder)
