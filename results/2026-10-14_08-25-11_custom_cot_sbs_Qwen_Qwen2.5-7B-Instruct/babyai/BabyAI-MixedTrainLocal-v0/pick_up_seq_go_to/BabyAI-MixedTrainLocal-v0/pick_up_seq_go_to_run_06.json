@@ -1,0 +1,42 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "go forward": 112,
+        "turn left": 16
+    },
+    "input_tokens": 106392,
+    "output_tokens": 3002,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "turn left\n\nLet me explain the reasoning:\n\nThe current plan is to move forward until you reach the locked purple door. However, upon reviewing the observations, you are currently 6 steps forward from a wall, which means you are already facing a wall and not moving towards the locked purple door. Therefore, the first action should be to turn left to face a direction where you can move forward towards the red boxes, as picking up a red box is the immediate task after turning around."
+    ],
+    "mission": "pick up a red box, then go to a red box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 218635893,
+    "agent": {
+        "type": "custom_cot_sbs",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

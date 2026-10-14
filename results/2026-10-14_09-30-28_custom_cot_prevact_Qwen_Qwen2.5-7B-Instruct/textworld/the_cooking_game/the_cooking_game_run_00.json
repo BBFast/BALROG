@@ -1,0 +1,51 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nThe goal is to find the recipe, prepare and eat a meal. The current observation indicates the presence of a block of cheese and a raw white tuna on a showcase. Since we haven't found the recipe yet, we'll take the block of cheese as a potential ingredient. We'll need to examine the cookbook later to see if this ingredient matches the recipe. Moving south to the closed sliding door might also be worth checking, but we should prioritize taking the cheese first since it's visible and could potentially be an ingredient.": 1,
+        "examine raw white tuna\n\nBy examining the raw white tuna, we can gather more information about it and determine if it could be a useful ingredient for the recipe. This step is crucial to understand what other ingredients we might need.": 1,
+        "examine closed sliding door\n\nBy examining the closed sliding door, we can determine if there is a way to proceed south or if there are any additional clues or objects near the door that might be useful.": 1,
+        "go south": 21,
+        "open sliding door": 18,
+        "go north": 8,
+        "examine raw white tuna": 1,
+        "take raw white tuna from showcase": 1,
+        "take showcase": 4,
+        "examine showcase": 7,
+        "take items from showcase": 2,
+        "open showcase": 1,
+        "go east": 2,
+        "take item from showcase": 12
+    },
+    "input_tokens": 132706,
+    "output_tokens": 1610,
+    "done": true,
+    "episode_return": 145.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-3",
+    "seed": 2827049528,
+    "agent": {
+        "type": "custom_cot_prevact",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

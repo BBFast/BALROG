@@ -1,0 +1,71 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Noop": 3,
+        "Move East": 4,
+        "Do": 111,
+        "Move South": 7,
+        "Move West": 2
+    },
+    "input_tokens": 205714,
+    "output_tokens": 1814,
+    "done": true,
+    "episode_return": 1.1000000000000003,
+    "num_steps": 127,
+    "failed_candidates": [
+        "Move East\n\nGiven the current observation, there is no key on the floor. The nearest tree is 4 steps to the east, which typically contains resources like wood or saplings. Since the goal is to collect wood and the first step in that process is usually to cut down a tree, moving east towards the tree seems like the logical first action.",
+        "Do\n\nGiven the current observation, there is no key on the floor. The nearest tree is 3 steps to the east. The objective is to collect wood and eventually craft tools. Since we don't have any resources yet, we need to proceed to the tree and cut it down to collect wood.\n\nThe previous action was \"Move East,\" which brought us closer to the tree. We now need to approach the tree and use the \"Do\" action to cut it down and collect the wood.\n\nACTION: Move East",
+        "Do\n\nGiven the current observation, we are now facing the tree that is 3 steps to the east. The \"Do\" action will allow us to cut down the tree and collect the wood. This aligns with our objective of collecting wood.\n\nAfter cutting down the tree, we will have wood in our inventory, which will allow us to craft tools in the future."
+    ],
+    "score": 2.0,
+    "progression": 0.09090909090909091,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 10,
+        "collect_stone": 0,
+        "collect_wood": 5,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 0,
+        "eat_cow": 0,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 0,
+        "make_wood_sword": 0,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 0,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-7",
+    "seed": 2780840191,
+    "agent": {
+        "type": "custom_cot_prevact",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

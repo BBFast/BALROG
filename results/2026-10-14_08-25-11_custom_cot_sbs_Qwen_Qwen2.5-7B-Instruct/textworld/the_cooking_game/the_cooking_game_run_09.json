@@ -1,0 +1,46 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine showcase\n\nIt seems that examining the showcase might give us more information about the items inside, which could be useful later. However, since the initial plan was to take the passkey and unlock the hatch in the dish-pit, we should follow that plan.\n\nACTION: take cheese from showcase\n\nAfter taking the cheese, we should check if the passkey is available and proceed to unlock the hatch.\n\nACTION: take passkey from floor\n\nNow that we have both the passkey and the cheese, we can proceed to unlock the hatch.\n\nACTION: unlock hatch with passkey\n\nOnce the hatch is unlocked, we can enter the dish-pit to find the closed sliding door leading south. Now we can proceed to open the door.\n\nACTION: go south": 1,
+        "take passkey from floor": 4,
+        "examine floor": 8,
+        "take passkey from showcase": 42,
+        "examine showcase": 18,
+        "take block of cheese from showcase": 1,
+        "take raw white tuna from showcase": 1,
+        "examine passkey": 4,
+        "open hatch with passkey": 1
+    },
+    "input_tokens": 111236,
+    "output_tokens": 1679,
+    "done": true,
+    "episode_return": 119.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-1",
+    "seed": 1692909069,
+    "agent": {
+        "type": "custom_cot_sbs",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

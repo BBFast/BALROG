@@ -1,0 +1,51 @@
+{
+    "average_progress": 2.3891231317701904,
+    "standard_error": 0.9208213415648911,
+    "environments": {
+        "babyai": {
+            "progression_percentage": 6.0,
+            "standard_error": 3.3585711247493344,
+            "episodes_played": 50
+        },
+        "babaisai": {
+            "progression_percentage": 0.8333333333333334,
+            "standard_error": 0.8298538470160922,
+            "episodes_played": 120
+        },
+        "textworld": {
+            "progression_percentage": 0.9049773755656108,
+            "standard_error": 0.524994887887169,
+            "episodes_played": 26
+        },
+        "crafter": {
+            "progression_percentage": 1.8181818181818181,
+            "standard_error": 1.1499191491521379,
+            "episodes_played": 10
+        }
+    },
+    "total_input_tokens": 61411328,
+    "total_output_tokens": 276603,
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "base_url": "http://localhost:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    },
+    "agent": {
+        "type": "custom_cot_prevact",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    }
+}

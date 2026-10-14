@@ -1,0 +1,53 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nThe plan remains the same as we need to find ingredients and the key. Taking the block of cheese is a logical first step to start collecting ingredients for the recipe.": 1,
+        "go south": 14,
+        "look": 4,
+        "examine closed sliding door": 4,
+        "go north": 6,
+        "go to showcase": 4,
+        "examine showcase": 2,
+        "go to door south of showcase": 14,
+        "go to fridge": 1,
+        "go to freezer": 4,
+        "go east": 1,
+        "go west": 1,
+        "go to door north of showcase": 8,
+        "go to door east of showcase": 10,
+        "examine freezer": 1,
+        "go to door west of showcase": 5
+    },
+    "input_tokens": 117388,
+    "output_tokens": 1863,
+    "done": true,
+    "episode_return": 80.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.058823529411764705,
+    "process_num": "ForkProcess-4",
+    "seed": 154225754,
+    "agent": {
+        "type": "custom_cot_4step",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

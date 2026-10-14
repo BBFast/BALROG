@@ -1,0 +1,49 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nThe plan was to search the laundromat and check the passageway for useful items. Since we are currently in the supermarket and there is no indication of a laundromat or passageway nearby, we should focus on the available items here. Taking the block of cheese is the first step in gathering ingredients for our meal.": 1,
+        "go south\n\nSince the current plan involves checking the laundromat and the passageway for useful items, and we are currently in the supermarket with a closed sliding door leading south, going south seems like the logical next step to potentially enter the laundromat or find another room connected to the showcase.": 1,
+        "open sliding door\n\nSince the sliding door is closed and leading south, we should open it to potentially access the laundromat or another area. This action aligns with our plan to search the laundromat and check the passageway.": 1,
+        "examine sliding door\n\nThis action will help us determine if there is any additional information about the sliding door that might be useful.": 1,
+        "go south": 28,
+        "examine sliding door": 1,
+        "open sliding door": 1,
+        "go north": 25,
+        "go east": 1,
+        "go west": 1,
+        "take raw white tuna from showcase": 1,
+        "examine showcase": 18
+    },
+    "input_tokens": 143588,
+    "output_tokens": 1378,
+    "done": true,
+    "episode_return": 146.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-2",
+    "seed": 3750185383,
+    "agent": {
+        "type": "custom_cot_sbs",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
