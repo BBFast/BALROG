@@ -25,41 +25,49 @@ class ReactBaby(BaseAgent):
         self.prompt_builder.update_observation(obs)
 
         react_instructions = """
-To solve the task use the steps: Observation, Thought, and Action.
-A Thought reasons about the current situation:  Devide your problem in many small steps to achieve the goal, keeping track of your progress and how to solve unexpected observations.
+To solve the task use the steps:  Thought, Observation, and Action.
+A Thought reasons about the current situation:  Reflect how the current observation, your mission appears it? Plan of how to reach your mission and the actions to help you. Devide your problem in many small steps to achieve the mission.
 The Observation is the state of your enviroment and that should be important when formulating your thoughts.
+A Action is a unique term from the allowed actions of the game.
+
+Rules of the world:
+- All positions are relative to you. "X steps left" or "X steps right" means you must first turn that way, then go forward. Only "forward" moves you.
+- You can only interact with an object that is exactly "1 step forward", with no left or right part. "pick up" and "toggle" do nothing in any other position.
+- If a wall or any object is "1 step forward", you cannot "go forward". Turn left or right instead.
+- Before each action, check whether it brings the target closer. Don't repeat an action that didn't change the observation.
+- Only talk about objects that appear in the current observation. Never invent objects.
+
+Missions:
+- "go to the <object>": you succeed when the object is "1 step forward". Then you are done.
+- "open the <color> door": go to the door until it is "1 step forward", then use "toggle".
+  - A closed door opens with "toggle".
+  - A locked door needs the key of the SAME color:
+    1. Move until "a <color> key 1 step forward".
+    2. "pick up". The observation will then show "You carry a <color> key".
+    3. Move until "a locked <color> door 1 step forward".
+    4. "toggle". The door becomes "open".
 
 Here is an example for the mission "go to the red ball":
-
-Observation: a wall 4 steps forward, a red ball 1 step left and 2 steps forward
-Thought: The read bol is my goal because it is my mission. I need to get to my goal. My goal is 2 steps forward and one to the left. To reach my goal I should use eather go forward or left.
-Action: go forward
-Observation: a wall 3 steps forward, a red ball 1 step left and 1 step forward
-Thought: I used one action as I should. The read bol is my goal because it is my mission. I need to get to my goal. My goal is 1 steps forward and 1 to the left. To reach my goal I should use eather go forward or left.
-Action: go forward
-Observation: a wall 2 steps forward, a red ball 1 step left
-Thought: I used one action as I should. The read bol is my goal because it is my mission. I need to get to my goal. My goal is 1 to the left. To reach my goal I should use left.
-Action: turn left
-Observation: a red ball 1 step forward
-Thought: The red ball is right in front of me, so I have reached it.
-
-Here is an example for navigation:
-Thought: There is a wall forward and on my right, therefore I can not go foward or to the right. To move I should turn left.
-Observation: a wall 1 step forward; a wall 1 step right
-Action: turn left
-
-Action Control:
-Thought: There is a wall forward and on my left, therefore I can not go foward or to the left. To move I should turn right.
-Observation: a wall 1 step forward; a wall 1 step left
-Action: go forward, turn right
-Thought: My last action had two components go forward and turn left. I should use only one action. To move I should turn right
+Thought: There is a wall forward and on my left, therefore I can not go foward or to the left and I should act turn right.
 Observation: a wall 1 step forward; a wall 1 step left
 Action: turn right
+Thought: The read bol is my mission. My mission is 2 steps forward and one to the left. To reach my mission I should act: go forward or left.
+Observation: a wall 4 steps forward, a red ball 1 step left and 2 steps forward
+Action: go forward
+Thought: the wall is closer to me, 4-3=1, that confirms that I moved foward. I should evaluate again how to get to my mission. The red ball is 1 steps forward and 1 to the left and to reach it I should act: go forward or left.
+Observation: a wall 3 steps forward, a red ball 1 step left and 1 step forward
+Action: go forward
+Thought: the wall is closer to me, 3-2=1, that confirms that I moved foward. I should investigate how to get to the red ball. My mission is on the left, therefore I will act turn left.
+Observation: a wall 2 steps forward, a red ball 1 step left
+Action: turn left
+Thought: The red ball is right in front of me, so I have reached it.
+Observation: a red ball 1 step forward
 
-Answer in the following format:
+
+Answer in the following format and follow the format rigorously:
 Thought: <your reasoning>
-Action: <choose your ONE SINGLE action>
-        """.strip()
+Action: <Output exactly ONE action from the action list. "turn left" or "turn right" or "go forward" or "pick up" or "drop" or "toggle".>
+""".strip()
 
         messages = self.prompt_builder.get_prompt()
         if messages and messages[-1].role == "user":
@@ -69,10 +77,10 @@ Action: <choose your ONE SINGLE action>
 
         thought, action = self._extract_thought_and_action(response.completion)
 
-        # Keep the thought in the trajectory so the context interleaves thoughts, actions and observations
+        # add the thought
         self.prompt_builder.update_reasoning(f"Thought: {thought}\nAction: {action}")
 
-        # Save the thought in the response.reasoning field and the action in response.completion
+        # Save the thought 
         response = response._replace(reasoning=thought, completion=action)
         return response
 
