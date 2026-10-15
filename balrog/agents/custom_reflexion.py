@@ -35,6 +35,7 @@ Determine if the actions made progress towards the goal.
 Only use the information in the trajectory to provide feedback.
 The latest observation is the current state of the environment and therefore the most important one.
 Give feedback including the main failure or successfull steps and one suggestion for improvement.
+Focus on giving feedback on repetitive mistakes and invalid actions.
 Do not choose the next action. Keep it concise.
 Give 2-3 sentences of actionable feedback.
 Format your answer in the following way:
