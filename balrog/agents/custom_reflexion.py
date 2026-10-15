@@ -31,8 +31,8 @@ class CustomReflexionAgent(BaseAgent):
 
         feedback_instructions = """
 Review the trajectory above, which includes actions and observations.
-Provide feedback on this trajectory, identifying what worked, what failed, and any suggestions for improvement.
-Give 2-3 sentences of feedback. Be specific.
+Provide feedback on this trajectory, identifying the progress made and any issues encountered. Treat the latest observation as the current state.
+Give 2-3 sentences of feedback. Keep it concise. Do not choose the next action or plan. Only provide feedback.
 Format your answer in the following way:
 FEEDBACK: <your feedback on the trajectory>
         """.strip()
@@ -50,8 +50,8 @@ FEEDBACK: <your feedback on the trajectory>
         feedback_text = f"Feedback on trajectory:\n{self.feedback}\n" if self.feedback else "No previous feedback available.\n"
 
         planning_instructions = """
-Review the current plan and feedback on the trajectory above. Decide whether to continue with the current plan or make changes.
-If the feedback identifies issues, change the plan accordingly.
+Review the current observation, the feedback and the current plan.
+If the feedback identifies issues, change the plan accordingly. If the feedback identifies repetitions, change the plan accordingly.
 If you make changes, provide the updated plan. Then, provide the next action to take.
 You must output an action at every step.
 Format your answer in the following way:
