@@ -44,8 +44,7 @@ FEEDBACK: <your feedback on the trajectory>
 
         if trajectory and trajectory[-1].role == "user":
             trajectory[-1].content += "\n\n" +  feedback_instructions
-
-        print("Trajectory: ", trajectory)
+        
         feedback_response = self.client.generate(trajectory)
         self.feedback = feedback_response.completion
 
