@@ -30,17 +30,21 @@ class CustomReflexionAgent(BaseAgent):
         trajectory = self.prompt_builder.get_prompt()
 
         feedback_instructions = """
-Review the trajectory above, which includes actions and observations.
-Provide feedback on this trajectory, identifying what worked, what failed, and any suggestions for improvement.
-Give 2-3 sentences of feedback. Be specific.
+Review the task goal, recent action and their observations.
+Determine if the actions made progress towards the goal.
+Only use the information in the trajectory to provide feedback.
+The latest observation is the current state of the environment and therefore the most important one.
+Give feedback including the main failure or successfull steps and one suggestion for improvement.
+Focus on giving feedback on repetitive mistakes and invalid actions.
+Do not choose the next action. Keep it concise.
+Give 2-3 sentences of actionable feedback.
 Format your answer in the following way:
 FEEDBACK: <your feedback on the trajectory>
         """.strip()
 
         if trajectory and trajectory[-1].role == "user":
             trajectory[-1].content += "\n\n" +  feedback_instructions
-
-        print("Trajectory: ", trajectory)
+        
         feedback_response = self.client.generate(trajectory)
         self.feedback = feedback_response.completion
 
@@ -50,8 +54,8 @@ FEEDBACK: <your feedback on the trajectory>
         feedback_text = f"Feedback on trajectory:\n{self.feedback}\n" if self.feedback else "No previous feedback available.\n"
 
         planning_instructions = """
-Review the current plan and feedback on the trajectory above. Decide whether to continue with the current plan or make changes.
-If the feedback identifies issues, change the plan accordingly.
+Choose the next action that lines up with the task goal, the current observation, the current plan and the feedback provided.
+Update the current plan if necessary, based on the feedback and the current observation.
 If you make changes, provide the updated plan. Then, provide the next action to take.
 You must output an action at every step.
 Format your answer in the following way:
