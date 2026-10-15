@@ -51,7 +51,8 @@ FEEDBACK: <your feedback on the trajectory>
 
         planning_instructions = """
 Review the current observation, the feedback and the current plan.
-If the feedback identifies issues, change the plan accordingly. If the feedback identifies repetitions, change the plan accordingly.
+Change the plan according to the feedback. 
+RULE: If the feedback or trajectory identifies repetitiveness, change your next action to avoid repetition.
 If you make changes, provide the updated plan. Then, provide the next action to take.
 You must output an action at every step.
 Format your answer in the following way:
