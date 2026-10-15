@@ -30,9 +30,13 @@ class CustomReflexionAgent(BaseAgent):
         trajectory = self.prompt_builder.get_prompt()
 
         feedback_instructions = """
-Review the trajectory above, which includes actions and observations.
-Provide feedback on this trajectory, identifying the progress made and any issues encountered. Treat the latest observation as the current state.
-Give 2-3 sentences of feedback. Keep it concise. Do not choose the next action or plan. Only provide feedback.
+Review the task goal, recent action and their observations.
+Determine if the actions made progress towards the goal.
+Only use the information in the trajectory to provide feedback.
+The latest observation is the current state of the environment and therefore the most important one.
+Give feedback including the main failure or successfull steps and one suggestion for improvement.
+Do not choose the next action. Keep it concise.
+Give 2-3 sentences of actionable feedback.
 Format your answer in the following way:
 FEEDBACK: <your feedback on the trajectory>
         """.strip()
@@ -50,8 +54,8 @@ FEEDBACK: <your feedback on the trajectory>
         feedback_text = f"Feedback on trajectory:\n{self.feedback}\n" if self.feedback else "No previous feedback available.\n"
 
         planning_instructions = """
-Review the current observation, the feedback and the current plan.
-Follow the feedback as close as possible. If the feedback suggests a change in the plan, update the plan accordingly.
+Choose the next action that lines up with the task goal, the current observation, the current plan and the feedback provided.
+Update the current plan if necessary, based on the feedback and the current observation.
 If you make changes, provide the updated plan. Then, provide the next action to take.
 You must output an action at every step.
 Format your answer in the following way:
