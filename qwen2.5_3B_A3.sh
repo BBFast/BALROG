@@ -126,7 +126,7 @@ python eval.py \
     client.client_name=vllm \
     client.model_id="$MODEL" \
     client.base_url=http://localhost:$PORT/v1 \
-    envs.names=babyai-babaisai-textworld-crafter 
+    envs.names=babyai-babaisai-textworld-crafter
 
 echo
 echo "========================================"
