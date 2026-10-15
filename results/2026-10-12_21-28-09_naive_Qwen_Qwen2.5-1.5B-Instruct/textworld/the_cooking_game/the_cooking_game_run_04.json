@@ -1,0 +1,55 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "go south": 13,
+        "open door": 1,
+        "look": 9,
+        "go east": 7,
+        "go west": 7,
+        "go north": 26,
+        "open front door": 2,
+        "open frostedglass door": 1,
+        "open frosted glass door": 2,
+        "examine stool": 2,
+        "take stool": 1,
+        "examine toilet": 2,
+        "take wrench": 2,
+        "open window": 1,
+        "Take stool": 1,
+        "Examine sink": 1,
+        "examine sink": 1,
+        "examine knife": 1
+    },
+    "input_tokens": 136093,
+    "output_tokens": 250,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-28",
+    "seed": 214370476,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

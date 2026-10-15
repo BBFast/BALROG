@@ -1,0 +1,59 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "look": 10,
+        "go south": 25,
+        "open door": 2,
+        "go north": 7,
+        "take fridge from shelf": 1,
+        "take cheese from shelf": 7,
+        "examine cheese": 1,
+        "examine street": 2,
+        "examine sliding door": 1,
+        "open sliding door": 4,
+        "close sliding door": 2,
+        "Look around the room What do you see": 1,
+        "examine block of cheese": 1,
+        "take block of cheese": 1,
+        "examine raw white tuna": 1,
+        "take raw white tuna": 1,
+        "cook raw white tuna with stove": 8,
+        "Cook raw white tuna with stove": 1,
+        "Examine the stove\n\n\n                                                                                                                                 Supermarket ": 1,
+        "examine stove": 1,
+        "ok": 1,
+        "examine open sliding door leading north": 1
+    },
+    "input_tokens": 111618,
+    "output_tokens": 331,
+    "done": true,
+    "episode_return": 40.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-13",
+    "seed": 829905012,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

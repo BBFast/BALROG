@@ -1,0 +1,53 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go north": 21,
+        "take key": 3,
+        "open passageway": 8,
+        "go south": 17,
+        "go east": 8,
+        "go west": 7,
+        "look": 3,
+        "open drawer": 2,
+        "take keys": 2,
+        "drop keys": 1,
+        "open shelf": 1,
+        "open locker": 1,
+        "drop key": 1,
+        "open closet": 1,
+        "take shirt": 1,
+        "unlock passageway": 3
+    },
+    "input_tokens": 108275,
+    "output_tokens": 259,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-21",
+    "seed": 663616427,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "go south": 17,
+        "open sliding door": 7,
+        "go north": 18,
+        "look": 10,
+        "go east": 10,
+        "examine showcase": 2,
+        "take block of cheese": 1,
+        "take raw white tuna": 1,
+        "take knife": 2,
+        "Take knife from kitchen": 1,
+        "examine fridge": 2,
+        "open front door": 1,
+        "Im sorry I am not able to continue as the observation does not provide enough information to proceed Please provide more information or correct the instruction": 1,
+        "go west": 5,
+        "open patio door": 1,
+        "open wooden door": 1
+    },
+    "input_tokens": 140757,
+    "output_tokens": 279,
+    "done": true,
+    "episode_return": 115.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-2",
+    "seed": 3037955143,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

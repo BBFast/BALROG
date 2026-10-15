@@ -1,0 +1,165 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn right,"I am currently at the starting point where there's only walls to the front and to the right. Since I need to reach the grey key, I should look for an exit or another path that leads towards it. 
+
+Observation: a wall 6 steps forward","a wall 3 steps forward
+a wall 1 step right",0,False
+1,turn left,"There seems to be no immediate clear path to the grey key. The closest accessible area has been explored, leading to dead ends either straight forward or to the right. The grey key could potentially be located further off-screen to the left.","a wall 6 steps forward
+a wall 3 steps right
+a grey key 1 step left and 3 steps forward",0,False
+2,turn right,"The observation shows two walls in front of me, indicating a dead end. Since there is no other viable direction based on the walls, the only option left would be turning around to face the opposite direction towards where I might encounter another potential exit or the next checkpoint.","a wall 3 steps forward
+a wall 1 step right",0,False
+3,toggle,"Based on the previous observations, there are three walls to the left, right, and forward. With this information, it seems like there's a dead end and we're unable to proceed forward without going back, to the right, or down. However, since all directions appear inaccessible due to walls, let's consider toggling any objects that could potentially lead us somewhere new or provide us with insight into the environment.","a wall 3 steps forward
+a wall 1 step right",0,False
+4,turn left,"Based on the observation, there is a wall straight ahead and a wall to the right. This suggests that the path forward might be blocked or unclear, but moving to the left may reveal another direction or allow access to the grey key. Let's check both options.","a wall 6 steps forward
+a wall 3 steps right
+a grey key 1 step left and 3 steps forward",0,False
+5,go forward,"Based on the observation, I see a wall in front of me and a wall to the right. This suggests that there is likely a door or a passage to continue my journey towards the grey key. However, I do not yet know exactly where this door/exit is located. I need to explore further by taking some initial steps and seeing what I encounter.","a wall 5 steps forward
+a wall 3 steps right
+a grey key 1 step left and 2 steps forward",0,False
+6,go forward,"From the previous observation, there is a wall to my left and another wall straight ahead. Without additional information suggesting an alternative path, continuing forward seems like the most straightforward choice until I discover otherwise.","a wall 4 steps forward
+a wall 3 steps right
+a grey key 1 step left and 1 step forward",0,False
+7,turn right,"The player has observed a wall 3 steps right from their current position, which means they cannot go to the right without changing direction or finding a way around. Since there's no indication of going left either, they might need to find an alternate route or backtrack.","a wall 3 steps forward
+a wall 3 steps right",0,False
+8,toggle,"The player is facing north towards a wall, unable to go straight due to the obstacle. They should check if there are any other paths or directions they could take.","a wall 3 steps forward
+a wall 3 steps right",0,False
+9,turn right,"The player is currently at a dead end, facing either north or west. Given their objective is to reach a grey key, moving north or west would likely lead them closer to the key.","a wall 3 steps forward
+a wall 3 steps left",0,False
+10,go backward,There's a wall both forward and to the right. The only option is to go backward since there's no other direction available.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps left",0,False
+11,go backward,There is a wall both forward and to the right. The only option is to go backward since there's no other direction available.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+12,toggle,The player is facing a wall in front and to the right. There seems to be no way to proceed without turning around or going back.,"a wall 1 step forward
+a wall 3 steps left",0,False
+13,turn left,"There is a wall both forward and to the right, so there is no path to the grey key directly in front of you.","a wall 3 steps forward
+a wall 1 step right",0,False
+14,go forward,"Since there is a wall both in front and to the right, the grey key cannot be directly accessible from where I am currently standing.","a wall 2 steps forward
+a wall 1 step right",0,False
+15,turn left,"The player has already gone forward once and now needs to continue to reach the grey key. However, they are facing the direction away from their goal (the grey key), so they need to turn left to face the correct direction.","a wall 6 steps forward
+a wall 2 steps right
+a grey key 2 steps left and 3 steps forward",0,False
+16,go backward,"Facing the wall to the right and the wall in front, I cannot proceed either way. I need to find another path or backtrack to get around the obstacles.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 2 steps right
+a grey key 2 steps left and 2 steps forward",0,False
+17,go backward,The wall to the left and the wall in front mean I am stuck. There seems to be no direct path to the grey key from where I stand.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 2 steps right
+a grey key 2 steps left and 1 step forward",0,False
+18,go forward,The wall to the right indicates there's no way to reach the grey key directly. I need to find another approach.,"a wall 3 steps forward
+a wall 2 steps right
+a grey key 2 steps left",0,False
+19,turn right,"The player needs to get close to the grey key to interact with it. Since they are currently facing towards the wall, we need to turn around.","a wall 2 steps forward
+a wall 3 steps left",0,False
+20,go forward,"The grey key is located 2 steps left and 3 steps forward from where the player is standing. To reach the grey key, the player should move 2 steps left and then follow it until they arrive at the intersection formed by the intersection between the grey key's position and their path.","a wall 1 step forward
+a wall 3 steps left",0,False
+21,go forward,"Based on the recent observation showing two walls (one forward and one to the right), there appears to be no clear path forward or to the right. However, we do know there is a grey key 2 steps left and 2 steps forward.","a wall 1 step forward
+a wall 3 steps left",0,False
+22,go backward,"There seems to be a wall both in front and to the right. Since I cannot proceed straight forward or to the right, I need to find another direction.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+23,go backward,"There seems to be a wall both in front and to the right. Since I cannot proceed straight forward or to the right, I need to find another direction.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+24,go forward,"There appears to be a wall both in front and to the right. Since there isn’t any direct path forward or to the right, I need to search for another route.","a wall 1 step forward
+a wall 3 steps left",0,False
+25,go backward,"There seems to be no clear path forward due to walls blocking our way. Given that we're facing the grey key which is close enough to reach, let's try moving backward towards the key.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+26,go backward,There are several walls obstructing the direct route to the grey key. We need to find another approach. Let's continue moving backwards towards the wall.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+27,go forward,There seems to be multiple walls blocking our path to the grey key. Let's try turning left and going forward to see if we can reach a clear path.,"a wall 1 step forward
+a wall 3 steps left",0,False
+28,go left,The grey key is 2 steps left and 3 steps forward. Moving left and then forward should lead us to the grey key.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+29,"go left, go forward",The grey key is 2 steps left and 3 steps forward from where we are currently standing. We need to walk 2 steps left and then 3 steps forward to reach the grey key.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+30,"go left, go forward",The grey key is 2 steps left and 3 steps forward from where we are currently standing. I need to walk 2 steps left and then 3 steps forward to reach the grey key.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+31,"turn left, go forward",The grey key is 2 steps left and 3 steps forward from where I am. I need to move 2 steps left first before moving forward another step to reach the grey key.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+32,"go left, go forward","The grey key is 2 steps left and 2 steps forward from where I am. To reach the grey key, I need to move 2 steps left first and then 2 steps forward.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+33,"turn left, go forward","The grey key is 2 steps left from my current position, so I need to move 2 steps left before picking it up.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+34,"turn left, go forward","The wall is blocking my path in both directions. Since there's no other available option besides moving around this wall, I'll need to go around it by turning left and going forward two steps.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+35,turn left,The player has encountered a wall and a red ball in their way. They should turn left to avoid the walls and continue towards the red ball.,"a wall 3 steps forward
+a wall 1 step right
+a grey key 3 steps left",0,False
+36,turn left,"The player has observed a grey key 3 steps left from where they currently are facing, which means there is an opening or door nearby. Since the player's objective seems to be moving forward while avoiding obstacles, turning left would allow them to approach this new path more easily without encountering the wall on the right.","a wall 3 steps right
+a grey key 3 steps forward",0,False
+37,go forward,"The player has encountered another wall directly ahead, preventing movement forward. However, there is no wall on the right side yet. Therefore, the only feasible direction based on the current environment is to continue moving straight ahead.","a wall 3 steps right
+a grey key 2 steps forward",0,False
+38,go forward,"Since there is no way to reach the grey key without passing through walls, the best option would be to try to move around them until we find a path that leads us towards the key.","a wall 3 steps right
+a grey key 1 step forward",0.4515625,True

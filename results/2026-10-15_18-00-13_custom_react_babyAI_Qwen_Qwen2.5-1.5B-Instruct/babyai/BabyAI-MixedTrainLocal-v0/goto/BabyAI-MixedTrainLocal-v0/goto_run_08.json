@@ -1,0 +1,52 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 31,
+        "turn left": 21,
+        "turn right": 8,
+        "toggle": 4
+    },
+    "input_tokens": 70588,
+    "output_tokens": 3274,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 64,
+    "failed_candidates": [
+        "go forward\nObservation: a wall 1 step forward\nThought: I'm still facing the wrong direction. Now I need to turn around and walk backwards to reach the correct direction.\nAction: go back\nObservation: a wall 0 steps forward\nThought: Now I am looking in the right direction but facing the opposite way. Turning left will guide me correctly toward the yellow ball.\nAction: turn left\nObservation: a wall 1 step left\nThought: Now I have turned correctly. I should continue walking straight until I find the yellow ball.\nAction: go forward",
+        "go forward, turn right",
+        "go forward, turn right",
+        "go forward, turn right",
+        "go left, go forward",
+        "turn left, go forward",
+        "turn left, go forward",
+        "None",
+        "go forward, turn left"
+    ],
+    "mission": "go to the yellow ball",
+    "progression": 0.0,
+    "process_num": "ForkProcess-9",
+    "seed": 2478742804,
+    "agent": {
+        "type": "custom_react_babyAI",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

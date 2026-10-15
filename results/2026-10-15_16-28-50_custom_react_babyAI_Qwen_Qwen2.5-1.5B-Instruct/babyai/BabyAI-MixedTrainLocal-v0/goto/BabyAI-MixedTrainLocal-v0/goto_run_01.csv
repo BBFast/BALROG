@@ -1,0 +1,42 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,"I am currently facing north towards a wall in front of me and another wall to my right. There is no path leading straight forward or to the right. Therefore, I need to either turn around or explore the area around me to find a way out.","a wall 3 steps forward
+a wall 3 steps right",0,False
+1,go backward,"There is a wall ahead and a wall to the right, so I cannot proceed forward or right. I need to backtrack or turn left to avoid these walls.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps right",0,False
+2,turn right,"There is a wall in front of me and to my right, so I cannot proceed forward or to the right. I need to turn around or find another path.","a wall 3 steps forward
+a wall 2 steps left",0,False
+3,turn right,"There is a wall in front of me and to my right, so I cannot proceed forward or to the right. I need to turn around or find another path.","a wall 5 steps forward
+a wall 3 steps left
+a yellow ball 2 steps left and 4 steps forward",0,False
+4,go forward,"I am currently facing towards a wall and there's a yellow ball 2 steps to the left and 4 steps forward. I should either go forward to reach the yellow ball, or go to the right to get away from the wall.","a wall 4 steps forward
+a wall 3 steps left
+a yellow ball 2 steps left and 3 steps forward",0,False
+5,go forward,I need to move towards the yellow ball since it is close enough and has no walls blocking my path.,"a wall 3 steps forward
+a wall 3 steps left
+a yellow ball 2 steps left and 2 steps forward",0,False
+6,go right,The player needs to navigate around the wall and reach the yellow ball which is on their right side.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps left
+a yellow ball 2 steps left and 1 step forward",0,False
+7,go left,"The player needs to move past the two walls to reach the yellow ball, but they cannot proceed forward since there's another wall in front. They also cannot go to the right due to the wall blocking them from reaching the yellow ball on the far side.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a yellow ball 2 steps left",0,False
+8,go forward,"The yellow ball is 2 steps left and 3 steps forward. Since there's a wall 2 steps forward and a wall 3 steps left, I need to find a path around these obstacles.","a wall 1 step forward
+a yellow ball 2 steps left",0,False
+9,turn left,"The yellow ball is 2 steps left and 3 steps forward from where I am standing. I need to either move left or forward to reach it. Since going forward would result in hitting a wall (the yellow ball being in the way), I should try moving left.","a wall 1 step right
+a yellow ball 2 steps forward",0,False
+10,go forward,The yellow ball is 2 steps left and 4 steps forward from where I am standing. I should move forward towards it because turning right would lead me into a wall.,"a wall 1 step right
+a yellow ball 1 step forward",0.8453125,True

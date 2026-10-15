@@ -1,0 +1,56 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "look": 19,
+        "go south": 13,
+        "open sliding door": 6,
+        "examine showcase": 1,
+        "go east": 4,
+        "go west": 2,
+        "go north": 15,
+        "close sliding door": 3,
+        "examine door": 1,
+        "examine cheese": 7,
+        "take cheese": 1,
+        "open cheese with knife": 1,
+        "Im sorry I didnt understand Can you please give me some more information so I could help you better": 1,
+        "take cheese with knife": 1,
+        "drop cheese": 1,
+        "open door": 1,
+        "examine toilet": 1,
+        "take knife": 1,
+        "take knife from bathroom": 1
+    },
+    "input_tokens": 130918,
+    "output_tokens": 268,
+    "done": true,
+    "episode_return": 33.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.058823529411764705,
+    "process_num": "ForkProcess-1",
+    "seed": 2407581933,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

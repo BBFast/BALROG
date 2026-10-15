@@ -1,0 +1,41 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,There's a wall to the right and another wall two steps away. I need to move forward before I can see the green key.,"a wall 5 steps forward
+a green key 1 step left",0,False
+1,go forward,"The player has already observed the environment, which includes a wall 2 steps to the left, a wall 6 steps forward, and a green key 1 step left and 1 step forward. Given this information, the player needs to decide the next action based on whether they can proceed forward without hitting any walls.","a wall 4 steps forward
+a wall 2 steps left",0,False
+2,go forward,"The player is facing north towards a wall to the west and a wall to the east. Since there's no path southward, and turning right would lead to another wall, the only viable option is going straight (north) until reaching the green key.","a wall 3 steps forward
+a wall 2 steps left",0,False
+3,go forward,"The player is currently facing the green key and has two options: go forward or turn right. Going forward brings them close to the exit, while turning right leads to a dead-end wall. Given that they are heading towards the green key, the most logical choice is to continue moving forward.","a wall 2 steps forward
+a wall 2 steps left",0,False
+4,toggle,"The player is facing the wall in front of them and there's another wall to their right. Since they're stuck between these walls, the only way out would be to turn around and face away from these obstacles. However, given that the next observation suggests they need to turn left to proceed, we'll focus on making a strategic decision rather than just going around this initial obstacle.","a wall 2 steps forward
+a wall 2 steps left",0,False
+5,toggle,"The player is facing towards a wall and needs to navigate to the green key which is 1 step left and 1 step forward. Given the previous observation shows the player facing towards a wall, it seems like they might need to turn left to continue forward. Let's check if they have any objects or keys they could pick up.","a wall 2 steps forward
+a wall 2 steps left",0,False
+6,toggle,"The player is facing towards a wall and needs to navigate to the green key which is 1 step left and 1 step forward. Given the previous observation shows the player facing towards a wall, it seems like they might need to turn left to continue forward. Let's check if they have any objects or keys they could pick up.","a wall 2 steps forward
+a wall 2 steps left",0,False
+7,turn left,"The player is currently facing towards a wall and needs to navigate to the green key which is 1 step left and 1 step forward. Since there is no clear path forward or right, let's consider turning left to see what happens.","a wall 2 steps forward
+a wall 2 steps right
+a green key 3 steps left and 1 step forward",0,False
+8,go forward,"The player is still in a room with two walls in front and right directions. They need to navigate to the green key located 1 step left and 1 step forward. Given that they haven't taken any steps yet, they might try moving straight forward or turning left.","a wall 1 step forward
+a wall 2 steps right
+a green key 3 steps left",0,False
+9,go forward,"The player is facing a wall with two walls surrounding them, which means they cannot proceed directly forward or turn left/right without going through the walls. Since there is no indication of obstacles blocking their path other than the walls, the only logical next move would be to continue walking straight forward until they encounter an obstacle.","a wall 1 step forward
+a wall 2 steps right
+a green key 3 steps left",0,False
+10,toggle,"There is a wall in front and to the left, so I can't go forward or to the right. I need to find another way to get to the green key. Let's check the objects around me.","a wall 1 step forward
+a wall 2 steps right
+a green key 3 steps left",0,False
+11,toggle,The player is facing a wall and has no immediate options for movement. They need to explore their surroundings to find a path towards the green key.,"a wall 1 step forward
+a wall 2 steps right
+a green key 3 steps left",0,False
+12,turn left,"The player is facing a wall and a wall to the right. They cannot proceed forward or to the right. Turning left would allow them to face the green key, which is 1 step left and 1 step forward.","a wall 1 step right
+a green key 3 steps forward",0,False
+13,go forward,The player is facing a wall and a wall to the right. There is also a green key 1 step left and 1 step forward. I need to find a way to reach the green key without interacting with any other objects.,"a wall 1 step right
+a green key 2 steps forward",0,False
+14,turn right,"There's a wall to my right and forward, which means I cannot proceed in those directions. I must either go backward or turn around to face the green key.","a wall 1 step forward
+a wall 3 steps right
+a green key 2 steps left",0,False
+15,turn left,The green key is 3 steps left from my current position. I need to move left to reach it.,"a wall 1 step right
+a green key 2 steps forward",0,False
+16,go forward,"The green key is directly in front of me. Since there are no obstacles between me and the key, I can simply walk towards it without needing to perform any additional actions.","a wall 1 step right
+a green key 1 step forward",0.7609375,True

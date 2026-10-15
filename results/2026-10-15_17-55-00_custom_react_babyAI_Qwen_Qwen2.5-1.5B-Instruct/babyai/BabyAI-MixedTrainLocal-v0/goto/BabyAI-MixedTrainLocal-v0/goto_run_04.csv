@@ -1,0 +1,13 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn left,"There are two walls in the current direction. I cannot proceed forward or to the right. Since there's no other path available, I need to explore an alternative route by turning left.
+Observation: a wall 1 step forward; a wall 1 step left","a wall 2 steps forward
+a wall 2 steps right",0,False
+1,turn left,"The player is facing a wall straight ahead and to their right, which means they cannot proceed forward or to the right. They must turn left to find an alternative path.","a wall 5 steps forward
+a wall 2 steps right
+a red ball 2 steps left",0,False
+2,turn left,"The player is facing a wall straight ahead and to their right, which means they cannot proceed forward or to the right. They must turn left to find an alternative path.","a wall 2 steps left
+a red ball 2 steps forward",0,False
+3,pick up,The player has reached the red ball and there are no further obstacles in this direction.,"a wall 2 steps left
+a red ball 2 steps forward",0,False
+4,go forward,The player needs to reach the red ball located 2 steps right from their current position. They need to continue moving right until they find the red ball.,"a wall 2 steps left
+a red ball 1 step forward",0.9296875,True
