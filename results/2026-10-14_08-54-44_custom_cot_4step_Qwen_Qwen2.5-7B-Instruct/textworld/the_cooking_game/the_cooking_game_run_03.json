@@ -1,0 +1,61 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine block of cheese\nACTION: examine raw white tuna\nACTION: go south": 1,
+        "go south": 7,
+        "examine raw white tuna": 4,
+        "examine sliding door": 14,
+        "look": 5,
+        "examine block of cheese": 5,
+        "examine showcase": 5,
+        "take block of cheese from showcase": 2,
+        "go north": 3,
+        "take raw white tuna from showcase": 8,
+        "open sliding door": 1,
+        "look around": 1,
+        "examine cookbook": 1,
+        "take key from counter": 2,
+        "examine counter": 3,
+        "examine register": 3,
+        "examine toolbox": 5,
+        "take key from toolbox": 4,
+        "examine shelf": 1,
+        "examine office": 1,
+        "examine fridge": 1,
+        "examinetoolbox": 1,
+        "examine keyhole": 1,
+        "examine shelves": 1
+    },
+    "input_tokens": 122448,
+    "output_tokens": 1408,
+    "done": true,
+    "episode_return": 125.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-1",
+    "seed": 3901937307,
+    "agent": {
+        "type": "custom_cot_4step",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

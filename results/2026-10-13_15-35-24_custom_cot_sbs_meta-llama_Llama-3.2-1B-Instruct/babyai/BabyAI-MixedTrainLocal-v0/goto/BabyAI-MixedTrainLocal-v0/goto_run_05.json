@@ -1,0 +1,48 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 7,
+        "turn left": 3,
+        "turn right": 1
+    },
+    "input_tokens": 6281,
+    "output_tokens": 463,
+    "done": true,
+    "episode_return": 0.8453125,
+    "num_steps": 11,
+    "failed_candidates": [
+        "go forward: take one step forward",
+        "toggle the large rock",
+        "go forward\n\nCurrent Observation:\na wall 2 steps forward\na wall 1 step right\n\nAs per the current observation, I will go forward to move towards the 'a wall 1 step right' direction.\n\nPLAN: go forward, turn right\nACTION: turn right\n\nCurrent Observation:\na wall 2 steps forward\na wall 1 step right",
+        "turn left\n\nAt this point, I am currently standing in front of a wall 1 step forward and a wall 1 step right. I will turn left to reorient myself and decide my next action.",
+        null,
+        null
+    ],
+    "mission": "go to the yellow key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-6",
+    "seed": 3749977888,
+    "agent": {
+        "type": "custom_cot_sbs",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,126 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,"Check the current rules to see if the key should be allowed to move
+You can move the key to the wall
+
+Current Plan:
+Move the key to the wall
+PLAN: Check the current rules to see if the wall should be allowed to move
+ACTION: Review the current rules to see if the wall should be allowed to move
+You can move the wall
+PLAN: Check the current rules to see if the door should be allowed to move
+ACTION: Review the current rules to see if the door should be allowed to move
+You can move the door to the right
+PLAN: Review the current map to see if the key is now in the correct location
+PLAN: Review the current map to see if the key is now in the correct location
+PLAN: No changes to the plan.
+ACTION: Move the key to the ball",Review the current plan to see if the key should be allowed to move,I didn't understand that sentence.,0,False
+1,"Move the key to the ball
+PLAN: Move the key to the ball
+PLAN: Exit the bathroom","No changes to the plan.
+
+Identifying new relevant information: 
+The key is near a door, and the door seems to be the exit to the north and east.
+
+Objectives and goals: 
+The objective is to find the coin, and the key seems to be the target object.
+
+Action to help achieving the goal: 
+Move the key to the ball
+
+Checking the action's validity:",You can't see any such thing.,0,False
+2,Move the key to the door,Move the key to the door,You can't see any such thing.,0,False
+3,"2in the game by ‘take coin’ if you see the coin in the room.
+
+PLAN: Move the key to the door and take coin
+ACTION: Move the key to the ball","Move the key to the door
+NEW RELEVANT INFORMATION:
+ The key is now at the wall.
+ OBJECTIVE: Get the coin in the room.
+ ACTION:
+2in the game by ‘take coin’ if you see the coin in the room.
+
+PLAN: Move the key to the door and take coin",That's not a verb I recognise.,0,False
+4,"2in the game by ‘take coin’
+PLAN: Take coin
+PLAN: Review the current plan
+NEW RELEVANT INFORMATION: The key is now at the ball.
+OBJECTIVE: Get the coin in the room.
+
+PLAN: Take coin
+PLAN: Move the key to the ball
+PLAN: Take coin","Take coin
+PLAN: Review the current plan
+NEW RELEVANT INFORMATION: The key is now at the wall.
+OBJECTIVE: Get the coin in the room.",That's not a verb I recognise.,0,False
+5,"Move the key to the door
+
+Plan Update:
+PLAN: Take coin
+PLAN: Take coin
+PLAN: Move the key to the door
+PLAN: Take coin","Take coin
+PLAN: Take coin
+NEW RELEVANT INFORMATION: The key is now at the wall.
+OBJECTIVE: Get the coin in the room.
+
+Review the current plan:
+NEW ACTION: Move the key to the door
+
+Plan Update:
+PLAN: Take coin
+PLAN: Take coin
+PLAN: Move the key to the door
+PLAN: Take coin",You can't see any such thing.,0,False
+6,"Move the key to the door
+PLAN: Take coin
+NEW ACTION: Take coin
+
+Consider the current relevant information and objective:
+NEW RELEVANT INFORMATION: The key is now at the ball.
+OBJECTIVE: Get the coin in the room.
+
+The action of taking coin doesn't seem to directly relate to getting the coin. To get the coin, we need to be in a room with the coin. The current relevant information is that the key is now at the ball.
+
+NEW ACTION: Move the key to the ball
+PLAN: Take coin
+PLAN: Take coin
+PLAN: Move the key to the ball
+PLAN: Take coin
+
+Make the change:
+PLAN: Take coin
+PLAN: Move the key to the ball
+PLAN: Take coin
+
+The current plan seems to be good.","PLAN: Take coin
+NEW ACTION: Move the key to the door
+PLAN: Take coin
+NEW ACTION: Take coin
+
+Consider the current relevant information and objective:
+NEW RELEVANT INFORMATION: The key is now at the ball.
+OBJECTIVE: Get the coin in the room.
+
+The action of taking coin doesn't seem to directly relate to getting the coin. To get the coin, we need to be in a room with the coin. The current relevant information is that the key is now at the ball.
+
+NEW ACTION: Move the key to the ball
+PLAN: Take coin
+PLAN: Take coin
+PLAN: Move the key to the ball
+PLAN: Take coin
+
+Make the change:
+PLAN: Take coin
+PLAN: Move the key to the ball
+PLAN: Take coin
+
+The current plan seems to be good.",You can't see any such thing.,0,False
+7,Go through the door,"Move the key to the ball
+PLAN: Move the key to the ball
+PLAN: Take coin
+
+Since the goal is to get the coin in the room, we need to be in a room with the coin. To achieve this, we need to be near the door. Considering the current plan, it's better to move the key to the ball and then go through the door to get the coin.
+
+PLAN: Move the key to the ball
+PLAN: Move the key to the ball
+PLAN: Move the key to the ball and take coin",You can't see any such thing.,0,False

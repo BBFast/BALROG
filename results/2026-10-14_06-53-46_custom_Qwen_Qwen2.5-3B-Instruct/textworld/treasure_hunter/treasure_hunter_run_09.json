@@ -1,0 +1,43 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go south": 2,
+        "open hatch": 3,
+        "go north": 26,
+        "look": 45,
+        "take Microsoft limited edition latchkey": 1,
+        "open Microsoft limited edition hatch": 3
+    },
+    "input_tokens": 87431,
+    "output_tokens": 1008,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-4",
+    "seed": 2319510043,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "base_url": "http://localhost:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

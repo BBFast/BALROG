@@ -1,0 +1,58 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nThe plan remains the same since we need to find the recipe and the items required for the meal. Taking the block of cheese from the showcase is a logical first step to proceed with finding the necessary ingredients.": 1,
+        "go south": 7,
+        "examine sliding door": 21,
+        "take block of cheese": 2,
+        "open sliding door with key": 5,
+        "take key from drawer": 1,
+        "examine drawer": 1,
+        "examine washing machine": 2,
+        "go north": 3,
+        "examine counter": 1,
+        "go east": 2,
+        "examine refrigerator": 1,
+        "go west": 3,
+        "examine vending machine": 7,
+        "take key from vending machine": 5,
+        "examine locker": 11,
+        "take key from locker": 1,
+        "examine countertop": 3,
+        "examine sink": 1,
+        "examine floor": 1,
+        "examine oven": 1
+    },
+    "input_tokens": 109997,
+    "output_tokens": 1366,
+    "done": true,
+    "episode_return": 80.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.058823529411764705,
+    "process_num": "ForkProcess-5",
+    "seed": 639155176,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

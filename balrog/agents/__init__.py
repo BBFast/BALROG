@@ -12,6 +12,7 @@ from .custom_cot_prevact import CotPrevActAgent
 from .custom_cot_sbs import StepByStepAgent
 from .custom_cot_4step import FourStepAgent
 from .custom_react_babyAI import ReactBaby
+from .custom_reflexion import CustomReflexionAgent
 
 
 class AgentFactory:
@@ -60,7 +61,7 @@ class AgentFactory:
             return RobustNaiveAgent(client_factory, prompt_builder)
         elif self.config.agent.type == "robust_cot":
             return RobustCoTAgent(client_factory, prompt_builder, config=self.config)
-        elif self.config.agent.type == "custom_cot":
+        elif self.config.agent.type == "custom_cot_prevact":
             return CotPrevActAgent(client_factory, prompt_builder)
         elif self.config.agent.type == "custom_cot_sbs":
             return StepByStepAgent(client_factory, prompt_builder)
@@ -68,5 +69,7 @@ class AgentFactory:
             return FourStepAgent(client_factory, prompt_builder)
         elif self.config.agent.type == "custom_react_babyAI":
             return ReactBaby(client_factory, prompt_builder)
+        elif self.config.agent.type == "custom_reflexion":
+            return CustomReflexionAgent(client_factory, prompt_builder)
         else:
             raise ValueError(f"Unknown agent type: {self.config.agent}")

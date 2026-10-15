@@ -1,0 +1,51 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nThe current plan was to return to the laundromat to pick up the key, but since we haven't yet found the key, we need to gather the ingredients first. We start by taking the block of cheese from the showcase.": 1,
+        "go south": 19,
+        "open sliding door with key": 1,
+        "examine sliding door": 7,
+        "go north": 16,
+        "go west": 12,
+        "go east": 8,
+        "look around": 6,
+        "look in sliding door": 2,
+        "examine shelves": 1,
+        "examine shelf": 1,
+        "look in shelf": 1,
+        "look in shelves": 3,
+        "look for key": 2
+    },
+    "input_tokens": 108688,
+    "output_tokens": 2395,
+    "done": true,
+    "episode_return": 80.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.058823529411764705,
+    "process_num": "ForkProcess-6",
+    "seed": 4247779892,
+    "agent": {
+        "type": "custom_cot_sbs",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn right": 31,
+        "turn left": 29,
+        "go forward": 38,
+        "pick up": 27,
+        "drop": 3
+    },
+    "input_tokens": 123194,
+    "output_tokens": 2808,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "go right",
+        "no changes to the plan",
+        "pick up\n\nObservation:\na blue box 2 steps left and 1 step forward\nPLAN: turn left, pick up, go forward\nACTION: go forward",
+        "turn left\n\nObservation:\na wall 1 step right\na blue box 3 steps left\na green key 1 step forward",
+        "go left",
+        null,
+        "turn left\n\nCurrent Observation:\nYou carry a green key\na wall 4 steps forward\na wall 3 steps left\na blue box 1 step left and 1 step forward",
+        "pick up\n\nNext Action: pick up",
+        "pick up\n\nThe plan looks good for now.",
+        null,
+        "pick up\n\nI must have dropped the blue box as I was moving to the blue box position. Now it's time to pick it up.",
+        null,
+        "drop\n\nI'll drop the blue box as it's not currently holding anything. Now, my plan looks like this:\npick up, go forward\n\nLet's proceed.",
+        "no change needed",
+        null,
+        "go forward\n\nI'll go forward to try to interact with the object in front of me, which is the wall 3 steps left.",
+        "pick up\n\nThey form a valid sequence. Let's continue with the plan.",
+        "pick up\n\nPlease let me know the observation after this step, and I'll proceed accordingly.",
+        "go forward\n\nI'll continue with the plan by moving forward."
+    ],
+    "mission": "pick up the blue box, then go to the green key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 189246183,
+    "agent": {
+        "type": "custom_cot_sbs",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

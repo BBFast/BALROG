@@ -1,0 +1,73 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "go forward": 55,
+        "turn left": 19,
+        "turn right": 19,
+        "pick up": 32,
+        "drop": 1,
+        "toggle": 2
+    },
+    "input_tokens": 138628,
+    "output_tokens": 7706,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "move forward 1 step\n\nThe current plan is correct. Let's proceed.\n\nMy next step will be to pick up the object below me, as I don't see any objects or objects on the floor or nearby surfaces that I can interact with yet.",
+        "turn right\n\nMy current plan is correct. The plan is to move forward and turn right. I will continue with this plan.\n\nMy next step will be to drop the object that I am holding, as I don't see any objects to pick up yet.",
+        "move forward 1 step",
+        null,
+        "pick up\n\nCurrent Observation:\na wall 3 steps forward\na wall 1 step left\n\nCurrent Plan:\ngo forward, turn left, drop, turn left, pick up, drop, go forward, turn right, pick up, drop, go forward, turn left, pick up, drop, go forward, turn left\nPLAN: No changes to the plan.\nACTION: turn left",
+        null,
+        "pick up\n\nCurrent Observation:\na locked yellow door 1 step right and 5 steps forward\n\nPLAN: go forward, pick up, drop, turn left, turn left, go forward, turn left, pick up, drop, turn left, turn left, go forward, turn left, pick up, drop, go forward, turn left, turn left, pick up, drop, go forward, turn left, pick up, go forward, turn left, turn left, turn left, drop, pick up, drop, go forward, turn left, pick up, go forward, turn left, pick up, turn left, pick up",
+        null,
+        "drop\n\nCurrent Observation:\na wall 1 step forward\na wall 3 steps right\n\nPLAN: turn left, turn left, go forward, turn left, go forward, turn left, pick up, go forward, turn left, pick up, turn left, go forward, turn left, pick up, turn left, pick up, go forward, turn left, go forward, turn left\n\nPLAN: No changes to the plan.\n\nACTION: pick up",
+        null,
+        "pick up\n\nSince my current plan involves picking up the same object multiple times without making any progress towards opening the yellow door, I will make a change.\n\nPLAN: turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn right, turn left, turn left, turn left, turn left, turn left\nACTION: pick up",
+        "pick up\n\nThis action has put the object directly in front of me, as required by the current observation.",
+        "go forward\n\nAs per the plan, I am currently at the wall 1 step forward and 1 step right. Let's continue with the plan.\n\nPLAN: go forward, turn left\nACTION: turn left\n\nI am now at the wall 1 step forward and 1 step left. Let's continue.",
+        "pick up\n\nCurrent observation:\na wall 6 steps forward\na wall 1 step right\na yellow key 2 steps left and 5 steps forward\n\nCurrent plan:\nturn right, turn left, pick up, turn left, go forward, turn right, turn left, turn left, pick up, turn left, turn right, turn left, turn left, go forward\n\nReviewing the current plan, it seems I am currently in front of the yellow key, which is required to open the door. Let's update the plan.\n\nPLAN: turn right, pick up, turn left, pick up, turn left, turn left, go forward\n\nACTION: turn right",
+        "pick up\n\nI will continue with the current plan. As per the plan, I am currently in front of the yellow key, which is required to open the door. Let's see what happens next.\n\nCurrent observation:\na wall 5 steps forward\na wall 1 step right\na yellow key 2 steps left and 4 steps forward\n\nCurrent plan:\ngo forward, go forward, turn right, turn left, turn left, turn left, turn left, pick up, go forward\n\nFollowing the current plan:\n\nPLAN: go forward, go forward, go forward, turn right, turn left, turn left, turn left, pick up, go forward\n\nACTION: turn left",
+        null,
+        "turn left\n\nI will continue with the updated plan.",
+        "turn left\n\nReviewing the plan, I notice that I am now in front of the yellow key, which is required to open the door. Let's update the plan.\n\nPLAN: go forward, go forward, turn right, turn right, turn left, go forward, go forward, turn right, go forward, go forward",
+        null,
+        "pick up\n\nReviewing the current plan, I notice that the walls are not aligned correctly, and I'm also not considering the yellow key's current position. To correct this, I need to make a few changes.\n\nPLAN: go forward, turn left, go forward, turn right, go forward, turn right, go forward, go forward, turn left, pick up\nACTION: turn right",
+        "turn left\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step left\n\nPLAN: turn right, go forward, turn right, go forward, turn left, pick up, drop, turn right, go forward, go forward\nACTION: go forward\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step left\n\nPLAN: turn right, go forward, turn right, go forward, turn left, pick up, drop, turn right, go forward, go forward\nACTION: go forward\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step left",
+        "pick up\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step right\na yellow key 2 steps left\n\nCurrent Plan:\nturn right, go forward, go forward, turn left, go forward, go forward, pick up, go forward, turn right, drop, go forward, turn left\n\nReviewing the current plan, I notice that I don't have the yellow key at the current position. To correct this, I need to re-examine the plan.\n\nPLAN: No changes to the plan.",
+        "go forward\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step right\na yellow key 2 steps left\n\nReviewing the current plan, I notice that I can interact with the yellow key. To correct this, I need to use the 'toggle' action on the yellow key.\n\nPLAN: go forward, pick up, drop, turn right, pick up, drop, go forward\nACTION: go forward\n\nCurrent Observation:\na wall 1 step forward\na wall 1 step right\na yellow key 2 steps left\n\nPLAN: No changes to the plan.\n\nACTION: go forward",
+        "turn right\n\nCurrent Observation:\nYou carry a yellow key\na wall 1 step forward\na wall 3 steps right\n\nPLAN: No changes to the plan.\n\n ACTION: go forward",
+        "pick up\n\nCurrent Observation:\nYou carry a yellow key\na wall 4 steps forward\na wall 1 step right\n\nCurrent Plan:\ngo forward, pick up, drop, turn right, pick up, go forward, turn left, pick up, turn right, go forward\n\nThe current plan is still good. However, I notice that my current action is to \"go forward\". I don't have an action to pick up that would change the outcome of the plan.\n\nPLAN: No changes to the plan\nACTION: go forward\n\nLet me review the plan again and see if I can come up with an alternative action.\n\nPLAN: go forward, pick up, drop, turn right, turn left, pick up, turn right, go forward\n\nACTION: go forward",
+        "go forward\n\nCurrent Plan:\ngo forward, pick up, drop, turn right, pick up, go forward, turn left, pick up, turn right, go forward\n\nSince I have the yellow key, I'll use the 'toggle' action on it to see what else I can interact with it.\n\nPLAN: No changes to the plan\nACTION: go forward\n\nCurrent Observation:\na wall 3 steps forward\na wall 1 step right",
+        "pick up\n\nCurrent Observation:\nYou carry a yellow key\na wall 6 steps forward\na wall 2 steps right\na locked yellow door 2 steps right and 4 steps forward",
+        null
+    ],
+    "mission": "open the yellow door",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2388252831,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

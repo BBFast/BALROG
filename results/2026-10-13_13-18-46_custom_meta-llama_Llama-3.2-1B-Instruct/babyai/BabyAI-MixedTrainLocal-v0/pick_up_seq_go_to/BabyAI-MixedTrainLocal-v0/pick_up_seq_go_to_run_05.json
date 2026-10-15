@@ -1,0 +1,72 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "go forward": 53,
+        "toggle": 1,
+        "turn left": 25,
+        "pick up": 36,
+        "turn right": 13
+    },
+    "input_tokens": 135073,
+    "output_tokens": 5835,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "go forward\n\nIt would be more efficient to make a move towards the green box directly.",
+        "pick up\n\nSince we are standing in front of the green box and picked up a box, it's not clear what to do next. The current plan seems to be heading in the right direction, but we need to make sure it's clear what the goal is.",
+        null,
+        "pick up\n\nThe current plan seems fine, as we have picked up the purple box and are headed in the right direction. Now that we've got the box, we should pick it up.",
+        "turn right\n\nSince we're heading in the right direction, turning right seems like a good next step.",
+        "pick up\n\nWe're currently standing in front of the green box, and we need to make sure the green box is picked up before moving on. Continuing with the plan, we can pick up the green box.",
+        null,
+        "pick up\n\nSince we are standing in front of the purple box and have picked it up, it seems like the best plan is to follow the directions to go back to the green box.",
+        "go forward\n\nWe've come to a crossroads. Since we've picked up the green box, we should head towards the purple box. Let's proceed accordingly.",
+        "turn left\n\nWe're currently standing at the wall where we picked up the purple box and turned left. Since we are already facing the wall, we should turn left to change direction.",
+        "pick up\n\nWe're making good progress. Now that we've picked up the purple box, let's continue towards the green box.",
+        "turn left\n\nSince we have to turn left to change direction after picking up the purple box, and after going forward it seems like we should continue with the original plan. We're currently standing in front of the wall where we picked up the purple box and turned left. Now that we are turning left, let's proceed.",
+        null,
+        "go right",
+        "turn left\n\nCurrent Observation:\na wall 1 step forward\na wall 2 steps right\n\nPLAN: turn left, go forward, pick up, turn left, go forward, turn left, pick up, turn left, go forward, turn left, pick up, turn left, go forward, turn left, pick up\nACTION: go forward\n\nI will go forward",
+        "turn left\n\n Current Observation:\na wall 1 step forward\na wall 3 steps right\n\nCurrent Plan:\nturn left, go forward, turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, go forward, turn left\n\nReview the current plan above if present. Decide whether to continue with it or make changes.\n\nNo changes to the plan.\n\nPLAN: turn left, turn left, go forward, turn left, turn left, turn left, turn left, turn left, turn left, turn left, go forward, turn left\nACTION: pick up\n\nCurrent Observation:\na wall 1 step forward\na wall 3 steps right\n\nCurrent Plan:\nturn left, go forward, turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, go forward, turn left\nPLAN: turn left, turn left, go forward, turn left, turn left, turn left, turn left, turn left, turn left, turn left, go forward, turn left\nACTION: pick up",
+        null,
+        "turn left\n\nCurrent Observation:\na wall 6 steps forward\na wall 3 steps left\na green box 1 step left and 4 steps forward\na purple box 2 steps right and 5 steps forward\n\nPLAN: turn left, go forward, pick up, turn left, pick up, go forward, pick up, turn left, go forward, turn left, pick up, turn left, pick up, turn left, turn left\n\nACTION: turn left\n\nPLAN: turn left, go forward, pick up, turn left, pick up, go forward, turn left, go forward, turn left, pick up, turn left, turn left, pick up, turn left\n\nACTION: turn left",
+        "pick up\n\nCurrent Observation:\na wall 4 steps forward\na wall 3 steps right\na purple box 3 steps left and 2 steps forward\n\nCurrent Plan:\nturn left, go forward, turn left, turn left, turn left, turn left, turn left, turn left, go forward, turn left, turn left, turn left, go forward, turn left\n\nReview the current plan above if present. Decide whether to continue with it or make changes.\n\nPLAN: No changes to the plan.",
+        "pick up\n\nCurrent Observation:\na wall 3 steps forward\na wall 3 steps right\na purple box 3 steps left and 1 step forward\n\nCurrent Plan:\ngo forward, turn left, go forward, turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, go forward\nPLAN: turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, turn left, go forward\n\nACTION: pick up",
+        "pick up\n\nCurrent Observation:\na wall 2 steps right\na green box 3 steps left and 2 steps forward\na purple box 2 steps forward\n\nCurrent Plan:\nturn left, turn left, go forward, turn left, turn left, go forward, turn left, turn left, go forward\n\nReview the current plan above if present. Decide whether to continue with it or make changes.\n\nPLAN: turn left, turn left, go forward, turn left, turn left, go forward\nPLAN: go forward, turn left, go forward, turn left, turn left, go forward\nPLAN: pick up, go forward, turn left, turn left, go forward, turn left, turn left, go forward",
+        "pick up\n\nCurrent Observation:\nYou carry a purple box\na wall 2 steps forward\na wall 2 steps right\na green box 3 steps left and 1 step forward",
+        "pick up\n\nCurrent Observation:\nYou carry a purple box\na wall 1 step forward\na wall 3 steps right\na green box 2 steps left",
+        "pick up\n\nCurrent Observation:\nYou carry a purple box\na wall 1 step forward\na wall 3 steps right\na green box 2 steps left",
+        "pick up\n\nCurrent Observation:\nYou carry a purple box\na wall 1 step forward\na wall 3 steps right\na green box 2 steps left\n\nCurrent Plan:\ngo left, go left, turn left, turn left, go left, turn left, turn left, turn left\nPLAN: turn left\n\nReview the current plan above if present. Decide whether to continue with it or make changes.\nIf you make changes, provide the updated plan. Then, provide the next action to take.\nIf the current plan is good, proceed with the updated plan.",
+        "go left",
+        "go left",
+        "go left"
+    ],
+    "mission": "pick up the purple box, then go to the green box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-4",
+    "seed": 279744159,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

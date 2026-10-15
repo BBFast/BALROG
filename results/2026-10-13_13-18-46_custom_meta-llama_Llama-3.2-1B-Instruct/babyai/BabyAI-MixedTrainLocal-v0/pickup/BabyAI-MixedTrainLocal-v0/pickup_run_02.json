@@ -1,0 +1,61 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pickup",
+    "action_frequency": {
+        "go forward": 26,
+        "turn left": 9,
+        "turn right": 10,
+        "pick up": 8
+    },
+    "input_tokens": 55791,
+    "output_tokens": 2347,
+    "done": true,
+    "episode_return": 0.25468749999999996,
+    "num_steps": 53,
+    "failed_candidates": [
+        "turn right\n\nI'm going in the right direction, but I need to turn left first. I'll do that.\n\nPLAN: turn left\nACTION: \n\nAs I turn left, I notice that I now have a grey key below me. \n\nPLAN: pick up\nACTION: pick up the grey key",
+        "pick up\n\nCurrent observation:\na wall 6 steps forward\na wall 3 steps right",
+        "go forward\n\nThe current plan appears to be correct, so I'll stick with it.",
+        "pick up the grey key",
+        "pick up the grey key",
+        "pick up the grey key",
+        "turn right\n\nAs I turn right, I notice that the grey key is currently 2 steps left and 3 steps forward. I also have a wall 4 steps forward. Since I'm already at the starting position, I need to decide what to do next.\n\nPLAN: go forward\nACTION: turn left",
+        "pick up the grey key",
+        "current plan seems good, I'll stick to it.\n\nturn right",
+        "go forward\n\nAs I go forward, I notice that I'm 3 steps right and 1 step forward of the grey key. Since the grey key is currently 3 steps left, I need to decide what to do next.\n\nPLAN: go forward, pick up, turn left, turn right, pick up, go forward\nACTION: pick up\n\nI've now picked up the grey key. My current position is (1, 3).",
+        "pick up\n\nI'm currently at (1, 3) and I've picked up the grey key. My goal is to reach the grey key and then the other objects in front of me.\n\nI'll make sure to review my previous actions to make changes if necessary.\n\nLet me review the actions I took:\n\n1. pick up the grey key\n2. pick up the grey key\n3. go forward\n4. turn left\n5. turn right\n6. pick up\n\nI notice that I went one step forward in the second action, which is correct. However, in the third action, I turned left, which doesn't seem to affect my goal. I'll keep in mind that turning left can be used to navigate around objects.\n\nPLAN: turn left, turn right, pick up, go forward, pick up, turn left\nACTION: pick up\n\nLet's continue with the new plan.",
+        "pick up\n\nI will continue with the current plan, as it appears to be working well for me. The grey key is 3 steps left, and the other objects in front of me are also under control.\n\nI'm currently at (1, 3) and I've picked up the grey key. Next, I'll pick up the other objects in front of me.",
+        null,
+        "turn left\n\nNext, I will turn left. I am currently at (1, 3) and I'll turn left, which will take me towards the wall to the left.",
+        "pick up\n\nI'll continue with the plan. Since I'm currently at (1, 2) and I've turned left, I'll go forward. I'll make sure to review my previous actions to see if there are any changes I can make to the plan.",
+        "turn left\n\nAs per the current plan, I will continue to turn left, which will take me to the wall. I am currently at (4, 3) and I'll turn left.\n\nPLAN: go forward, pick up, turn left, go forward\nACTION: turn left",
+        "pick up\n\nI've taken the next step as per the current plan. My current position is (3, 3) and I've picked up the grey key. Now, I need to continue with the plan to move towards the grey key.",
+        "go forward\n\nSince the current plan is good, I will continue with it. My current position is (1, 3) and I'll take the next step by going forward. I'll make sure to review my previous actions to see if there are any changes I can make to the plan."
+    ],
+    "mission": "pick up the grey key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 366981502,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

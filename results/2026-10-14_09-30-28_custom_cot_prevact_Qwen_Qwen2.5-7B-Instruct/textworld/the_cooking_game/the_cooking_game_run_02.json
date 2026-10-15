@@ -1,0 +1,57 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nExplanation:\n1. New relevant information: There is a block of cheese on the showcase.\n2. Objective: Move the block of cheese to get closer to the door.\n3. Action: Take the block of cheese from the showcase to move closer to the door.\n4. Comparison with previous action: This action is different from the previous plan, which was to move right. Now we are taking an item that is closer to the door.\n5. Validity: The action is valid based on the available commands.": 1,
+        "go south": 8,
+        "examine closed sliding door": 1,
+        "take raw white tuna from showcase": 1,
+        "open sliding door": 1,
+        "go north": 4,
+        "go east": 6,
+        "open front door": 1,
+        "go west": 6,
+        "open patio door": 1,
+        "open wooden door": 2,
+        "take red onion from floor\n\nPLAN: No changes to the plan.\nACTION: take white onion from floor": 1,
+        "take white onion from floor": 3,
+        "examine white onion": 1,
+        "take red onion from floor": 1,
+        "open toolbox": 4,
+        "examine toolbox": 7,
+        "take knife from toolbox": 28,
+        "examine knife": 1,
+        "examine knife in toolbox": 2
+    },
+    "input_tokens": 137415,
+    "output_tokens": 1332,
+    "done": true,
+    "episode_return": 80.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.058823529411764705,
+    "process_num": "ForkProcess-1",
+    "seed": 750891713,
+    "agent": {
+        "type": "custom_cot_prevact",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

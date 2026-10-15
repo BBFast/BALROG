@@ -1,0 +1,92 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward: take one step forward,No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 2 steps left",0,False
+1,toggle the large rock,No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+2,turn left,No changes to the plan.,"a wall 2 steps forward
+a wall 1 step right",0,False
+3,turn right,"go forward, turn right","a wall 1 step forward
+a wall 2 steps left",0,False
+4,turn left,"go forward, turn right","a wall 2 steps forward
+a wall 1 step right",0,False
+5,"go forward
+
+Current Observation:
+a wall 2 steps forward
+a wall 1 step right
+
+As per the current observation, I will go forward to move towards the 'a wall 1 step right' direction.
+
+PLAN: go forward, turn right
+ACTION: turn right
+
+Current Observation:
+a wall 2 steps forward
+a wall 1 step right","go forward, turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+6,"turn left
+
+At this point, I am currently standing in front of a wall 1 step forward and a wall 1 step right. I will turn left to reorient myself and decide my next action.","go forward, turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+7,turn left,No changes to the plan.,"a wall 1 step right
+a yellow key 4 steps forward",0,False
+8,go forward,"go forward, turn right","a wall 1 step right
+a yellow key 3 steps forward",0,False
+9,,"go forward, turn right, turn left, pick up, drop
+
+At this point, I have decided to make a change to the plan. 
+
+Current Observation:
+a wall 1 step right
+a yellow key 4 steps forward
+
+PLAN: go forward, turn right, turn left, pick up, drop, go forward, turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step right
+a yellow key 2 steps forward",0,False
+10,,"go forward, turn right, turn left, pick up, drop, go forward, turn right
+
+Since I am currently standing in front of a wall 1 step right and a yellow key 4 steps forward, I will:
+
+go forward
+
+Next, I will pick up the yellow key.
+
+PLAN: go forward, turn right, turn left, pick up, drop, go forward, turn right, pick up, drop
+
+Since I picked up the yellow key, I will now consider dropping it.
+
+PLAN: go forward, turn right, turn left, pick up, drop
+
+Next, I will go forward.
+
+PLAN: go forward, turn right, turn left, pick up, drop, go forward, turn right, pick up, drop, go forward","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step right
+a yellow key 1 step forward",0.8453125,True

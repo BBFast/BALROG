@@ -1,0 +1,604 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,"go forward, turn left, pick up, go forward, drop","go forward, turn left, pick up, go forward, turn right, pick up, go forward, turn right, pick up, go forward, turn right, pick up, go forward, turn right, pick up, pick up, pick up, pick up, pick up, pick up, pick up
+
+Reviewing the current plan, I notice that there are repeated actions:
+
+- going forward twice
+- turning right twice
+
+To optimize the plan, I'll change it to eliminate these unnecessary actions.
+
+PLAN: go forward, turn left, pick up, go forward, turn right, pick up, drop","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 2 steps left",0,False
+1,pick up,"go forward, turn left, pick up, go forward, turn right, drop","a wall 4 steps forward
+a wall 2 steps left",0,False
+2,"pick up
+
+Current Observation:
+a wall 4 steps forward
+a wall 2 steps left
+
+Current Plan:
+go forward, turn left, pick up, go forward, turn right, drop
+
+The current plan seems good. Next, I will take the next step. 
+
+PLAN: go forward, drop
+ACTION: turn left","go forward, drop","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 2 steps left",0,False
+3,"go forward
+
+The door is in sight, but I'll still need to pick it up or interact with it to progress further.","go forward, drop, turn right
+
+I will apply the turn right action to the current plan. 
+
+PLAN: go forward, drop, turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 2 steps left",0,False
+4,"go forward, turn right","turn left, pick up","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+5,go forward,pick up,"a wall 1 step forward
+a wall 2 steps left",0,False
+6,turn left,"drop, turn right, pick up","a wall 2 steps forward
+a wall 1 step right",0,False
+7,go forward,"pick up, turn left, drop, turn right, pick up","a wall 1 step forward
+a wall 1 step right",0,False
+8,turn right,"go forward, turn right, pick up, turn left, drop, turn right, pick up
+
+Since the current plan is good, I will stick with it. Now, I'll take the next step.","a wall 1 step forward
+a wall 1 step left",0,False
+9,turn right,"go forward, turn left, pick up, turn left, drop, turn left, pick up","a wall 6 steps forward
+a wall 1 step left",0,False
+10,turn right,"drop, turn right, pick up, turn right, drop","a wall 6 steps forward
+a wall 1 step right",0,False
+11,turn right,"drop, turn right, pick up, turn right, drop, turn right, drop, pick up","a wall 1 step forward
+a wall 1 step right",0,False
+12,go forward,"drop, turn right, pick up, turn right, drop, turn right, drop, pick up","a wall 1 step forward
+a wall 1 step right",0,False
+13,go forward,"pick up, turn right, drop, pick up, turn right, drop, turn right, drop","a wall 1 step forward
+a wall 1 step right",0,False
+14,"go forward
+
+The current plan is:
+pick up, turn right, drop, turn right, drop, turn right, drop
+
+Current Observation:
+a wall 1 step forward
+a wall 1 step right
+
+PLAN: go forward, turn left, pick up, go forward, turn right, drop
+
+ACTION: turn left","turn right, turn right, drop, turn right, drop, turn right, drop
+
+To review the plan, I notice that the current plan is good, so I will proceed with it.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+15,"go forward
+
+Current Observation:
+a wall 1 step forward","turn right, turn right, drop, turn right, drop, turn right, drop","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+16,go forward,"turn right, turn right, drop, turn right, drop, turn right, drop
+
+Since the current plan seems to be correct and successful so far, I'll make a small tweak.
+
+PLAN: turn right, turn left, drop, turn right, drop, turn right, drop","a wall 1 step forward
+a wall 1 step right",0,False
+17,pick up,"turn left, drop, turn right, drop, turn right, drop","a wall 1 step forward
+a wall 1 step right",0,False
+18,"turn right
+
+Current Observation:
+a wall 1 step forward
+a wall 1 step right
+
+The current plan seems good.",No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+19,turn right,"turn right, pick up, drop, turn right, drop, turn right, drop
+
+Next Action: turn right","a wall 1 step forward
+a wall 1 step left",0,False
+20,turn left,"turn left, drop, turn right, drop, turn right, drop","a wall 1 step forward
+a wall 1 step right",0,False
+21,go forward,"turn right, drop, turn right, turn left, turn right, drop","a wall 1 step forward
+a wall 1 step right",0,False
+22,turn left,No changes to the plan,"a wall 6 steps forward
+a wall 1 step right",0,False
+23,go forward,No changes to the plan,"a wall 5 steps forward
+a wall 1 step right",0,False
+24,turn left,"go forward, pick up, drop, turn right, drop, go forward","a wall 6 steps forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 6 steps forward",0,False
+25,turn right,"go forward, pick up, drop, turn right, drop, go forward","a wall 5 steps forward
+a wall 1 step right",0,False
+26,pick up,"go forward, turn left, pick up, go forward, drop, turn right, drop, go forward, turn left, pick up, go forward, drop, turn right, drop, turn left","a wall 5 steps forward
+a wall 1 step right",0,False
+27,turn left,"go forward, turn left, pick up, go forward, drop, turn right, drop, go forward, turn left, pick up, go forward, drop, turn right, drop, turn left, pick up, go forward, drop","a wall 6 steps forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 6 steps forward",0,False
+28,go forward,"go forward, turn left, pick up, go forward, drop, turn right, drop, turn left, pick up, go forward, drop
+
+At this point, we have reached the locked yellow door. We should exit the door since there is no other action to take.","a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 5 steps forward",0,False
+29,drop,No changes to the plan.,"a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 5 steps forward",0,False
+30,"turn left
+
+Current Observation:
+a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 5 steps forward
+
+The current plan seems good, so we will proceed with it.","go forward, turn right, pick up, go forward, drop, turn right, drop, turn left, pick up, go forward, drop","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 4 steps forward",0,False
+31,go forward,"go forward, turn right, pick up, go forward, drop, turn right, drop, turn left, pick up, go forward, drop, turn right","a wall 3 steps forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 3 steps forward",0,False
+32,drop,"turn left, pick up, go forward, turn left, pick up, go forward, drop, turn left, pick up, go forward, drop, turn left","a wall 3 steps forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 3 steps forward",0,False
+33,turn right,"turn left, pick up, go forward, turn left, pick up, go forward, drop, turn left, pick up, go forward, drop, turn left","a wall 5 steps forward
+a wall 3 steps left
+a locked yellow door 3 steps left and 3 steps forward
+a yellow key 1 step left and 4 steps forward",0,False
+34,"turn right
+
+Current Observation:
+a wall 3 steps left
+a locked yellow door 3 steps left and 3 steps forward
+a yellow key 1 step left and 4 steps forward","turn left, pick up, go forward, turn left, pick up, drop, turn left, pick up, go forward, drop, turn left, pick up","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 3 steps left
+a locked yellow door 3 steps left and 2 steps forward
+a yellow key 1 step left and 3 steps forward",0,False
+35,go forward,drop,"a wall 3 steps forward
+a wall 3 steps left
+a locked yellow door 3 steps left and 1 step forward
+a yellow key 1 step left and 2 steps forward",0,False
+36,go forward,go forward and pick up,"a wall 2 steps forward
+a locked yellow door 3 steps left
+a yellow key 1 step left and 1 step forward",0,False
+37,go forward,go forward and pick up,"a wall 1 step forward
+a yellow key 1 step left",0,False
+38,pick up,go forward and pick up,"a wall 1 step forward
+a yellow key 1 step left",0,False
+39,"turn right
+
+Current Observation:
+a wall 1 step forward
+a yellow key 1 step left
+
+I will continue with the current plan, as it seems to be the most logical course of action given the situation.",go forward and pick up,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a yellow key 1 step left",0,False
+40,turn left,go forward and pick up,"a wall 1 step right
+a locked yellow door 1 step left and 3 steps forward
+a yellow key 1 step forward",0,False
+41,go forward,go forward and pick up,"a wall 1 step right
+a locked yellow door 1 step left and 3 steps forward
+a yellow key 1 step forward",0,False
+42,"pick up
+
+Current Observation:
+a wall 1 step right
+a locked yellow door 1 step left and 3 steps forward
+a yellow key 1 step forward",go forward and pick up,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step right
+a locked yellow door 1 step left and 3 steps forward
+a yellow key 1 step forward",0,False
+43,pick up,go forward and pick up,"You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right
+a locked yellow door 1 step left and 3 steps forward",0,False
+44,pick up,go forward and pick up,"You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right
+a locked yellow door 1 step left and 3 steps forward",0,False
+45,turn left,go forward and pick up,"You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps right
+a locked yellow door 3 steps right and 1 step forward",0,False
+46,"go forward
+
+As we continue, the lock should now be open, allowing us to proceed with the goal.",go forward and pick up,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 5 steps forward
+a locked yellow door 3 steps right",0,False
+47,pick up,pick up and go forward,"You carry a yellow key
+a wall 5 steps forward
+a locked yellow door 3 steps right",0,False
+48,"pick up
+
+Current Observation:
+You carry a yellow key
+a wall 5 steps forward
+a locked yellow door 3 steps right
+
+The goal of the game is to open the locked yellow door. Following the current plan, the best next step is to pick up the yellow key.",go forward,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 4 steps forward
+a wall 3 steps right",0,False
+49,pick up,turn left,"You carry a yellow key
+a wall 4 steps forward
+a wall 3 steps right",0,False
+50,pick up,turn left,"You carry a yellow key
+a wall 4 steps forward
+a wall 3 steps right",0,False
+51,turn right,turn left,"You carry a yellow key
+a wall 3 steps forward
+a wall 3 steps right
+a locked yellow door 1 step right and 3 steps forward",0,False
+52,go forward,turn right,"You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right
+a locked yellow door 1 step right and 2 steps forward",0,False
+53,go forward,turn right,"You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+54,pick up,"go forward, pick up, turn right
+
+As we look at the current plan, it appears to be suitable and efficient. The goal remains the same, and we should continue with the plan as it is.","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+55,pick up,"turn right, go forward, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+56,pick up,"turn right, go forward, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+57,go forward,"turn right, go forward, pick up
+
+As per the plan, after turning right, the next step is to go forward. Since I am currently standing on the right wall, the next step is to move forward by 1 step.","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+58,pick up,"turn right, go forward, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+59,turn left,"go forward, pick up","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right",0,False
+60,turn right,"pick up, go forward","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+61,"pick up
+
+Current Observation:
+You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward","go forward, pick up","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+62,,"pick up, turn left
+
+Since we are currently standing near the locked yellow door and have a key, picking up the key seems like the best next step.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+63,go forward,"pick up, go forward","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 1 step right and 1 step forward",0,False
+64,turn left,"pick up, go forward","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right",0,False
+65,turn left,"pick up, go forward","You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps left",0,False
+66,turn right,"pick up, go forward","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right",0,False
+67,go forward,"go forward, pick up","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right",0,False
+68,go forward,No changes to the plan.,"You carry a yellow key
+a wall 2 steps forward
+a wall 1 step right",0,False
+69,pick up,"pick up, go forward","You carry a yellow key
+a wall 2 steps forward
+a wall 1 step right",0,False
+70,turn right,"pick up, go forward","You carry a yellow key
+a wall 1 step forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 1 step forward",0,False
+71,pick up,"pick up, go forward","You carry a yellow key
+a wall 1 step forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 1 step forward",0,False
+72,pick up,"go forward, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 1 step forward",0,False
+73,pick up,"go forward, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 1 step forward",0,False
+74,go forward,"go forward, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 1 step forward",0,False
+75,pick up,"go forward, pick up
+
+Since my current plan is to pick up the key, I will choose to proceed with that plan.","You carry a yellow key
+a wall 1 step forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 1 step forward",0,False
+76,go forward,"pick up, go forward","You carry a yellow key
+a wall 1 step forward
+a wall 2 steps left
+a locked yellow door 3 steps right and 1 step forward",0,False
+77,turn right,"pick up, go forward","You carry a yellow key
+a wall 5 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 3 steps forward",0,False
+78,turn right,"pick up, go forward, turn right","You carry a yellow key
+a wall 6 steps forward
+a wall 2 steps right",0,False
+79,"go forward
+
+I made a change to the current plan by picking up the key to manipulate it.","pick up, go forward, turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 5 steps forward
+a wall 2 steps right",0,False
+80,pick up,"go forward, turn right","You carry a yellow key
+a wall 5 steps forward
+a wall 2 steps right",0,False
+81,go forward,"go forward, turn right","You carry a yellow key
+a wall 4 steps forward
+a wall 2 steps right",0,False
+82,go forward,"turn right, go forward, turn right, pick up, go forward, turn right, pick up, go forward","You carry a yellow key
+a wall 3 steps forward
+a wall 2 steps right",0,False
+83,"drop
+
+The current plan is still sufficient to reach the door.","turn right, go forward, turn right, pick up, go forward, turn right, pick up, go forward","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 2 steps forward
+a wall 2 steps right",0,False
+84,turn left,"go forward, turn right, pick up, go forward, turn right, pick up, go forward","You carry a yellow key
+a wall 5 steps forward
+a wall 2 steps right",0,False
+85,"go forward
+
+This is a valid plan that reaches the door. The plan still adheres to the observation: carrying a yellow key, a wall 5 steps forward, and a wall 2 steps right.","go forward, turn right, pick up, go forward, turn right, pick up, drop","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 4 steps forward
+a wall 2 steps right",0,False
+86,turn right,"drop, go forward, turn right, pick up, drop, go forward, turn right","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right",0,False
+87,pick up,"go forward, turn left","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right",0,False
+88,pick up,"go forward, turn left","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right",0,False
+89,turn left,"go forward, turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 2 steps right",0,False
+90,turn right,"go forward, turn left","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right",0,False
+91,pick up,"turn left, pick up","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right",0,False
+92,turn left,"turn left, pick up, go forward","You carry a yellow key
+a wall 4 steps forward
+a wall 2 steps right",0,False
+93,pick up,"go forward, turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 2 steps right",0,False
+94,pick up,"go forward, turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 2 steps right",0,False
+95,turn right,"go forward, turn left","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right",0,False
+96,pick up,"go forward, turn left","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right",0,False
+97,go forward,"turn right, go forward","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right",0,False
+98,,"turn right, go forward, pick up
+
+The current plan seems to be a good plan to reach the door. To continue, I will turn right.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right",0,False
+99,turn right,"turn right, go forward, pick up","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step left",0,False
+100,turn right,"pick up, turn right, go forward","You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps left
+a locked yellow door 2 steps right and 6 steps forward",0,False
+101,pick up,"turn right, go forward","You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps left
+a locked yellow door 2 steps right and 6 steps forward",0,False
+102,pick up,No changes to the plan.,"You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps left
+a locked yellow door 2 steps right and 6 steps forward",0,False
+103,pick up,"turn left, go forward","You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps left
+a locked yellow door 2 steps right and 6 steps forward",0,False
+104,pick up,"turn right, go forward","You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps left
+a locked yellow door 2 steps right and 6 steps forward",0,False
+105,turn right,"turn left, go forward","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right",0,False
+106,turn left,"turn left, go forward","You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps left
+a locked yellow door 2 steps right and 6 steps forward",0,False
+107,turn left,"turn right, go forward, pick up, turn left, go forward, turn left","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step left",0,False
+108,turn left,"turn left, go forward, pick up, turn left, go forward, drop","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right",0,False
+109,turn left,"go forward, pick up, drop","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right",0,False
+110,go forward,"go forward, pick up, drop","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right",0,False
+111,turn left,drop,"You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps right
+a locked yellow door 1 step right and 6 steps forward",0,False
+112,pick up,turn right,"You carry a yellow key
+a wall 6 steps forward
+a wall 3 steps right
+a locked yellow door 1 step right and 6 steps forward",0,False
+113,turn left,"turn left, pick up","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step left",0,False
+114,pick up,"turn left, pick up","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step left",0,False
+115,turn left,"turn left, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps left",0,False
+116,pick up,"turn left, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps left",0,False
+117,pick up,"turn left, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps left",0,False
+118,turn left,"turn left, pick up","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right",0,False
+119,pick up,"turn left, pick up","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right",0,False
+120,turn right,No changes to the plan.,"You carry a yellow key
+a wall 1 step forward
+a wall 3 steps left",0,False
+121,turn right,"turn right, pick up","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step left",0,False
+122,turn left,"turn left, pick up","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps left",0,False
+123,turn right,"turn right, go forward","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step left",0,False
+124,turn left,No changes to the plan.,"You carry a yellow key
+a wall 1 step forward
+a wall 3 steps left",0,False
+125,,"No changes to the plan.
+turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 1 step forward
+a wall 3 steps left",0,False
+126,turn left,No changes to the plan.,"You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right",0,False
+127,pick up,turn right,"You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right",0,True

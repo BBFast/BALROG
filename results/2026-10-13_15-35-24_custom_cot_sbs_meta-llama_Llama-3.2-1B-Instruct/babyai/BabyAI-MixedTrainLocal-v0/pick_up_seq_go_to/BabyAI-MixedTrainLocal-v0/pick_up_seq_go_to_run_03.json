@@ -1,0 +1,68 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "go forward": 47,
+        "turn right": 29,
+        "drop": 7,
+        "turn left": 15,
+        "pick up": 30
+    },
+    "input_tokens": 114265,
+    "output_tokens": 4624,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "pick up the grey key",
+        "pick up, turn right",
+        "go right",
+        "go right",
+        "pick up, go forward",
+        "pick up the grey key",
+        null,
+        "pick up the grey key",
+        "go right",
+        "pick up the grey key",
+        "pick up the grey key",
+        "pick up, go forward",
+        "turn right\n\nLet's apply the plan:\n\nPLAN: go forward, turn left, pick up, go forward, go forward, turn right\nACTION: pick up the grey key",
+        "pick up the grey key",
+        "pick up the grey key",
+        "pick up the grey key",
+        "pick up the grey key",
+        "drop the grey key\n\nCurrent Observation:\na wall 1 step right\na grey key 0 steps forward\nyellow ball 0 steps left\n\nCurrent Plan:\ndrop, go forward, turn right, pick up\n\nI'll drop the grey key immediately to save space. Now, I can proceed with my original plan. Here's the updated action:\nACTION: turn right",
+        "Review the current plan above if present. Decide whether to continue with it or make changes.\n\n PLAN: No changes to the plan.\n\nSince the current plan is good, I'll proceed as planned.\n\nPLAN: pick up, drop, go forward, turn right, pick up",
+        "The current observation suggests that you need to move left to pick up the grey key. Based on the current plan, you should turn left. \n\nPLAN: pick up, turn left, go forward, pick up, turn right, go forward, pick up, turn left, pick up, pick up, pick up, pick up, pick up, pick up, go forward\n\nACTION:",
+        "drop\n\nSince the plan would repeat the same actions, I will update it. \n\nPLAN: turn right, pick up, turn right, turn right, turn left, pick up, turn right, pick up, turn right, turn left, pick up\nACTION: drop",
+        "pick up\n\nCurrent Observation:\na wall 1 step left\na grey key 5 steps forward",
+        "pick up\n\nCurrent Observation:\na wall 1 step left\na grey key 4 steps forward\n\nI will follow the current plan and take the action \"pick up\".",
+        "go forward\n\nCurrent Observation:\na wall 1 step left\na grey key 2 steps forward\n\nLet's update the current plan if necessary.\n\nNo changes to the plan.\n\nPLAN: turn right, turn left, turn right, turn right, turn left, pick up\nACTION: go forward"
+    ],
+    "mission": "pick up the grey key, then go to the yellow ball",
+    "progression": 0.0,
+    "process_num": "ForkProcess-4",
+    "seed": 586682608,
+    "agent": {
+        "type": "custom_cot_sbs",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

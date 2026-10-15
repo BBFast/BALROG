@@ -1,0 +1,64 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 26,
+        "turn right": 17,
+        "toggle": 1,
+        "drop": 2,
+        "pick up": 13,
+        "turn left": 4
+    },
+    "input_tokens": 61207,
+    "output_tokens": 1986,
+    "done": true,
+    "episode_return": 0.11406249999999996,
+    "num_steps": 63,
+    "failed_candidates": [
+        "go forward\n\nI am currently standing in front of the grey key, and I need to move forward to reach it. My goal is to get closer to the key.",
+        "go forward\n\nI am currently standing 2 steps forward and need to make a slight adjustment to get closer to the grey key.",
+        "go forward\n\nAs I plan to continue moving forward to reach the grey key, I need to make a small adjustment to stay in front of the wall. I will turn left to move two steps to the left, which will put me closer to the wall and the grey key.",
+        null,
+        "go forward\n\nI have reviewed the current plan and decided to make a change. The goal remains to get closer to the grey key by moving forward and adjusting to the wall position. My next step is to turn left to move two steps to the left, which will put me closer to the wall and the grey key.",
+        null,
+        "turn right\n\nReviewing the plan, I realize that it doesn't align with the observation \"a wall 1 step left\". Since I am 5 steps forward and need to move 1 step back, I will turn left.",
+        "turn left\n\nReviewing the current plan, I notice that it's okay and I should proceed with it. Let's continue with the plan.\n\nPLAN: go forward, turn right\nACTION: turn left",
+        "turn left, go forward",
+        "go forward\n\nI have taken the next step according to the current plan. Since I am 6 steps forward and need to move 2 steps to the left, I will turn left. The current plan is consistent with my objective.",
+        "turn right\n\nReviewing the current plan, it's a good plan as it will allow me to pick up the grey key, drop it, and then pick it up again if it falls off. Let's continue with the plan.",
+        "pick up\n\nReviewing the current plan, it's a good plan as it seems to allow me to pick up the grey key in the correct direction.",
+        null,
+        "turn right\n\nReviewing the current plan, it seems to be mostly correct, but it's unclear what the object I need to pick up is. I'll pick up the object below me and drop it. \n\nPLAN: turn left, drop, turn right, pick up\nACTION: pick up",
+        "pick up\n\nReviewing the current plan, it seems to be mostly correct, but the plan seems to be about being directed to interact with objects in a specific order. The current plan seems to have enough interactions to keep going.\n\nThe plan seems to be working as intended, and there's no obvious reason to change it.",
+        "go forward\n\nObservation:\na wall 4 steps forward\na wall 1 step right\na grey key 3 steps left and 3 steps forward",
+        "pick up\n\nReviewing the current plan, I see that it's actually not working correctly. It seems to be a loop with no clear progression.",
+        "turn right\n\nCurrent Observation:\na wall 5 steps forward\na wall 2 steps right\na grey key 1 step right and 2 steps forward",
+        "turn right\n\nCurrent Observation:\na wall 4 steps forward\na wall 2 steps right\na grey key 1 step right and 1 step forward"
+    ],
+    "mission": "go to the grey key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-4",
+    "seed": 3115229599,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

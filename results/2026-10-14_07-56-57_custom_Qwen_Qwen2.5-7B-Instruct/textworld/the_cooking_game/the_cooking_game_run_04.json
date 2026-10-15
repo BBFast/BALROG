@@ -1,0 +1,47 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "go south": 3,
+        "go east": 1,
+        "examine cookbook": 2,
+        "open frosted-glass door": 1,
+        "take knife from counter": 1,
+        "take green hot pepper from fridge": 52,
+        "examine fridge": 15,
+        "open fridge": 1,
+        "take green bell pepper from fridge": 1,
+        "examine green hot pepper": 3
+    },
+    "input_tokens": 116650,
+    "output_tokens": 1290,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-7",
+    "seed": 133655702,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
