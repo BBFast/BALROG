@@ -1,0 +1,47 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 6,
+        "turn right": 1
+    },
+    "input_tokens": 4936,
+    "output_tokens": 294,
+    "done": true,
+    "episode_return": 0.9015625,
+    "num_steps": 7,
+    "failed_candidates": [
+        "turn left\n\nI will turn left to face the wall that I'm currently in, so I can use my 'toggle' action to interact with it later.",
+        "go forward\n\nI will take one step forward, which moves me away from the purple box and towards the wall, and potentially interacts with the wall or other objects in the environment.",
+        "turn left\n\nI will turn left to face the wall that I'm currently in, and now I have the opportunity to pick up the object that's in front of me.",
+        "pick up\n\nI will take one step forward, which moves me towards the purple box, and pick up the object in front of me.",
+        null,
+        "turn left\n\nI will turn left to face the wall that I'm currently in, and now I have the opportunity to pick up the object that's in front of me."
+    ],
+    "mission": "go to the purple box",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 3724932550,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

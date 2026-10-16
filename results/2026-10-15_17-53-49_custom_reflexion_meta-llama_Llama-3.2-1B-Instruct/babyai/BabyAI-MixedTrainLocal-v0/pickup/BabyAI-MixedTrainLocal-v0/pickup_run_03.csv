@@ -1,0 +1,298 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,"turn left
+
+Now that I've turned left, I should be able to see the object in front of me, which is the wall 5 steps forward. I can interact with it to pick it up.","go forward
+
+PLAN: No changes to the plan.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 2 steps right",0,False
+1,"turn right
+
+I'll make sure to focus on the wall that is 4 steps forward from my current position.","go forward, turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 2 steps right",0,False
+2,"toggle 
+
+I need to manipulate the wall that is 3 steps forward, which is now in the way.","go forward, turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 2 steps right",0,False
+3,"turn left
+
+Now that I've turned left, I should be able to see the wall that is 2 steps forward from my current position. I can pick it up by going forward and using my hand to interact with it.",No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+4,,"No changes to the plan.
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right
+
+Current observation: a wall 1 step forward
+
+Now that I have a wall in front of me, I can try to pick it up using the pick up action. I'll take a step forward to create space and then use my hand to pick up the wall.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+5,"turn left
+
+Now that I've turned left, I should be able to see the wall in front of me. I can pick it up using the 'pick up' action by going forward and then interacting with the wall.",turn left,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+6,pick up,turn right,"a wall 1 step forward
+a wall 2 steps right",0,False
+7,turn left,No changes to the plan.,"a wall 5 steps forward
+a wall 1 step right",0,False
+8,turn right,No changes to the plan.,"a wall 1 step forward
+a wall 2 steps right",0,False
+9,turn right,go forward,"a wall 2 steps forward
+a wall 1 step left",0,False
+10,pick up,No changes to the plan.,"a wall 2 steps forward
+a wall 1 step left",0,False
+11,"go forward 
+
+I'm moving forward to continue the progress towards the purple key.","go forward, pick up","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+12,pick up,"go forward, pick up, turn left, pick up","a wall 1 step forward
+a wall 1 step left",0,False
+13,pick up,"go forward, pick up, turn right, pick up, turn left, pick up","a wall 1 step forward
+a wall 1 step left",0,False
+14,turn left,No changes to the plan.,"a wall 1 step forward
+a wall 1 step right",0,False
+15,"turn left
+
+The current observation is that I am at a point where both the wall in front of me (1 step forward) and the object in front of me (wall 1 step right) are now in the way. The best course of action is to interact with the object that is in front of me, which is the wall.","go forward, pick up, turn right, pick up, turn left, pick up","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+16,turn left,"go forward, pick up, turn right, pick up, turn left, drop","a wall 6 steps forward
+a wall 1 step right",0,False
+17,"toggle
+
+The object has been interacted with and is now in my hand. Now that I have the object, I can use it as a stepping stone to continue the progress towards the purple key. 
+
+PLAN: turn left, pick up, drop
+
+ACTION: turn left","No changes to the plan.
+
+To take a more efficient path, I'll use the 'toggle' action to interact with the wall in front of the object, which is now 6 steps forward. I'll interact with it and then pick it up. This will provide an advantage in navigating towards the purple key.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 1 step right",0,False
+18,toggle,"turn left, pick up, drop, turn right, pick up","a wall 5 steps forward
+a wall 1 step right",0,False
+19,"turn left
+
+I've made the change to follow the instruction to use the object (wall) as a stepping stone to continue the progress towards the purple key. Now that I've turned left, I should be able to see my hand interacting with the wall, which is now in my way. I can pick up the wall by going forward and then interacting with it.","turn left, pick up, drop, turn right, pick up","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 1 step right",0,False
+20,pick up,"go forward, pick up","a wall 4 steps forward
+a wall 1 step right",0,False
+21,pick up,"pick up, drop
+
+Since I previously picked up the wall (action pick up), and then dropped it (action drop), and now the wall is in front of me again, and the object is in front of me, the best course of action is to pick up the object that is in front of me, which is the wall.","a wall 4 steps forward
+a wall 1 step right",0,False
+22,turn left,"pick up, drop","a wall 6 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 5 steps forward",0,False
+23,pick up,"pick up, drop","a wall 6 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 5 steps forward",0,False
+24,turn left,"turn left, pick up, drop","a wall 3 steps forward
+a wall 1 step left",0,False
+25,turn right,"turn right, pick up, drop","a wall 6 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 5 steps forward",0,False
+26,pick up,go forward,"a wall 6 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 5 steps forward",0,False
+27,"turn right
+
+I've decided to only pick up the purple key once it interacts with the wall. Now that I've turned right, I should be able to see the key interacting with the wall. 
+
+PLAN: turn right, pick up, drop, go forward
+
+ACTION: turn right","turn right, pick up, drop, go forward","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 4 steps forward",0,False
+28,pick up,"turn right, pick up, drop, go forward","a wall 5 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 4 steps forward",0,False
+29,go forward,"turn right, pick up, drop, go forward","a wall 4 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 3 steps forward",0,False
+30,go forward,"go forward, turn right, pick up","a wall 3 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 2 steps forward",0,False
+31,,"pick up, go forward, turn left","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 1 step forward",0,False
+32,turn left,"go forward, turn left","a wall 3 steps forward
+a wall 2 steps right",0,False
+33,turn right,"turn right, go forward","a wall 2 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 1 step forward",0,False
+34,turn left,"turn left, go forward","a wall 3 steps forward
+a wall 2 steps right",0,False
+35,,"go forward, pick up","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 2 steps right",0,False
+36,turn left,"turn left, pick up","a wall 5 steps forward
+a wall 2 steps right",0,False
+37,pick up,No changes to the plan,"a wall 5 steps forward
+a wall 2 steps right",0,False
+38,pick up,pick up,"a wall 5 steps forward
+a wall 2 steps right",0,False
+39,turn left,"turn left, go forward
+
+ ACTION: turn left","a wall 5 steps forward
+a wall 2 steps left
+a purple key 1 step left and 4 steps forward",0,False
+40,go forward,"go forward, pick up","a wall 4 steps forward
+a wall 2 steps left
+a purple key 1 step left and 3 steps forward",0,False
+41,turn right,"turn right, pick up, go forward","a wall 5 steps forward
+a wall 3 steps right",0,False
+42,"turn right
+
+I'll start with the plan as is.",No changes to the plan.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 3 steps right",0,False
+43,pick up,"turn left, pick up, go forward","a wall 4 steps forward
+a wall 3 steps right",0,False
+44,go forward,"go forward, turn left, pick up, go forward","a wall 3 steps forward
+a wall 3 steps right",0,False
+45,pick up,"go forward, turn left, pick up, drop","a wall 3 steps forward
+a wall 3 steps right",0,False
+46,"go forward
+
+The current plan is good and I'm in a good position to proceed.","turn left, pick up, drop","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps right",0,False
+47,turn right,"turn left, pick up, drop","a wall 3 steps forward
+a wall 2 steps left",0,False
+48,pick up,go forward,"a wall 3 steps forward
+a wall 2 steps left",0,False
+49,pick up,go forward,"a wall 3 steps forward
+a wall 2 steps left",0,False
+50,turn right,No changes to the plan.,"a wall 5 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 4 steps forward",0,False
+51,pick up,pick up and turn left,"a wall 5 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 4 steps forward",0,False
+52,go forward,go forward and turn left,"a wall 4 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 3 steps forward",0,False
+53,turn right,go forward and turn left,"a wall 4 steps forward
+a wall 3 steps right
+a purple key 3 steps left and 3 steps forward",0,False
+54,turn left,go forward and turn left,"a wall 4 steps forward
+a wall 3 steps left
+a purple key 3 steps right and 3 steps forward",0,False
+55,turn right,"go forward, pick up","a wall 4 steps forward
+a wall 3 steps right
+a purple key 3 steps left and 3 steps forward",0,False
+56,,"No changes to the plan.
+
+turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 3 steps right
+a purple key 3 steps left and 2 steps forward",0,False
+57,turn right,No changes to the plan.,"a wall 3 steps forward
+a wall 3 steps left",0,False
+58,pick up,turn right,"a wall 3 steps forward
+a wall 3 steps left",0,False
+59,,go forward,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps left",0,False
+60,turn left,go forward,"a wall 3 steps forward
+a wall 2 steps right",0,False
+61,turn left,go forward,"a wall 5 steps forward
+a wall 3 steps right
+a purple key 2 steps right and 4 steps forward",0,False
+62,"pick up
+
+The plan is good, and I'm in a good position to pick up the purple key. I'm 1 step forward.",go forward,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 3 steps right
+a purple key 2 steps right and 3 steps forward",0,False
+63,,"go forward, turn left","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 3 steps right
+a purple key 2 steps right and 2 steps forward",0,True

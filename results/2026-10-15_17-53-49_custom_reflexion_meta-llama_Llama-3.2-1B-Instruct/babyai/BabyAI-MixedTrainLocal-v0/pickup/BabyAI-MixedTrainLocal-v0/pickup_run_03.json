@@ -1,0 +1,63 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pickup",
+    "action_frequency": {
+        "go forward": 24,
+        "pick up": 17,
+        "turn left": 12,
+        "turn right": 10,
+        "toggle": 1
+    },
+    "input_tokens": 67325,
+    "output_tokens": 1607,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 64,
+    "failed_candidates": [
+        "turn left\n\nNow that I've turned left, I should be able to see the object in front of me, which is the wall 5 steps forward. I can interact with it to pick it up.",
+        "turn right\n\nI'll make sure to focus on the wall that is 4 steps forward from my current position.",
+        "toggle \n\nI need to manipulate the wall that is 3 steps forward, which is now in the way.",
+        "turn left\n\nNow that I've turned left, I should be able to see the wall that is 2 steps forward from my current position. I can pick it up by going forward and using my hand to interact with it.",
+        null,
+        "turn left\n\nNow that I've turned left, I should be able to see the wall in front of me. I can pick it up using the 'pick up' action by going forward and then interacting with the wall.",
+        "go forward \n\nI'm moving forward to continue the progress towards the purple key.",
+        "turn left\n\nThe current observation is that I am at a point where both the wall in front of me (1 step forward) and the object in front of me (wall 1 step right) are now in the way. The best course of action is to interact with the object that is in front of me, which is the wall.",
+        "toggle\n\nThe object has been interacted with and is now in my hand. Now that I have the object, I can use it as a stepping stone to continue the progress towards the purple key. \n\nPLAN: turn left, pick up, drop\n\nACTION: turn left",
+        "turn left\n\nI've made the change to follow the instruction to use the object (wall) as a stepping stone to continue the progress towards the purple key. Now that I've turned left, I should be able to see my hand interacting with the wall, which is now in my way. I can pick up the wall by going forward and then interacting with it.",
+        "turn right\n\nI've decided to only pick up the purple key once it interacts with the wall. Now that I've turned right, I should be able to see the key interacting with the wall. \n\nPLAN: turn right, pick up, drop, go forward\n\nACTION: turn right",
+        null,
+        null,
+        "turn right\n\nI'll start with the plan as is.",
+        "go forward\n\nThe current plan is good and I'm in a good position to proceed.",
+        null,
+        null,
+        "pick up\n\nThe plan is good, and I'm in a good position to pick up the purple key. I'm 1 step forward.",
+        null
+    ],
+    "mission": "pick up the purple key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 3527480877,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
