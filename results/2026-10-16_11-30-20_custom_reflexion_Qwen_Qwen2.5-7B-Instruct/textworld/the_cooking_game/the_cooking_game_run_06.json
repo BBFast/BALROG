@@ -1,0 +1,55 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nAfter taking the block of cheese, I will examine it to ensure I have the correct item and proceed to take the raw white tuna next.": 1,
+        "examine raw white tuna": 3,
+        "take raw white tuna from showcase": 10,
+        "go south": 6,
+        "open sliding door": 1,
+        "go east": 6,
+        "go north": 7,
+        "go west": 3,
+        "examine showcase": 14,
+        "examine cookbook": 6,
+        "look": 1,
+        "go to laundromat": 2,
+        "go to refrigerator": 1,
+        "go to produce section": 1,
+        "go to fish counter": 8,
+        "go to freezer": 8,
+        "examine nearby shelves": 1,
+        "examine raw tuna in showcase": 1
+    },
+    "input_tokens": 126124,
+    "output_tokens": 2089,
+    "done": true,
+    "episode_return": 157.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-4",
+    "seed": 2743855271,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

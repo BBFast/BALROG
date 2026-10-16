@@ -1,0 +1,61 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine bed": 1,
+        "go east": 3,
+        "examine sofa": 1,
+        "go south": 3,
+        "take knife from counter": 1,
+        "examine cookbook": 1,
+        "open frosted-glass door": 1,
+        "go north": 4,
+        "examine fridge": 27,
+        "open front door": 1,
+        "go to kitchen": 1,
+        "open fridge": 2,
+        "take lettuce from fridge": 10,
+        "open fridge\n\nThen, after opening the fridge:\nACTION: take lettuce from fridge": 1,
+        "look inside fridge": 4,
+        "look around": 1,
+        "examine knife": 2,
+        "examine pantry": 1,
+        "examine countertop": 6,
+        "examine lettuce": 2,
+        "look": 1,
+        "examine lettuce in fridge": 1,
+        "examine contents of fridge": 4,
+        "examine table": 1
+    },
+    "input_tokens": 126430,
+    "output_tokens": 1260,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2310785450,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

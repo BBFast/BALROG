@@ -1,0 +1,56 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase\n\nTaking the block of cheese from the showcase is the next logical step since it is one of the ingredients needed for the recipe.": 1,
+        "examine showcase": 9,
+        "examine raw white tuna": 1,
+        "take raw white tuna from showcase": 5,
+        "take block of cheese from showcase": 2,
+        "examine cookbook": 5,
+        "examine block of cheese": 1,
+        "go north": 17,
+        "go east": 12,
+        "go west": 7,
+        "go south": 9,
+        "examine sliding door": 2,
+        "open sliding door with key": 1,
+        "examine fridge": 1,
+        "examine checkout counter": 1,
+        "open sliding door": 1,
+        "examine freezer": 1,
+        "examine closed front door": 2,
+        "look": 2
+    },
+    "input_tokens": 118855,
+    "output_tokens": 1882,
+    "done": true,
+    "episode_return": 155.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-1",
+    "seed": 1417255270,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

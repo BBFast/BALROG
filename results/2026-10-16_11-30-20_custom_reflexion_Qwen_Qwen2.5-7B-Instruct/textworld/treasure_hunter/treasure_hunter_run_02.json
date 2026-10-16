@@ -1,0 +1,58 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go east": 17,
+        "go north": 5,
+        "look": 7,
+        "go west": 7,
+        "take key": 4,
+        "go south": 13,
+        "take key\n\nAfter taking the key, I will attempt to unlock the passageway.\nACTION: unlock passageway with key": 1,
+        "unlock passageway with key": 2,
+        "take drawer from shelf": 1,
+        "take drawer from wall": 2,
+        "look at drawer": 2,
+        "take drawer": 1,
+        "open drawer": 3,
+        "look around laundromat": 1,
+        "take anything from drawer": 1,
+        "look around shelf": 2,
+        "look around shelves": 6,
+        "look at shelves": 1,
+        "take anything from shelf": 1,
+        "look around drawers": 2,
+        "take key from drawer": 1
+    },
+    "input_tokens": 107162,
+    "output_tokens": 2328,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 856903917,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

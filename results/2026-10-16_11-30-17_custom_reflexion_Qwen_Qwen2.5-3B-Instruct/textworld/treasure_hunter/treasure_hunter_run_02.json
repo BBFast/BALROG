@@ -1,0 +1,47 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go south": 14,
+        "open passageway": 6,
+        "go north": 8,
+        "go east": 3,
+        "go west": 2,
+        "take key": 1,
+        "look": 43,
+        "inventory": 1,
+        "unlock passageway with key": 1,
+        "take drawer from shelf": 1
+    },
+    "input_tokens": 141439,
+    "output_tokens": 1820,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-7",
+    "seed": 2317468743,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "base_url": "http://localhost:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

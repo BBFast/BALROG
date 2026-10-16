@@ -1,0 +1,60 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine bed": 1,
+        "go east": 1,
+        "examine closed front door": 1,
+        "examine sofa": 1,
+        "go south": 1,
+        "open closed frosted-glass door": 1,
+        "take knife from counter": 1,
+        "examine frosted-glass door": 2,
+        "open frosted-glass door": 3,
+        "examine fridge": 13,
+        "open fridge": 3,
+        "take ingredients from fridge": 2,
+        "go through frosted-glass door": 16,
+        "examine cookbook": 3,
+        "take green hot pepper, orange bell pepper, tomato, white tuna, yellow apple from fridge": 5,
+        "examine counter": 1,
+        "examine green hot pepper": 4,
+        "take green hot pepper from fridge": 10,
+        "go to fridge": 3,
+        "examine orange bell pepper": 2,
+        "take orange bell pepper from fridge": 3,
+        "examine green hot pepper in fridge": 2,
+        "examine contents of fridge": 1
+    },
+    "input_tokens": 158383,
+    "output_tokens": 1413,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 2983774841,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

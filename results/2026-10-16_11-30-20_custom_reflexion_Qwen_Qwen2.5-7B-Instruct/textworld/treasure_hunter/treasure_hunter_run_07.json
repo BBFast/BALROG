@@ -1,0 +1,53 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "take Microsoft limited edition latchkey from the floor": 3,
+        "take Microsoft limited edition latchkey": 1,
+        "examine north hatch": 1,
+        "unlock north hatch with Microsoft limited edition latchkey": 10,
+        "look north hatch": 8,
+        "unlock north hatch using Microsoft limited edition latchkey": 2,
+        "go north": 1,
+        "look for Microsoft limited edition latchkey": 1,
+        "look north": 1,
+        "look inventory": 6,
+        "look": 2,
+        "take Microsoft limited edition latchkey from north hatch": 5,
+        "open north hatch": 7,
+        "look south hatch": 1,
+        "open north hatch with Microsoft limited edition latchkey": 22,
+        "use Microsoft limited edition latchkey on north hatch": 9
+    },
+    "input_tokens": 82329,
+    "output_tokens": 1900,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-5",
+    "seed": 4080591149,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
