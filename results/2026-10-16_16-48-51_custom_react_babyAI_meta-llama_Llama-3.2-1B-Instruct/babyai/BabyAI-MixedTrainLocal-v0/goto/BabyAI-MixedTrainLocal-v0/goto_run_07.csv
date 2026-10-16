@@ -1,0 +1,199 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn left,Target red ball: 0 steps forward.,"a wall 6 steps forward
+a wall 3 steps left
+a red ball 1 step left and 2 steps forward",0,False
+1,pick up,Target red ball: 0 steps forward and 2 steps forward. Green flag: only one action. Action: pick up,"a wall 6 steps forward
+a wall 3 steps left
+a red ball 1 step left and 2 steps forward",0,False
+2,pick up,Target the red ball: 2 steps forward. Pick up -> pick up,"a wall 6 steps forward
+a wall 3 steps left
+a red ball 1 step left and 2 steps forward",0,False
+3,,"Target red ball: 2 steps forward. Problem is, we have 3 steps to go before reaching the red ball.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 3 steps left
+a red ball 1 step left and 1 step forward",0,False
+4,pick up,Target the red ball: 1 step forward. Pick up -> pick up,"a wall 5 steps forward
+a wall 3 steps left
+a red ball 1 step left and 1 step forward",0,False
+5,pick up,"Target the red ball: 1 step forward.  ""pick up"" is on the correct object and follows the rules. -> pick up","a wall 5 steps forward
+a wall 3 steps left
+a red ball 1 step left and 1 step forward",0,False
+6,drop,"Target the red ball: 0 steps forward.  ""go forward"" moves you, so drop is not a valid action.","a wall 5 steps forward
+a wall 3 steps left
+a red ball 1 step left and 1 step forward",0,False
+7,drop,"Target the red ball: 0 steps forward. Rule: never repeat an action that did not change the observation, ""drop"" does not apply.","a wall 5 steps forward
+a wall 3 steps left
+a red ball 1 step left and 1 step forward",0,False
+8,turn right,Target the red ball: 2 steps forward.,"a wall 4 steps forward
+a wall 2 steps right",0,False
+9,,"Target the red ball: 1 step forward. Since the red ball is in front of you, we need to turn left to go to it.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 2 steps right",0,False
+10,go forward,Target the red ball: 0 steps forward.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+11,go forward,Target red ball: 0 steps forward. Rule: never repeat the same action over and over.,"a wall 1 step forward
+a wall 2 steps right",0,False
+12,turn left,Target red ball: 0 steps forward. Rule: never repeat the same action over and over. Forward part is not 0 -> turn left.,"a wall 5 steps forward
+a wall 1 step right",0,False
+13,go forward,Target the red ball: 4 steps forward. Rule: never repeat the same action over and over.,"a wall 4 steps forward
+a wall 1 step right",0,False
+14,go forward,Target red ball: 1 step forward. Rule: never repeat the same action over and over.,"a wall 3 steps forward
+a wall 1 step right",0,False
+15,drop,"Target red ball: 4 steps forward. Rule: ""drop"" drops the object that you are holding, and ""toggle"" interacts with the object in front of you.","a wall 3 steps forward
+a wall 1 step right",0,False
+16,pick up,"Target red ball: 1 step forward. Rule: ""pick up"" picks the object in front of you. Action: pick up","a wall 3 steps forward
+a wall 1 step right",0,False
+17,pick up,"Target red ball: 1 step forward. Rule: ""pick up"" picks the object in front of you.","a wall 3 steps forward
+a wall 1 step right",0,False
+18,pick up,"Target red ball: 0 steps. Rule: ""pick up"" picks the object in front of you.","a wall 3 steps forward
+a wall 1 step right",0,False
+19,,"Target red ball: 1 step forward. Rule: ""pick up"" picks the object in front of you.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 1 step right",0,False
+20,go forward,"Target red ball: 0 steps. Rule: ""go forward"" moves me.","a wall 1 step forward
+a wall 1 step right",0,False
+21,pick up,"Target red ball: 0 steps. Rule: ""pick up"" moves me. Action: pick up","a wall 1 step forward
+a wall 1 step right",0,False
+22,pick up,Target red ball: 1 step forward. Rule: pick up -> pick up,"a wall 1 step forward
+a wall 1 step right",0,False
+23,turn left,Target red ball: 1 step left. Turn left -> turn left.,"a wall 6 steps forward
+a wall 1 step right
+a red ball 3 steps left and 4 steps forward",0,False
+24,turn right,Target red ball: 3 steps left and 2 steps forward. After position -2 -> turn right.,"a wall 1 step forward
+a wall 1 step right",0,False
+25,turn right,Target red ball: 3 steps forward. Action: turn right,"a wall 1 step forward
+a wall 1 step left",0,False
+26,go forward,Target red ball: 0 steps forward.,"a wall 1 step forward
+a wall 1 step left",0,False
+27,go forward,Target red ball: 0 steps forward.,"a wall 1 step forward
+a wall 1 step left",0,False
+28,go forward,Target the red ball: 2 steps forward.,"a wall 1 step forward
+a wall 1 step left",0,False
+29,turn left,Target the red ball: 2 steps left and 4 steps forward. Turn toward it -> turn left.,"a wall 1 step forward
+a wall 1 step right",0,False
+30,turn right,Target red ball: 2 steps left and 3 steps forward. Forward part is 1. Turn toward it -> turn right.,"a wall 1 step forward
+a wall 1 step left",0,False
+31,turn left,Target red ball: 0 steps forward. Rule: never repeat an action that did not change the observation.,"a wall 1 step forward
+a wall 1 step right",0,False
+32,turn left,Target red ball: 3 steps forward. Rule: navigate to the red ball.,"a wall 6 steps forward
+a wall 1 step right
+a red ball 3 steps left and 4 steps forward",0,False
+33,go forward,Target the red ball: 3 steps forward. Forward part is not 0 -> go forward.,"a wall 5 steps forward
+a wall 1 step right
+a red ball 3 steps left and 3 steps forward",0,False
+34,go forward,Target the red ball: 3 steps forward. Forward part is not 0 -> go forward.,"a wall 4 steps forward
+a wall 1 step right
+a red ball 3 steps left and 2 steps forward",0,False
+35,go forward,Target the red ball: 1 step forward. Forward part is not 0 -> go forward.,"a wall 3 steps forward
+a wall 1 step right
+a red ball 3 steps left and 1 step forward",0,False
+36,turn left,Target red ball: 3 steps forward. turn left -> turn left,"a wall 6 steps forward
+a wall 3 steps right
+a red ball 1 step right and 3 steps forward",0,False
+37,,Target red ball: 3 steps forward. turn right -> turn right.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 3 steps right
+a red ball 1 step right and 2 steps forward",0,False
+38,go forward,Target red ball: 3 steps forward. Action: go forward,"a wall 4 steps forward
+a wall 3 steps right
+a red ball 1 step right and 1 step forward",0,False
+39,turn left,"Target the red ball: 4 steps forward, it is 4 steps left and 3 steps forward.","a wall 4 steps forward
+a wall 3 steps left",0,False
+40,turn left,Target the red ball: 3 steps left. Turn right -> turn left.,"a wall 3 steps forward
+a wall 3 steps left",0,False
+41,turn right,Target the red ball: 3 steps left. Turn right,"a wall 4 steps forward
+a wall 3 steps left",0,False
+42,turn left,Target the red ball: 1 step left. Roll backward -> turn left.,"a wall 3 steps forward
+a wall 3 steps left",0,False
+43,pick up,Target red ball: 3 steps left. Rule: <action to interact with object in front of you> -> pick up.,"a wall 3 steps forward
+a wall 3 steps left",0,False
+44,go right,Target red ball: 1 step right. forward part is not 0 -> go right.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps left",0,False
+45,turn left,Target red ball: 1 step forward.,"a wall 3 steps forward
+a wall 2 steps right
+a red ball 2 steps left and 1 step forward",0,False
+46,drop,Target red ball: 0 steps forward. Action: drop,"a wall 3 steps forward
+a wall 2 steps right
+a red ball 2 steps left and 1 step forward",0,False
+47,turn left,Target red ball: 4 steps left.,"a wall 5 steps forward
+a wall 3 steps right
+a red ball 1 step right and 2 steps forward",0,False
+48,,Target red ball: 3 steps left. drop,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 3 steps right
+a red ball 1 step right and 1 step forward",0,False
+49,go forward,Target red ball: 4 steps left. (Mission: go to the red ball),"a wall 3 steps forward
+a red ball 1 step right",0,False
+50,turn left,Target red ball: 3 steps left. -> turn left,"a wall 4 steps forward
+a wall 3 steps right",0,False
+51,pick up,"Target red ball: 1 step left and 3 steps forward. ""pick up"" -> pick up","a wall 4 steps forward
+a wall 3 steps right",0,False
+52,,Target red ball: 1 step right and 2 steps forward. Rule: 1 step forward. -> go right,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 3 steps right",0,False
+53,pick up,"Target red ball: 1 step right and 2 steps forward. Rule: ""Pick up"" only works on the cell exactly ""1 step forward"".","a wall 3 steps forward
+a wall 3 steps right",0,False
+54,drop,"Target red ball: 1 step forward and 1 step right. Rules: ""pick up"" only works on the cell exactly ""1 step forward"", ""toggle"" only works on the cell exactly ""1 step forward"". Forward part is not 1 -> drop.","a wall 3 steps forward
+a wall 3 steps right",0,False
+55,pick up,"Target red ball: 2 steps forward. ""Pick up"" only works on the cell exactly 1 step forward.","a wall 3 steps forward
+a wall 3 steps right",0,False
+56,pick up,Target red ball: 2 steps left and 1 step forward. Rule: pick up only works on the cell exactly 1 step forward.,"a wall 3 steps forward
+a wall 3 steps right",0,False
+57,,Target red ball: 2 steps right. Go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps right",0,False
+58,pick up,Target red ball: 1 step forward and 1 step right. Rule: pick up only works on the cell exactly 1 step forward.,"a wall 2 steps forward
+a wall 3 steps right",0,False
+59,pick up,Target red ball: 1 step forward and 1 step left. Rule: pick up only works on the cell exactly 1 step forward.,"a wall 2 steps forward
+a wall 3 steps right",0,False
+60,pick up,Target red ball: 0 steps left and 0 steps forward. Rule: pick up only works on the cell exactly 1 step forward. Action: pick up,"a wall 2 steps forward
+a wall 3 steps right",0,False
+61,,"Target red ball: 2 steps right, 1 step forward. Rule: pick up only works on the cell exactly 1 step forward.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right",0,False
+62,,Target red ball: 2 steps forward. Rule: pick up -> pick up,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right",0,False
+63,go forward,Target the red ball: 1 step right and 1 step forward.,"a wall 1 step forward
+a wall 3 steps right",0,True

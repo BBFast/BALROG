@@ -1,0 +1,561 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn right,The purple door is behind a wall 2 steps forward. I need to open the door.,"a wall 3 steps forward
+a wall 3 steps left
+a locked purple door 2 steps right and 3 steps forward",0,False
+1,turn left,You carry the yellow key; a purple door 1 step left and 3 steps forward.,"a wall 3 steps forward
+a wall 3 steps right
+a purple key 1 step left and 2 steps forward",0,False
+2,turn left,You carry the yellow key; a purple door 3 steps forward.,"a wall 4 steps forward
+a wall 3 steps right
+a purple key 2 steps right and 1 step forward",0,False
+3,turn right,"purple door 1 step forward, I carry the yellow key 1 step right.","a wall 3 steps forward
+a wall 3 steps right
+a purple key 1 step left and 2 steps forward",0,False
+4,go forward,"purple door 2 steps forward, I carry the yellow key 1 step right.","a wall 2 steps forward
+a wall 3 steps right
+a purple key 1 step left and 1 step forward",0,False
+5,,the purple door: 2 steps right and 2 steps forward. rule: drop object exactly 1 step forward. -> drop.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+6,pick up,"purple door (1 step forward), I carry a yellow key (1 step right).","a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+7,,the purple door: 3 steps forward. drop -> drop,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+8,toggle,"the purple door: 2 steps right, in front of me.","a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+9,pick up,purple key 1 step forward -> pick up.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+10,pick up,purple door: 1 step forward; I carry a key of the same color -> pick up.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+11,,purple door 1 step forward -> toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+12,pick up,The purple door: 1 step forward; I carry a key of the same color -> pick up.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+13,,purple door: 1 step forward. rule: go forward -> go forward,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+14,pick up,Target purple door: 1 step forward; I carry a purple key of the same color -> pick up.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+15,pick up,target purple door: 2 steps forward; I carry a purple key of the same color -> pick up.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+16,pick up.,Purple door: 2 steps forward. Rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+17,pick up.,purple door: 1 step forward. Rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+18,pick up.,the purple door: 1 step forward. Rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+19,pick up.,Target purple door: 1 step forward. Rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+20,pick up,purple key 1 step forward.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+21,turn right,purple door: 3 steps right.,"a wall 3 steps forward
+a wall 1 step left",0,False
+22,,purple door: 2 steps forward. rule: 'drop' only works on the cell exactly '1 step forward'. -> drop,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 1 step left",0,False
+23,turn right,purple door: 3 steps forward.,"a wall 6 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 4 steps forward
+a purple key 2 steps right",0,False
+24,turn left,"purple door: 1 step forward, purple key: 2 steps forward.","a wall 2 steps forward
+a wall 1 step left",0,False
+25,drop,Purple door: 1 step forward. rule: drop.,"a wall 2 steps forward
+a wall 1 step left",0,False
+26,turn left,purple door: 2 steps forward. rule: open.,"a wall 1 step forward
+a wall 2 steps right
+a purple key 2 steps left",0,False
+27,turn left,purple door: 1 step forward. rule: open.,"a wall 1 step right
+a purple key 2 steps forward",0,False
+28,pick up,purple door: 1 step forward. rule: open.,"a wall 1 step right
+a purple key 2 steps forward",0,False
+29,pick up,"purple door: 2 steps forward, Object: (empty). rule: open.","a wall 1 step right
+a purple key 2 steps forward",0,False
+30,pick up,"purple door: 1 step forward, object: purple key. rule: open.","a wall 1 step right
+a purple key 2 steps forward",0,False
+31,,purple door 1 step forward. rules: open -> toggle,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step right
+a purple key 1 step forward",0,False
+32,turn left,the purple door: 1 step forward. rule: open.,"a wall 6 steps forward
+a wall 3 steps left
+a locked purple door 3 steps left and 4 steps forward
+a purple key 1 step right",0,False
+33,pick up,purple door: 1 step forward. rule: open.,"a wall 6 steps forward
+a wall 3 steps left
+a locked purple door 3 steps left and 4 steps forward
+a purple key 1 step right",0,False
+34,turn left,purple door: 1 step forward. rule: open.,"a wall 3 steps forward
+a wall 1 step left",0,False
+35,pick up,purple door: 1 step forward. rule: open.,"a wall 3 steps forward
+a wall 1 step left",0,False
+36,turn left,purple door: 2 steps forward.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+37,,Target purple door: 4 steps forward. <rule> -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+38,,purple door: 1 step forward. rule: pick up -> pick up,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+39,go forward,purple door: 2 steps forward.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+40,pick up,purple door: 1 step forward; purple key: 1 step right -> pick up.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+41,pick up,purple door: 3 steps forward; purple key: 1 step right -> pick up.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+42,,purple door: 1 step forward; purple key 1 step right -> pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+43,,the purple door: 3 steps forward; the purple key: 1 step right -> pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+44,toggle,purple door 1 step forward; purple key 2 steps forward -> toggle.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+45,toggle,purple door 1 step forward; purple key 2 steps forward -> toggle.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+46,,The purple door 4 steps forward; the purple key 1 step left -> turn right.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+47,pick up,purple door 1 step forward; a purple key 1 step right. rule: pick up,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+48,go forward,The purple door 3 steps forward; a purple key 1 step left.,"a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+49,,"Target purple door: 4 steps forward. ""open the purple door"" -> toggle.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps right
+a purple key 1 step left",0,False
+50,turn left,Target purple door: purple door 1 step forward; purple key 1 step left.,"a wall 1 step right
+a purple key 1 step forward",0,False
+51,turn left,Target purple door: purple door 1 step forward; purple key 1 step left.,"a wall 6 steps forward
+a wall 3 steps left
+a locked purple door 3 steps left and 4 steps forward
+a purple key 1 step right",0,False
+52,pick up,Target purple door: purple door 1 step forward; purple key 1 step forward.,"a wall 6 steps forward
+a wall 3 steps left
+a locked purple door 3 steps left and 4 steps forward
+a purple key 1 step right",0,False
+53,go forward,purple door 3 steps forward. move forward -> go forward.,"a wall 5 steps forward
+a wall 3 steps left
+a locked purple door 3 steps left and 3 steps forward",0,False
+54,turn left,purple door 1 step forward. rule: open the purple door,"a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 3 steps right and 3 steps forward",0,False
+55,pick up,purple door 1 step forward. rule: open the purple door,"a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 3 steps right and 3 steps forward",0,False
+56,pick up,purple door 1 step forward. rule: open the purple door,"a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 3 steps right and 3 steps forward",0,False
+57,turn left,the purple door: 3 steps left. rule: open the door.,"a wall 2 steps forward
+a wall 3 steps right
+a purple key 1 step left and 1 step forward",0,False
+58,pick up,Purple key (carried) 1 step left: pick up.,"a wall 2 steps forward
+a wall 3 steps right
+a purple key 1 step left and 1 step forward",0,False
+59,turn right,purple door 1 step forward. turn right.,"a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 3 steps right and 3 steps forward",0,False
+60,,"purple door 1 step forward. Remember, I started with the key in front of me. Pick up.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 2 steps left
+a locked purple door 3 steps right and 2 steps forward",0,False
+61,turn right,purple door (which is currently 1 step forward). turn right.,"a wall 5 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 3 steps forward",0,False
+62,toggle,purple door (which is currently 1 step forward). toggle.,"a wall 5 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 3 steps forward",0,False
+63,toggle,The purple door: 2 steps right. rule: toggle.,"a wall 5 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 3 steps forward",0,False
+64,turn right,purple door: 1 step right. rule: turn right,"a wall 5 steps forward
+a wall 2 steps right
+a purple key 1 step right and 2 steps forward",0,False
+65,drop,purple door: 1 step forward. rule: open the purple door,"a wall 5 steps forward
+a wall 2 steps right
+a purple key 1 step right and 2 steps forward",0,False
+66,turn right,purple door: 1 step forward. rule: open the purple door,"a wall 2 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 1 step forward",0,False
+67,turn right,purple door: 1 step forward. rule: open the purple door,"a wall 2 steps forward
+a wall 2 steps left
+a locked purple door 3 steps right and 2 steps forward",0,False
+68,turn right,purple door: 3 steps right and 4 steps forward,"a wall 5 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 3 steps forward",0,False
+69,,purple door: 3 steps right and 3 steps forward. rule: go forward -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 2 steps forward",0,False
+70,,purple door: 2 steps forward. toggle -> toggle,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 1 step forward",0,False
+71,pick up,purple door: 1 step forward; purple key 1 step right -> pick up.,"a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 1 step forward",0,False
+72,pick up,purple door: 1 step forward; purple key 1 step right -> pick up.,"a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 1 step forward",0,False
+73,pick up,purple door: 1 step forward; purple key 1 step right -> pick up.,"a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 1 step forward",0,False
+74,pick up,purple door: 1 step forward; purple key 1 step right -> pick up.,"a wall 3 steps forward
+a wall 2 steps left
+a locked purple door 2 steps left and 1 step forward",0,False
+75,,purple door 1 step forward; purple key 1 step left -> drop.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a locked purple door 2 steps left",0,False
+76,pick up,purple door: 3 steps forward; purple key 2 steps forward,"a wall 2 steps forward
+a locked purple door 2 steps left",0,False
+77,drop,purple door: 1 step forward -> drop.,"a wall 2 steps forward
+a locked purple door 2 steps left",0,False
+78,pick up,purple door: 2 steps forward -> pick up.,"a wall 2 steps forward
+a locked purple door 2 steps left",0,False
+79,go forward,The purple door: 3 steps forward -> go forward.,"a wall 1 step forward
+a wall 2 steps left",0,False
+80,,The purple door: 3 steps forward -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+81,go forward,purple door: 3 steps forward; purple key 1 step right and 1 step forward.,"a wall 1 step forward
+a wall 2 steps left",0,False
+82,pick up,purple door: 1 step forward; purple key: 1 step right and 1 step forward.,"a wall 1 step forward
+a wall 2 steps left",0,False
+83,pick up,purple door: 3 steps forward; purple key: 3 steps right and 2 steps forward.,"a wall 1 step forward
+a wall 2 steps left",0,False
+84,turn right,purple door: 2 steps forward; purple key: 2 steps right and 2 steps forward.,"a wall 5 steps forward
+a wall 1 step left",0,False
+85,pick up,purple door: 1 step forward; purple key: 1 step right.,"a wall 5 steps forward
+a wall 1 step left",0,False
+86,pick up,purple door: 2 steps forward; a yellow key 1 step right.,"a wall 5 steps forward
+a wall 1 step left",0,False
+87,turn right,Purple door: 2 steps forward; a locked purple door 2 steps left.,"a wall 6 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 5 steps forward
+a locked purple door 2 steps right and 1 step forward",0,False
+88,drop,purple door: 2 steps forward; a locked purple door 2 steps left,"a wall 6 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 5 steps forward
+a locked purple door 2 steps right and 1 step forward",0,False
+89,pick up,purple door: 2 steps forward; a purple key 2 steps left and 5 steps forward,"a wall 6 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 5 steps forward
+a locked purple door 2 steps right and 1 step forward",0,False
+90,pick up,purple door: 2 steps forward; a purple key 2 steps left and 5 steps forward,"a wall 6 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 5 steps forward
+a locked purple door 2 steps right and 1 step forward",0,False
+91,drop,the purple door: 2 steps forward; a purple key 2 steps left and 5 steps forward,"a wall 6 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 5 steps forward
+a locked purple door 2 steps right and 1 step forward",0,False
+92,pick up,purple door: 1 step forward; a purple key 1 step right -> pick up.,"a wall 6 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 5 steps forward
+a locked purple door 2 steps right and 1 step forward",0,False
+93,pick up,purple door: 2 steps left. Rule: go forward (already moved). Action: pick up,"a wall 6 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 5 steps forward
+a locked purple door 2 steps right and 1 step forward",0,False
+94,pick up,purple door: 2 steps forward. Rule: go forward (already moved). Action: pick up,"a wall 6 steps forward
+a wall 2 steps right
+a purple key 2 steps left and 5 steps forward
+a locked purple door 2 steps right and 1 step forward",0,False
+95,turn left,purple door 1 step forward. rule: open door,"a wall 5 steps forward
+a wall 1 step left",0,False
+96,turn left,purple door 1 step forward. rule: open door,"a wall 1 step forward
+a wall 2 steps left",0,False
+97,,The purple door: 2 steps forward -> open the purple door,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+98,,target purple door: 1 step forward. rule: open door -> pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+99,toggle,target purple door: 1 step forward. rule: open door -> toggle,"a wall 1 step forward
+a wall 2 steps left",0,False
+100,toggle,Target purple door: 1 step forward. rule: open door -> toggle.,"a wall 1 step forward
+a wall 2 steps left",0,False
+101,drop,The purple door 2 steps forward. rule: open door -> drop.,"a wall 1 step forward
+a wall 2 steps left",0,False
+102,drop,Target purple door: 2 steps forward. rule: open door -> drop.,"a wall 1 step forward
+a wall 2 steps left",0,False
+103,,The purple door: 1 step forward. Rule: open door -> drop.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+104,open,Target purple door: 1 step forward. rule: open door -> open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+105,open,The purple door: 1 step forward. Rule: open door -> open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+106,,Target purple key from YOUR mission: 2 steps left. rule: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+107,open,Target purple door: 1 step forward. Rule: open door -> open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+108,,target purple door: 2 steps forward. rule: open door -> open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+109,open,Target purple door: 2 steps forward. Rule: open door -> open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+110,open,Target purple door: 2 steps forward. Rule: open door -> open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+111,go forward,The purple door -> go forward.,"a wall 1 step forward
+a wall 2 steps left",0,False
+112,pick up,The purple door: 1 step forward.,"a wall 1 step forward
+a wall 2 steps left",0,False
+113,,the purple door: 2 steps forward; you carry the yellow key. rule: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+114,go forward,The purple door: 1 step forward. rule: go forward.,"a wall 1 step forward
+a wall 2 steps left",0,False
+115,go forward,Target purple door: 1 step forward. rule: go forward.,"a wall 1 step forward
+a wall 2 steps left",0,False
+116,open,The purple door: 3 steps forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+117,open,The purple door: 2 steps forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+118,open,purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+119,open,The purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+120,open,purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+121,open,purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+122,open,purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+123,open,purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+124,open,purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+125,open,The purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+126,open,The purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,False
+127,open,The purple door: 1 step forward. rule: open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps left",0,True

@@ -1,0 +1,518 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,pick up,"I carry the yellow key, and it's 1 step right of the door -> pick up.","a wall 4 steps forward
+a wall 3 steps right
+a yellow key 2 steps left",0,False
+1,turn right,Door 1 step forward. Turn right.,"a wall 3 steps forward
+a wall 3 steps right",0,False
+2,turn right,You carry the yellow key; the door is 1 step forward. Turn right.,"a wall 3 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 3 steps forward
+a yellow key 2 steps right",0,False
+3,turn right,You carry a yellow key; the open yellow door is 1 step forward.,"a wall 3 steps left
+a locked yellow door 3 steps left and 1 step forward
+a yellow key 2 steps forward",0,False
+4,,You carry a yellow key; a lock on the yellow door is 1 step forward.  Open the door rule -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a locked yellow door 3 steps left
+a yellow key 1 step forward",0,False
+5,,"You carry a yellow key; a locked yellow door 1 step forward. Rule: ""toggle"" interacts with the object in front of you.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a locked yellow door 3 steps left
+a yellow key 1 step forward",0,False
+6,,target the yellow door: 1 step forward. toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a locked yellow door 3 steps left
+a yellow key 1 step forward",0,False
+7,turn right,"You carry a yellow key; a locked yellow door 1 step forward. Rule: to open the door, the door must be 1 step forward.","a wall 4 steps forward
+a yellow key 1 step left",0,False
+8,,The door is open. Mission complete.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 3 steps left",0,False
+9,drop,"You carry a yellow key; a open yellow door 1 step forward. Rule: to open the door, the door must be 1 step forward.","a wall 3 steps forward
+a wall 3 steps left",0,False
+10,toggle,"The door is open. It was behind the key, 1 step forward -> toggle.","a wall 3 steps forward
+a wall 3 steps left",0,False
+11,toggle,"The door is open. The yellow key is 1 step forward, it was behind the key, 1 step left -> toggle.","a wall 3 steps forward
+a wall 3 steps left",0,False
+12,drop,the door: 1 step forward; the yellow key: 1 step forward -> drop.,"a wall 3 steps forward
+a wall 3 steps left",0,False
+13,toggle,You carry a yellow key (1 step right) and a locked yellow door (1 step forward),"a wall 3 steps forward
+a wall 3 steps left",0,False
+14,drop,The yellow door: 1 step forward. Rule: open the door.,"a wall 3 steps forward
+a wall 3 steps left",0,False
+15,turn left,You carry the yellow key; a wall 3 steps left. Rule: turn left.,"a wall 3 steps forward
+a wall 3 steps right
+a yellow key 1 step left and 1 step forward",0,False
+16,turn right,the yellow door: 1 step forward; the yellow key: 1 step right and 1 step forward.,"a wall 3 steps forward
+a wall 3 steps left",0,False
+17,pick up,"a yellow door: 1 step forward. rule: to open the door, you need to interact with the door and not with objects behind the door.","a wall 3 steps forward
+a wall 3 steps left",0,False
+18,toggle,"a yellow door 1 step forward. rule: to open the door, you need to interact with the door and not with objects behind the door.","a wall 3 steps forward
+a wall 3 steps left",0,False
+19,drop,open yellow door: 1 step forward -> drop,"a wall 3 steps forward
+a wall 3 steps left",0,False
+20,,a yellow door 1 step forward -> toggle,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps left",0,False
+21,pick up,I have a locked yellow door 1 step forward and I carry a yellow key.,"a wall 2 steps forward
+a wall 3 steps left",0,False
+22,drop,The locked yellow door: 1 step forward. Rule: drop.,"a wall 2 steps forward
+a wall 3 steps left",0,False
+23,go forward,open the door: a door 1 step forward. Rule: go forward -> go forward.,"a wall 1 step forward
+a wall 3 steps left",0,False
+24,go forward,the yellow door: 1 step forward. rule: go forward -> go forward.,"a wall 1 step forward
+a wall 3 steps left",0,False
+25,go forward,the door: 1 step forward. Rule: go forward -> go forward.,"a wall 1 step forward
+a wall 3 steps left",0,False
+26,go forward,Target yellow door: 1 step forward. Rule: go forward -> go forward.,"a wall 1 step forward
+a wall 3 steps left",0,False
+27,go forward,open yellow door: 1 step forward. Rule: go forward -> go forward.,"a wall 1 step forward
+a wall 3 steps left",0,False
+28,pick up,"You carry a yellow key, and the door is 1 step forward.","a wall 1 step forward
+a wall 3 steps left",0,False
+29,go forward,"Target yellow door: 1 step forward. rule: ""go forward"".","a wall 1 step forward
+a wall 3 steps left",0,False
+30,go forward,"target yellow door: 1 step forward. rule: ""go forward"" moves you.","a wall 1 step forward
+a wall 3 steps left",0,False
+31,go forward,"open door: 1 step forward. rule: ""go forward"" moves you.","a wall 1 step forward
+a wall 3 steps left",0,False
+32,go forward,"You have a open yellow door. Rule: ""go forward"" moves you -> go forward.","a wall 1 step forward
+a wall 3 steps left",0,False
+33,go forward.,"The yellow door: 1 step forward. Rule: ""go forward"" moves you. Action: go forward.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+34,toggle,open the yellow door 1 step forward. Rule: toggle. Action: toggle,"a wall 1 step forward
+a wall 3 steps left",0,False
+35,pick up,Key on the table: 1 step right.,"a wall 1 step forward
+a wall 3 steps left",0,False
+36,pick up.,The yellow door: 1 step forward. Rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+37,pick up.,The yellow door: 1 step forward. Rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+38,pick up.,The yellow door: 1 step forward. Rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+39,,"door: 1 step forward, yellow key: 1 step forward, locked yellow door: 2 steps forward -> go forward.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+40,pick up.,a yellow door 1 step forward. Key: I carry; rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left",0,False
+41,turn right,The yellow door: 1 step forward.,"a wall 4 steps forward
+a wall 1 step left",0,False
+42,pick up,The door: 1 step forward. Key: 1 step left -> pick up.,"a wall 4 steps forward
+a wall 1 step left",0,False
+43,go forward,Door: 1 forward -> go forward.,"a wall 3 steps forward
+a wall 1 step left",0,False
+44,,the yellow door 1 step forward. open the door: 1 forward -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 1 step left",0,False
+45,pick up,The yellow key: 1 step right -> pick up.,"a wall 2 steps forward
+a wall 1 step left",0,False
+46,turn right,The yellow key: 1 step right -> turn right.,"a wall 6 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps right and 6 steps forward
+a yellow key 3 steps right and 3 steps forward",0,False
+47,pick up,yellow key 1 step forward -> pick up.,"a wall 6 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps right and 6 steps forward
+a yellow key 3 steps right and 3 steps forward",0,False
+48,,open yellow door: 1 step forward -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps right and 5 steps forward
+a yellow key 3 steps right and 2 steps forward",0,False
+49,toggle,a locked yellow door 1 step forward. toggle.,"a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps right and 5 steps forward
+a yellow key 3 steps right and 2 steps forward",0,False
+50,toggle,a yellow door 1 step forward. toggle.,"a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps right and 5 steps forward
+a yellow key 3 steps right and 2 steps forward",0,False
+51,toggle,yellow door 1 step forward. toggle.,"a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps right and 5 steps forward
+a yellow key 3 steps right and 2 steps forward",0,False
+52,toggle,You carry a yellow key and the yellow door is open.,"a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps right and 5 steps forward
+a yellow key 3 steps right and 2 steps forward",0,False
+53,pick up,yellow door: 1 step forward; yellow key: 1 step right.,"a wall 5 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps right and 5 steps forward
+a yellow key 3 steps right and 2 steps forward",0,False
+54,turn right,a yellow key 1 step right,"a wall 5 steps forward
+a wall 2 steps right
+a yellow key 2 steps left and 3 steps forward",0,False
+55,turn right,The yellow key in front of you: 1 step forward.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+56,pick up,Target yellow key: 1 step forward. rule: pick up.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+57,toggle,You carry a yellow key; a locked yellow door 1 step forward. Rule: toggle.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+58,,door: 1 step forward -> drop.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+59,,"door: 1 step forward, keys: 0 -> pick up.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+60,go forward,The locked yellow door 1 step forward -> go forward.,"a wall 1 step forward
+a wall 2 steps right",0,False
+61,go forward,a yellow door 1 step forward,"a wall 1 step forward
+a wall 2 steps right",0,False
+62,turn right,"door 1 step forward, key in hand: a locked yellow door 1 step forward.","a wall 2 steps forward
+a wall 1 step left",0,False
+63,,door 1 step forward -> toggle,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+64,drop,The door: 1 step forward -> drop.,"a wall 1 step forward
+a wall 1 step left",0,False
+65,,You carry a yellow key. <object from YOUR mission>: yellow key; <its position>. The yellow key is in front of you. -> pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+66,go forward,the door 1 step forward -> go forward.,"a wall 1 step forward
+a wall 1 step left",0,False
+67,turn left,the yellow door: 1 step forward. toggle -> (no action),"a wall 1 step forward
+a wall 1 step right",0,False
+68,pick up,"Yellow key: 1 step forward. Rule: ""pick up"" only works on objects exactly 1 step forward.","a wall 1 step forward
+a wall 1 step right",0,False
+69,,"The door <1 step forward> is open. Rule: ""open the door"" -> toggle.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+70,pick up,"The door: 1 forward, I carry nothing. Rule: ""pick up"" only works on the object exactly 1 step forward.","a wall 1 step forward
+a wall 1 step right",0,False
+71,pick up,The door: 1 step forward; the yellow key is exactly 1 step forward -> pick up.,"a wall 1 step forward
+a wall 1 step right",0,False
+72,,door: 1 step forward -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+73,pick up,The yellow key 1 step forward; the door 1 step forward,"a wall 1 step forward
+a wall 1 step right",0,False
+74,turn left,door 1 step forward: open the door -> turn left.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 4 steps forward",0,False
+75,drop,door 1 step forward: open the door,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 4 steps forward",0,False
+76,toggle,open the door: the door (1 step forward).,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 4 steps forward",0,False
+77,go forward,the open yellow door 1 step forward -> go forward.,"a wall 5 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+78,,"The door is open. (Target: the open yellow door, position: 1 step forward). go forward","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 2 steps forward",0,False
+79,toggle,The open yellow door 1 step forward -> open the yellow door.,"a wall 4 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 2 steps forward",0,False
+80,toggle,The open yellow door 1 step forward -> open the yellow door.,"a wall 4 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 2 steps forward",0,False
+81,turn right,Open the door: The door 1 step forward.,"a wall 1 step forward
+a wall 3 steps right",0,False
+82,go forward,door 1 step forward.,"a wall 1 step forward
+a wall 3 steps right",0,False
+83,go forward,open the yellow door: it is currently 1 step forward.,"a wall 1 step forward
+a wall 3 steps right",0,False
+84,pick up,Target the yellow key on my mission: it is 1 step forward. yellow key: 1 right -> pick up.,"a wall 1 step forward
+a wall 3 steps right",0,False
+85,turn left,The yellow door: 1 step forward. rule: turn left -> turn left.,"a wall 4 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 2 steps forward",0,False
+86,turn left,the yellow door 1 step forward. rule: turn left -> turn left.,"a wall 6 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 6 steps forward
+a yellow key 2 steps right and 3 steps forward",0,False
+87,,yellow door 1 step forward. rule: go forward -> go forward,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 5 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+88,,the locked yellow door 1 step forward. rule: open the door -> toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 4 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+89,pick up,Yellow key 1 step forward. Rule: pick up -> pick up.,"a wall 4 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 4 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+90,drop,the yellow door: 1 step forward. rule: drop.,"a wall 4 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 4 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+91,drop,the yellow door: 1 step forward. rule: drop.,"a wall 4 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 4 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+92,drop,the door: 1 step forward. rule: drop.,"a wall 4 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 4 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+93,pick up,the yellow key 1 step right -> pick up.,"a wall 4 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 4 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+94,,The yellow door is open; the yellow key is in front of you -> toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 3 steps forward
+a yellow key 2 steps right",0,False
+95,drop,yellow door: 1 step forward.,"a wall 3 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 3 steps forward
+a yellow key 2 steps right",0,False
+96,go forward,The yellow door: 1 step forward. rule: open the yellow door,"a wall 2 steps forward
+a wall 3 steps left
+a locked yellow door 1 step right and 2 steps forward",0,False
+97,,You carry a yellow key. The door is open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+98,go forward,open yellow door: 1 step forward. rule: open the yellow door.,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+99,go forward,open the yellow door: its position is 1 step forward. rule: open the yellow door.,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+100,toggle,a locked yellow door 1 step forward. Rule: open the yellow door.,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+101,pick up,door 1 step forward; yellow door 1 step forward,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+102,drop,The yellow door: 1 step forward. Yellow key: 1 step right -> drop.,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+103,,yellow door: 1 step forward. yellow key: 1 step right -> toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+104,go forward,The locked yellow door: 1 step forward.,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+105,,The door: 1 forward. Rule: move towards the door. -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+106,,The yellow key is 1 step forward. -> pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+107,go forward,a locked yellow door 1 step forward.,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+108,go forward,Target the locked yellow door: 1 step forward. rule: open the yellow door.,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+109,open,a locked yellow door 1 step forward. rule: open the yellow door.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+110,,The locked yellow door 1 step forward. Rule: open the yellow door. -> open,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+111,turn right,open the yellow door: 1 step forward; a yellow key 1 step right,"a wall 4 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+112,turn left,the locked yellow door is on my left: 2 steps forward,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+113,drop,You carry a yellow key 1 step forward; a locked yellow door 2 steps forward.,"a wall 1 step forward
+a wall 3 steps left
+a locked yellow door 1 step right and 1 step forward",0,False
+114,turn right,door (yellow key) - it's 1 step forward,"a wall 4 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+115,pick up,yellow key 1 step forward: pick up.,"a wall 4 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+116,,the yellow door: 1 step forward. toggle -> turn left,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a locked yellow door 1 step left
+a yellow key 2 steps right and 1 step forward",0,False
+117,toggle,The locked yellow door 1 step forward: toggle.,"a wall 3 steps forward
+a locked yellow door 1 step left
+a yellow key 2 steps right and 1 step forward",0,False
+118,open,The yellow door 1 step forward -> open the door.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 1 step left
+a yellow key 2 steps right",0,False
+119,,the door 1 step forward -> open,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+120,,"yellow door: 1 step forward, open <purple door>. rule: toggled","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+121,open,The yellow door 1 step forward -> open the door.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+122,open,A locked yellow door 1 step forward; a yellow key 1 step right -> open the door.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+123,open,door: 1 step forward; yellow key: 1 step right -> open.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+124,toggle,the locked yellow door 1 step forward: toggle.,"a wall 1 step forward
+a wall 1 step left",0,False
+125,pick up,The yellow door: 1 step forward; The yellow key: 1 step right. rule: pick up,"a wall 1 step forward
+a wall 1 step left",0,False
+126,,the yellow door: 1 step forward. rule: open the door -> open,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step left",0,False
+127,pick up,The yellow door: 1 step forward; The yellow key: 1 step right. rule: pick up,"a wall 1 step forward
+a wall 1 step left",0,True

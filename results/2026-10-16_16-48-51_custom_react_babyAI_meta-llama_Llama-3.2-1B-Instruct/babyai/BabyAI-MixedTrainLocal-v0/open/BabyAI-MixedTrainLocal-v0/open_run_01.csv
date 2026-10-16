@@ -1,0 +1,408 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,pick up,The blue door is 1 step forward and I carry nothing -> first pick up.,"a wall 1 step forward
+a wall 1 step right",0,False
+1,toggle,I have the open yellow door in front of me.,"a wall 1 step forward
+a wall 1 step right",0,False
+2,drop,Blue door 3 steps forward; the key is 1 step right -> drop.,"a wall 1 step forward
+a wall 1 step right",0,False
+3,,Blue door 1 step forward; a wall 1 step forward,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+4,pick up,blue door 1 step forward; you carry the yellow key 1 step right.,"a wall 1 step forward
+a wall 1 step right",0,False
+5,turn left,The blue door 2 steps forward -> turn left.,"a wall 6 steps forward
+a wall 1 step right",0,False
+6,,Target blue door: 1 step forward. rule: drop -> drop.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 1 step right",0,False
+7,turn left,"Target blue door: it is 1 step forward, in front of me.","a wall 6 steps forward
+a wall 2 steps left
+a locked blue door 2 steps left and 4 steps forward
+a blue key 1 step left and 5 steps forward",0,False
+8,turn left,"Target blue door: it is 2 steps forward, in front of me.","a wall 2 steps forward
+a wall 1 step left",0,False
+9,turn left,"Target blue door: it is 2 steps forward, in front of me.","a wall 1 step forward
+a wall 2 steps right",0,False
+10,go forward,"Target blue door: it is 2 steps forward, in front of me.","a wall 1 step forward
+a wall 2 steps right",0,False
+11,go forward,"Target blue door: it is 2 steps forward, in front of me.","a wall 1 step forward
+a wall 2 steps right",0,False
+12,pick up,"target blue door: it is 1 step forward, in front of me. rule: never repeat the same action over and over if the observation doesn't change.","a wall 1 step forward
+a wall 2 steps right",0,False
+13,pick up,"The blue door: it is 1 step forward, in front of you. rule: never repeat the same action over and over if the observation doesn't change.","a wall 1 step forward
+a wall 2 steps right",0,False
+14,turn left,"The blue door <2 steps left, and 4 steps forward>. rule: a door is a cell, 2 steps right means 4 steps left.","a wall 5 steps forward
+a wall 1 step right",0,False
+15,,"The blue door <1 step right>. rule: a door is a cell, 1 right means 1 step forward. -> turn right","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 1 step right",0,False
+16,pick up,The blue door: 4 steps forward; a blue key 1 step right -> pick up.,"a wall 4 steps forward
+a wall 1 step right",0,False
+17,pick up,"Blue door <opening blue door, with blue key 1 step forward> -> pick up.","a wall 4 steps forward
+a wall 1 step right",0,False
+18,toggle,blue door 2 steps forward; blue key 1 step right -> toggle.,"a wall 4 steps forward
+a wall 1 step right",0,False
+19,pick up,blue door 1 step forward; blue key 1 step right -> pick up.,"a wall 4 steps forward
+a wall 1 step right",0,False
+20,pick up,"Target blue door: 1 step forward; blue key: 2 steps left. Rule: ""pick up"" only works on the cell exactly 1 step forward.","a wall 4 steps forward
+a wall 1 step right",0,False
+21,pick up,"blue door: 1 step forward; blue key: 2 steps left. Rule: ""pick up"" only works on the cell exactly ""1 step forward"".","a wall 4 steps forward
+a wall 1 step right",0,False
+22,pick up,"blue door: 1 step forward; blue key: 2 steps left. Rule: ""pick up"" only works on the cell exactly ""1 step forward"".","a wall 4 steps forward
+a wall 1 step right",0,False
+23,pick up,"the blue door 4 steps forward; a blue key 2 steps left. Rule: ""pick up"" only works on the cell exactly ""1 step forward"".","a wall 4 steps forward
+a wall 1 step right",0,False
+24,go forward,the blue door (my current target) 4 steps forward,"a wall 3 steps forward
+a wall 1 step right",0,False
+25,,Target blue door: 0 steps forward. rule: open the blue door -> drop.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 1 step right",0,False
+26,,"Target blue door: 1 step forward, there is no rule mentioned about the blue door yet -> go forward.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 1 step right",0,False
+27,turn left,the blue door 1 step forward; I carry the yellow key,"a wall 6 steps forward
+a wall 1 step right",0,False
+28,,blue door 1 step forward; a blue key 1 step right -> pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 1 step right",0,False
+29,turn right,The blue door: 1 step forward; a wall 6 steps forward,"a wall 1 step forward
+a wall 2 steps right",0,False
+30,,"blue door: 1 step forward; object from YOUR mission: a blue key 1 step right; rule: ""drop"" only works on the cell exactly ""1 step forward"". -> toggle.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+31,turn right,The blue door: 1 step forward; a wall 2 steps forward,"a wall 2 steps forward
+a wall 1 step left",0,False
+32,toggle,The blue door: 1 step forward; a phone 1 step left,"a wall 2 steps forward
+a wall 1 step left",0,False
+33,turn right,Blue door: 0 steps forward; no object from the mission.,"a wall 6 steps forward
+a wall 2 steps left
+a locked blue door 3 steps right and 6 steps forward",0,False
+34,drop,the blue door 3 steps forward; the blue door 1 step forward; never repeat an action,"a wall 6 steps forward
+a wall 2 steps left
+a locked blue door 3 steps right and 6 steps forward",0,False
+35,turn right,the blue door 3 steps forward; the blue door 1 step forward; never repeat an action that did not change the observation.,"a wall 5 steps forward
+a wall 1 step right",0,False
+36,go forward,The blue door; target blue door; the blue door is 1 step forward,"a wall 4 steps forward
+a wall 1 step right",0,False
+37,,The blue door: 3 steps right and 6 steps forward. rule: toggle -> toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 1 step right",0,False
+38,turn left,blue door 1 step forward and I carry a yellow key.,"a wall 6 steps forward
+a wall 3 steps right
+a locked blue door 1 step right and 6 steps forward
+a blue key 2 steps right and 5 steps forward",0,False
+39,,The blue door: 2 steps right and 1 step forward. I need to turn left.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 3 steps right
+a locked blue door 1 step right and 5 steps forward
+a blue key 2 steps right and 4 steps forward",0,False
+40,turn left,blue door 1 step forward and I carry a blue key.,"a wall 4 steps forward
+a wall 2 steps left",0,False
+41,turn right,the blue door: 3 steps right.,"a wall 5 steps forward
+a wall 3 steps right
+a locked blue door 1 step right and 5 steps forward
+a blue key 2 steps right and 4 steps forward",0,False
+42,toggle,The blue door: 3 steps forward; a blue key 2 steps right and 5 steps forward,"a wall 5 steps forward
+a wall 3 steps right
+a locked blue door 1 step right and 5 steps forward
+a blue key 2 steps right and 4 steps forward",0,False
+43,pick up,blue door: 1 step forward; blue key: 2 steps right and 4 steps forward.,"a wall 5 steps forward
+a wall 3 steps right
+a locked blue door 1 step right and 5 steps forward
+a blue key 2 steps right and 4 steps forward",0,False
+44,pick up,The blue door: 1 step forward; the blue key: 2 steps right and 4 steps forward.,"a wall 5 steps forward
+a wall 3 steps right
+a locked blue door 1 step right and 5 steps forward
+a blue key 2 steps right and 4 steps forward",0,False
+45,turn left,a blue door 3 steps right and 6 steps forward,"a wall 4 steps forward
+a wall 2 steps left",0,False
+46,pick up,blue door 1 step forward; blue key 1 step right,"a wall 4 steps forward
+a wall 2 steps left",0,False
+47,pick up,The blue door 3 steps right and 6 steps forward.,"a wall 4 steps forward
+a wall 2 steps left",0,False
+48,go forward,open the blue door: the blue door 6 steps forward,"a wall 3 steps forward
+a wall 2 steps left",0,False
+49,toggle,the blue door <position> -> open the blue door,"a wall 3 steps forward
+a wall 2 steps left",0,False
+50,drop,The blue door <position> -> open the blue door,"a wall 3 steps forward
+a wall 2 steps left",0,False
+51,pick up,The blue door <position> -> open the blue door,"a wall 3 steps forward
+a wall 2 steps left",0,False
+52,,The blue door 2 steps forward. Open the blue door -> toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 2 steps left",0,False
+53,toggle,the blue door <position> -> open the blue door.,"a wall 2 steps forward
+a wall 2 steps left",0,False
+54,toggle,the blue door <position> -> open the blue door.,"a wall 2 steps forward
+a wall 2 steps left",0,False
+55,toggle,The blue door <position> -> open the blue door.,"a wall 2 steps forward
+a wall 2 steps left",0,False
+56,turn left,The blue door <position> -> open the blue door.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+57,,"blue door, 5 steps forward; I am carrying a blue key, 2 steps forward. <rule> -> pick up.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+58,toggle,The blue door <position> 1 step forward -> toggle.,"a wall 1 step forward
+a wall 2 steps right",0,False
+59,,the blue door 2 steps forward. toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+60,pick up,blue door: 5 steps forward; blue key 2 steps forward,"a wall 1 step forward
+a wall 2 steps right",0,False
+61,go forward,blue door: 1 step forward,"a wall 1 step forward
+a wall 2 steps right",0,False
+62,turn right,blue door: 1 step forward -> turn right.,"a wall 2 steps forward
+a wall 1 step left",0,False
+63,pick up,blue door: 1 step forward -> pick up.,"a wall 2 steps forward
+a wall 1 step left",0,False
+64,pick up,blue door: 1 step forward -> pick up.,"a wall 2 steps forward
+a wall 1 step left",0,False
+65,go forward,blue door: 2 steps forward,"a wall 1 step forward
+a wall 1 step left",0,False
+66,toggle,blue door: 1 step forward; blue object: toggle; rule: toggles interact with objects in front of the player,"a wall 1 step forward
+a wall 1 step left",0,False
+67,turn left,blue door 2 steps forward; blue object 1 step left,"a wall 1 step forward
+a wall 1 step right",0,False
+68,turn left,blue door 2 steps forward; blue object 1 step left.,"a wall 6 steps forward
+a wall 1 step right",0,False
+69,toggle,blue door 1 step forward; blue object 2 steps right.,"a wall 6 steps forward
+a wall 1 step right",0,False
+70,toggle,blue door 1 step forward; blue object 2 steps right.,"a wall 6 steps forward
+a wall 1 step right",0,False
+71,turn left,Blue door 1 step forward; blue key 2 steps left,"a wall 6 steps forward
+a wall 1 step left",0,False
+72,turn left,blue door 1 step forward; blue key 2 steps left,"a wall 1 step forward
+a wall 1 step left",0,False
+73,turn left,blue door: 1 step forward; blue key: 2 steps left,"a wall 1 step forward
+a wall 1 step right",0,False
+74,turn left,Target blue door: 1 step forward. rule: open the door.,"a wall 6 steps forward
+a wall 1 step right",0,False
+75,pick up,Target blue door: 1 step forward. rule: open the door.,"a wall 6 steps forward
+a wall 1 step right",0,False
+76,go forward,Target blue door: 1 step forward. rule: open the door.,"a wall 5 steps forward
+a wall 1 step right",0,False
+77,drop,Target blue door: 2 steps forward. rule: open the door. Action: drop,"a wall 5 steps forward
+a wall 1 step right",0,False
+78,go forward,Target blue door: 2 steps forward. rule: open the door.,"a wall 4 steps forward
+a wall 1 step right",0,False
+79,drop,Target blue door: 2 steps forward. Rule: open the door.,"a wall 4 steps forward
+a wall 1 step right",0,False
+80,pick up,Target blue door: 2 steps forward. Rule: open the door.,"a wall 4 steps forward
+a wall 1 step right",0,False
+81,turn left,Target blue door: 1 step forward. Rule: open the door.,"a wall 6 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 6 steps forward
+a blue key 3 steps right and 5 steps forward",0,False
+82,,target blue door: 2 steps forward. rule: open the door.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+83,pick up,target blue door: 1 step forward. rule: open the door.,"a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+84,pick up,blue door 2 steps forward. rule: open the door.,"a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+85,toggle,the blue door: 2 steps forward; the blue key: 3 steps forward,"a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+86,pick up,blue door: 1 step forward; blue key 3 steps right,"a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+87,turn right,a blue door 1 step forward; a blue key 3 steps right,"a wall 4 steps forward
+a wall 2 steps right",0,False
+88,turn left,blue door: 2 steps forward; blue key 3 steps right,"a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+89,pick up,blue door: 1 step forward; blue key: 1 step right,"a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+90,drop,the blue door: 2 steps forward; the blue key: 3 steps forward,"a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+91,toggle,The blue door: 2 steps forward; the blue key: 3 steps forward,"a wall 5 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 5 steps forward
+a blue key 3 steps right and 4 steps forward",0,False
+92,,"blue door (locked, 2 steps right) <blue door> <toggle>.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 3 steps left
+a locked blue door 2 steps right and 4 steps forward
+a blue key 3 steps right and 3 steps forward",0,False
+93,turn right,the blue door: 2 steps forward; the blue key: 3 steps forward,"a wall 4 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 3 steps forward",0,False
+94,toggle,"The blue door: 2 steps forward; the blue key: 3 steps forward. rule: ""toggle"" interacts with the object in front of you.","a wall 4 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 3 steps forward",0,False
+95,toggle,"target blue door: 2 steps forward; rule: ""toggle"" interacts with the object in front of you.","a wall 4 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 3 steps forward",0,False
+96,toggle,"blue key 3 steps right and 3 steps forward. rule: ""toggle"" interacts with the object in front of you.","a wall 4 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 3 steps forward",0,False
+97,drop,the blue door 2 steps right and 6 steps forward -> drop.,"a wall 4 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 3 steps forward",0,False
+98,pick up.,blue key 3 steps left and 3 steps forward. Rule: never repeat an action that did not change the observation. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 2 steps forward",0,False
+99,pick up,Target blue door: 2 steps forward. Rule: be on the blue door to pick it up.,"a wall 3 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 2 steps forward",0,False
+100,pick up,"blue door: 1 step forward, blue key 1 step forward -> pick up.","a wall 3 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 2 steps forward",0,False
+101,,blue door: 2 steps forward; a blue key 3 steps left and 2 steps forward,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 3 steps right
+a blue key 3 steps left and 1 step forward",0,False
+102,go forward,The blue door: 2 steps forward -> go forward.,"a wall 1 step forward
+a wall 3 steps right
+a blue key 3 steps left",0,False
+103,go forward,The blue door: 2 steps forward -> go forward.,"a wall 1 step forward
+a wall 3 steps right
+a blue key 3 steps left",0,False
+104,turn right,The blue door 2 steps forward and I carry nothing -> first get the blue key. Key: 1 right -> turn right.,"a wall 3 steps forward
+a wall 1 step left",0,False
+105,pick up,The blue door is 2 steps forward and I carry nothing -> first pick up.,"a wall 3 steps forward
+a wall 1 step left",0,False
+106,toggle,blue door 1 step forward: toggle.,"a wall 3 steps forward
+a wall 1 step left",0,False
+107,toggle,the blue door: 2 steps forward: toggle.,"a wall 3 steps forward
+a wall 1 step left",0,False
+108,pick up,The blue door: 2 steps forward. Rule: pick up -> pick up.,"a wall 3 steps forward
+a wall 1 step left",0,False
+109,drop,The blue door: 4 steps forward. Rule: drop -> drop.,"a wall 3 steps forward
+a wall 1 step left",0,False
+110,pick up,The blue door: 4 steps forward. Rule: pick up -> pick up.,"a wall 3 steps forward
+a wall 1 step left",0,False
+111,pick up,Target blue door: 3 steps forward. rule: pick up -> pick up.,"a wall 3 steps forward
+a wall 1 step left",0,False
+112,pick up,Target blue door: 1 step forward. rule: pick up -> pick up.,"a wall 3 steps forward
+a wall 1 step left",0,False
+113,turn right,Target blue door: 1 step forward. rule: open the blue door.,"a wall 6 steps forward
+a wall 3 steps left
+a blue key 3 steps right",0,False
+114,drop,The blue door is directly in front of you; it's 0 steps forward.,"a wall 6 steps forward
+a wall 3 steps left
+a blue key 3 steps right",0,False
+115,,Blue door <position>. be open -> pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 3 steps left",0,False
+116,turn left,the blue door: 0 steps forward.,"a wall 3 steps forward
+a wall 2 steps left",0,False
+117,go forward,the blue door: 2 steps forward.,"a wall 2 steps forward
+a wall 2 steps left",0,False
+118,turn left,blue door: 2 steps forward.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+119,pick up,blue door: 1 step forward; pick up.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+120,pick up,blue door: 1 step forward; pick up.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+121,pick up,open blue door: 1 step forward; pick up.,"a wall 2 steps forward
+a wall 2 steps right",0,False
+122,pick up,open the blue door: blue door 0 steps forward,"a wall 2 steps forward
+a wall 2 steps right",0,False
+123,toggle,"The blue door 0 steps forward, target blue door: 0 position. rule: open the blue door.","a wall 2 steps forward
+a wall 2 steps right",0,False
+124,,the blue door 3 steps forward. rule: open the blue door -> go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+125,pick up.,Target blue door: 0 position. Rule: open the blue door. Action: pick up.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,False
+126,pick up,The blue door: 0 position. Rule: open the blue door. Action: pick up,"a wall 1 step forward
+a wall 2 steps right",0,False
+127,drop.,target the blue door: 3 steps right. Rule: open the blue door. Action: drop.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step forward
+a wall 2 steps right",0,True

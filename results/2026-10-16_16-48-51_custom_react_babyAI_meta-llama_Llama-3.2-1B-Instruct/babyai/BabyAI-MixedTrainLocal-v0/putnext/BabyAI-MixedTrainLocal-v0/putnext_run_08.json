@@ -1,0 +1,72 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "pick up": 82,
+        "toggle": 7,
+        "go forward": 32,
+        "turn right": 1,
+        "turn left": 3,
+        "drop": 3
+    },
+    "input_tokens": 169813,
+    "output_tokens": 3533,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        null,
+        null,
+        null,
+        "pick up.",
+        "pick up.",
+        "pick up.\nAction: pick up",
+        "pick up.",
+        "pick up.",
+        null,
+        "pick up.",
+        "go right",
+        null,
+        null,
+        "pick up.",
+        null,
+        null,
+        "pick up.",
+        "pick up.",
+        "pick up.",
+        "pick up.",
+        "pick up.",
+        "pick up.",
+        "pick up.",
+        "pick up.\n\nAction: pick up.",
+        "pick up.",
+        "pick up.",
+        "pick up."
+    ],
+    "mission": "put the purple box next to the purple ball",
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 3227062109,
+    "agent": {
+        "type": "custom_react_babyAI",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "http://0.0.0.0:8081/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
