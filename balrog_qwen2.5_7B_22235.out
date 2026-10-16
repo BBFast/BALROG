@@ -1,0 +1,106 @@
+========================================
+BALROG Qwen2.5-7B
+========================================
+Host: netherite
+Job ID: 22235
+========================================
+
+GPU:
+Thu Oct 15 21:53:13 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 615.71.09              KMD Version: 615.71.09     CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    Off |   00000000:C9:00.0 Off |                    0 |
+| N/A   45C    P0             92W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+Checking BALROG installation...
+drwxr-xr-x. 19 s3685918 student 4096 Oct 15 21:53 /local/s3685918/BALROG
+drwxr-xr-x. 7 s3685918 student 4096 Oct  6 14:35 /local/s3685918/BALROG/.venv
+
+Model: Qwen/Qwen2.5-7B-Instruct
+
+========================================
+Starting vLLM
+========================================
+vLLM PID: 3277044
+Waiting for vLLM...
+vLLM is ready!
+
+========================================
+vLLM model
+========================================
+{"object":"list","data":[{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1792094044,"owned_by":"vllm","root":"Qwen/Qwen2.5-7B-Instruct","parent":null,"max_model_len":32768,"permission":[{"id":"modelperm-b567ecd912738799","object":"model_permission","created":1792094044,"allow_create_engine":false,"allow_sampling":true,"allow_logprobs":true,"allow_search_indices":false,"allow_view":true,"allow_fine_tuning":false,"organization":"*","group":null,"is_blocking":false}]}]}
+========================================
+Running BALROG custom
+========================================
+
+Summary of Results:
+Overall Average Progression: 9.05% ± 1.67%
+Per-Environment Results:
+  babyai: 26.00% ± 6.20%, Episodes: 50
+  babaisai: 4.17% ± 1.82%, Episodes: 120
+  textworld: 1.96% ± 0.80%, Episodes: 30
+  crafter: 4.09% ± 1.50%, Episodes: 10
+
+========================================
+BALROG finished successfully
+========================================
+
+========================================
+Running BALROG custom_cot_sbs
+========================================
+
+Summary of Results:
+Overall Average Progression: 7.81% ± 1.58%
+Per-Environment Results:
+  babyai: 22.00% ± 5.86%, Episodes: 50
+  babaisai: 5.00% ± 1.99%, Episodes: 120
+  textworld: 1.96% ± 0.70%, Episodes: 30
+  crafter: 2.27% ± 0.96%, Episodes: 10
+
+========================================
+BALROG finished successfully
+========================================
+
+========================================
+Running BALROG custom_cot_4step
+========================================
+
+Summary of Results:
+Overall Average Progression: 9.66% ± 1.70%
+Per-Environment Results:
+  babyai: 26.00% ± 6.20%, Episodes: 50
+  babaisai: 3.33% ± 1.64%, Episodes: 120
+  textworld: 2.94% ± 0.95%, Episodes: 30
+  crafter: 6.36% ± 2.05%, Episodes: 10
+
+========================================
+BALROG finished successfully
+========================================
+
+========================================
+Running BALROG custom_reflexion
+========================================
+
+Summary of Results:
+Overall Average Progression: 40.00% ± 15.49%
+Per-Environment Results:
+  babyai: 40.00% ± 15.49%, Episodes: 10
+
+========================================
+BALROG finished successfully
+========================================

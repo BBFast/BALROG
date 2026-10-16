@@ -1,0 +1,55 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go east": 22,
+        "look": 4,
+        "go north": 6,
+        "go west": 9,
+        "take key": 1,
+        "go south": 16,
+        "take drawer from floor": 1,
+        "open drawer": 1,
+        "look at drawer": 1,
+        "take key from drawer": 1,
+        "look at shelf": 1,
+        "open passageway": 3,
+        "look at passageway": 1,
+        "take key from passageway": 6,
+        "open passageway with key": 4,
+        "look for key in kitchenette": 1,
+        "look for key on table": 1,
+        "look in basement": 1
+    },
+    "input_tokens": 101158,
+    "output_tokens": 1937,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-4",
+    "seed": 2247072666,
+    "agent": {
+        "type": "custom_reflexion",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://localhost:8082/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

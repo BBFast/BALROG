@@ -1,0 +1,60 @@
+========================================
+BALROG Qwen2.5-7B
+========================================
+Host: netherite
+Job ID: 22248
+========================================
+
+GPU:
+Thu Oct 15 22:12:16 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 615.71.09              KMD Version: 615.71.09     CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    Off |   00000000:E1:00.0 Off |                    0 |
+| N/A   57C    P0            115W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+Checking BALROG installation...
+drwxr-xr-x. 19 s3685918 student 8192 Oct 15 22:12 /local/s3685918/BALROG
+drwxr-xr-x. 7 s3685918 student 4096 Oct  6 14:35 /local/s3685918/BALROG/.venv
+
+Model: Qwen/Qwen2.5-7B-Instruct
+
+========================================
+Starting vLLM
+========================================
+vLLM PID: 3279966
+Waiting for vLLM...
+vLLM is ready!
+
+========================================
+vLLM model
+========================================
+{"object":"list","data":[{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1792095136,"owned_by":"vllm","root":"Qwen/Qwen2.5-7B-Instruct","parent":null,"max_model_len":32768,"permission":[{"id":"modelperm-945b91d9783c4544","object":"model_permission","created":1792095136,"allow_create_engine":false,"allow_sampling":true,"allow_logprobs":true,"allow_search_indices":false,"allow_view":true,"allow_fine_tuning":false,"organization":"*","group":null,"is_blocking":false}]}]}========================================
+Running BALROG custom_reflexion
+========================================
+Glk library error: agent_get_output: string too large for buffer (258 versus 256)
+
+Summary of Results:
+Overall Average Progression: 8.05% ± 1.96%
+Per-Environment Results:
+  babyai: 18.00% ± 5.43%, Episodes: 50
+  babaisai: 6.14% ± 2.25%, Episodes: 114
+  textworld: 0.00% ± 0.00%, Episodes: 9
+
+========================================
+BALROG finished successfully
+========================================
