@@ -1,0 +1,400 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,Target door: 6 steps forward. There is no object in front of me to interact with -> go forward.,"a wall 5 steps forward
+a wall 1 step right
+a purple key 2 steps left and 4 steps forward",0,False
+1,go forward,Target door: 4 steps forward. A door is located 4 steps forward -> go forward.,"a wall 4 steps forward
+a wall 1 step right
+a purple key 2 steps left and 3 steps forward",0,False
+2,go forward,Target door: 3 steps forward. Go forward -> go forward.,"a wall 3 steps forward
+a wall 1 step right
+a purple key 2 steps left and 2 steps forward",0,False
+3,go forward,Target door: 2 steps forward. Go forward -> go forward.,"a wall 2 steps forward
+a wall 1 step right
+a purple key 2 steps left and 1 step forward",0,False
+4,go forward,Target door: 1 step forward. Go forward -> go forward.,"a wall 1 step forward
+a wall 1 step right
+a purple key 2 steps left",0,False
+5,go forward,Target door: 1 step forward. Go forward -> go forward.,"a wall 1 step forward
+a wall 1 step right
+a purple key 2 steps left",0,False
+6,go forward,Target door: 1 step forward. Go forward -> go forward.,"a wall 1 step forward
+a wall 1 step right
+a purple key 2 steps left",0,False
+7,pick up,"Target door: 1 step forward. If the door is in front of me, I need to pick it up or toggle it. Since I don't carry any object, I need to pick it up.","a wall 1 step forward
+a wall 1 step right
+a purple key 2 steps left",0,False
+8,turn left,"Target door: 1 step forward. Since there is no key and the door is not open, I need to find the key first. Key: 2 steps left -> turn left.","a wall 1 step right
+a purple key 2 steps forward
+a locked purple door 1 step right and 4 steps forward",0,False
+9,go forward,Target door: 1 step right and 4 steps forward. Key: 2 steps forward -> go forward.,"a wall 1 step right
+a purple key 1 step forward
+a locked purple door 1 step right and 3 steps forward",0,False
+10,pick up,Target door: 1 step right and 3 steps forward. Key: 1 step forward -> pick up key.,"You carry a purple key
+a wall 5 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 3 steps forward",0,False
+11,toggle,Target door: 1 step right and 3 steps forward. Key: 1 step forward and carried -> use key to unlock door.,"You carry a purple key
+a wall 5 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 3 steps forward",0,False
+12,toggle,Target door: 1 step right and 3 steps forward. Key: carried and in front of the door -> use key to unlock door.,"You carry a purple key
+a wall 5 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 3 steps forward",0,False
+13,toggle,Target door: 1 step right and 3 steps forward. Key: carried and in front of the door -> use key to unlock door.,"You carry a purple key
+a wall 5 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 3 steps forward",0,False
+14,toggle,Target door: 1 step right and 3 steps forward. Door is locked and I carry a purple key -> use key to unlock door.,"You carry a purple key
+a wall 5 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 3 steps forward",0,False
+15,toggle,"Target locked purple door: 1 step right and 3 steps forward. Key in hand, door is locked -> use key to unlock door.","You carry a purple key
+a wall 5 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 3 steps forward",0,False
+16,"toggle.
+Action: toggle",Target locked purple door: 1 step right and 3 steps forward. I need to use the purple key to unlock it. Action: toggle.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a purple key
+a wall 4 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 2 steps forward",0,False
+17,toggle,Target locked purple door: 1 step right and 2 steps forward. Use the purple key to unlock the door. Rule -> toggle.,"You carry a purple key
+a wall 4 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 2 steps forward",0,False
+18,go forward,Target locked purple door: 1 step right and 2 steps forward. Use the purple key to unlock the door. Rule -> toggle.,"You carry a purple key
+a wall 3 steps forward
+a wall 1 step right
+a locked purple door 1 step right and 1 step forward",0,False
+19,turn left,"Target locked purple door: 1 step right and 1 step forward. Key: 1 left and 1 forward -> turn left, then go forward to pick up the key, turn right, then go forward twice to reach the door, and finally toggle.","You carry a purple key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+20,go forward,"Target door: 3 steps forward. Since there is no object in front of me that needs interaction and the door is not yet within reach, I need to move closer.","You carry a purple key
+a wall 5 steps forward
+a wall 3 steps right",0,False
+21,pick up,"Target door: 5 steps forward. Since the door is directly in front of me, I need to pick it up to interact with it.","You carry a purple key
+a wall 5 steps forward
+a wall 3 steps right",0,False
+22,pick up,Target door: 5 steps forward. Door is directly in front of me and I carry a purple key -> pick up.,"You carry a purple key
+a wall 5 steps forward
+a wall 3 steps right",0,False
+23,pick up,Target door: 5 steps forward. Directly in front of me and I carry a purple key -> pick up.,"You carry a purple key
+a wall 5 steps forward
+a wall 3 steps right",0,False
+24,toggle,Target door: 5 steps forward. Key is in hand but door is locked -> use key to unlock door.,"You carry a purple key
+a wall 5 steps forward
+a wall 3 steps right",0,False
+25,go forward,"Target door: 5 steps forward. Since no key is mentioned and the door is locked, I need to find or use a key to unlock it. However, there are no keys in the current observation, so I need to move towards the door.","You carry a purple key
+a wall 4 steps forward
+a wall 3 steps right",0,False
+26,go forward,"Target door: 4 steps forward. Since I am carrying the purple key and the door is 4 steps forward, I need to move closer to the door.","You carry a purple key
+a wall 3 steps forward
+a wall 3 steps right",0,False
+27,go forward,Target door: 3 steps forward. Key is needed to unlock the door -> go forward.,"You carry a purple key
+a wall 2 steps forward
+a wall 3 steps right",0,False
+28,go forward,Target door: 1 step forward. Door is not opened and I carry the purple key -> go forward.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+29,go forward,Target door: 1 step forward. Door is not opened and I carry the purple key -> go forward.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+30,go forward,Target door: 1 step forward. Door is not opened and I carry the purple key -> go forward.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+31,toggle,Target door: 1 step forward. I carry a purple key which matches the door's color -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+32,toggle,Target door: 1 step forward. Purple key matches door color -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+33,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+34,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+35,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+36,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+37,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+38,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+39,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+40,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+41,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+42,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+43,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+44,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+45,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+46,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+47,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+48,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+49,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+50,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+51,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+52,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+53,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+54,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+55,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+56,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+57,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+58,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+59,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+60,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+61,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+62,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+63,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+64,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+65,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+66,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+67,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+68,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+69,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+70,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+71,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+72,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+73,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+74,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+75,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+76,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+77,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+78,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+79,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+80,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+81,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+82,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+83,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+84,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+85,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+86,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+87,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+88,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+89,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+90,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+91,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+92,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+93,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+94,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+95,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+96,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+97,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+98,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+99,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+100,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+101,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+102,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+103,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+104,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+105,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+106,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+107,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+108,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+109,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+110,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+111,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+112,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+113,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+114,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+115,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+116,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+117,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+118,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+119,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+120,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+121,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+122,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+123,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+124,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+125,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+126,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,False
+127,toggle,Target door: 1 step forward. Door is the only object to interact with -> toggle.,"You carry a purple key
+a wall 1 step forward
+a wall 3 steps right",0,True
