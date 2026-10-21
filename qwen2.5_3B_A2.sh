@@ -154,25 +154,6 @@ echo "BALROG finished successfully"
 echo "========================================"
 echo
 echo "========================================"
-echo "Running BALROG custom_cot_4step"
-echo "========================================"
-
-python eval.py \
-    agent.type=custom_cot_4step \
-    agent.max_image_history=0 \
-    agent.max_text_history=16 \
-    eval.num_workers=8 \
-    client.client_name=vllm \
-    client.model_id="$MODEL" \
-    client.base_url=http://localhost:$PORT/v1 \
-    envs.names=babyai-babaisai-textworld-crafter
-
-echo
-echo "========================================"
-echo "BALROG finished successfully"
-echo "========================================"
-echo
-echo "========================================"
 echo "Running BALROG custom_cot_prevact"
 echo "========================================"
 
