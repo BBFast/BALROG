@@ -9,6 +9,9 @@ and one LLM via the API:
 
 These models are tested on the following agents: `balrog/agents/custom_reflexion.py` and `balrog/agents/custom_react_babyAI.py`. `custom_reflexion.py` implements the Reflexion-like agent. `custom_react_babyAI.py` implements the ReAct agent on babyAI. The Reflexion-like agent is evaluated on BabyAI, BabaIsAI, TextWorld and Crafter. The ReAct agent only on BabyAI. 
 
+
+Before you can run `eval.py` on Llama, you have to start the vllm in another terminal with `vllm serve meta-llama/Llama-3.2-1B-Instruct --port 8080`.
+
 The following command is used to run the Llama model, for `$AGENT = [custom_reflexion, custom_react_babyAI]` and `$ENVS = babyai-babaisai-textworld-crafter` for custom_reflexion and `babyai` for custom_react_babyAI:
 
 ```bash
@@ -35,4 +38,4 @@ python eval.py \
     envs.names=babyai
 ```
 
-The following scripts can be run using `bash` (or `sbatch` when using a SLURM machine) which will run all agents sequentially: qwen2.5_3B_A3.sh, qwen2.5_7B_A3.sh which run `custom_reflexion.py` and qwen2.5_3B_A3_react.sh, qwen2.5_7B_A3_react.sh which run `custom_react_babyAI.py`
+The following scripts can be run using `bash` (or `sbatch` when using a SLURM machine) which will run all agents sequentially: qwen2.5_3B_A3.sh, qwen2.5_7B_A3.sh which run `custom_reflexion.py` and qwen2.5_3B_A3_react.sh, qwen2.5_7B_A3_react.sh which run `custom_react_babyAI.py`. In these scripts, `source .venv/bin/activate` is automatically called. However, the script also automatically goes to the desired directory where this venv is located. Therefore, you need to change this `cd` command inside the script to your preferred directory.

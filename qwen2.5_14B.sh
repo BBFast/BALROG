@@ -42,9 +42,6 @@ nvidia-smi
 echo
 echo "Checking BALROG installation..."
 
-ls -ld /local/s3685918/BALROG
-ls -ld /local/s3685918/BALROG/.venv
-
 cd /local/s3685918/BALROG
 source .venv/bin/activate
 

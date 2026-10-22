@@ -11,6 +11,8 @@ Additionally, one cloud model is used via an API key:
 
 For this exercise we only make use of the provided `balrog/agents/naive.py` agent.
 
+Before you can run `eval.py` on Llama, you have to start the vllm in another terminal with `vllm serve meta-llama/Llama-3.2-1B-Instruct --port 8080`. 
+
 The following command is used to run the Llama model:
 
 ```bash
@@ -24,7 +26,7 @@ python eval.py \
     client.base_url=http://localhost:8080/v1
 ```
 
-The following scripts can be run using `bash` (or `sbatch` when using a SLURM machine): qwen2.5_3B.sh, qwen2.5_7B.sh, qwen2.5_14B.sh, gpt_oss_20b.sh.
+The following scripts can be run using `bash` (or `sbatch` when using a SLURM machine): qwen2.5_3B.sh, qwen2.5_7B.sh, qwen2.5_14B.sh, gpt_oss_20b.sh. In these scripts, `source .venv/bin/activate` is automatically called. However, the script also automatically goes to the desired directory where this venv is located. Therefore, you need to change this `cd` command inside the script to your preferred directory.
 
 To run the gpt-4o-mini-2024-07-18 model the following command is used:
 
