@@ -1,0 +1,13 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn left,"Target yellow key: not present in the current observation. Possible wall right and forward, no move possible -> turn left.","a wall 5 steps forward
+a wall 1 step right
+a yellow key 3 steps left",0,False
+1,turn left,Target yellow key: 3 steps left. I need to turn toward it to reach it. -> turn left.,"a wall 2 steps left
+a yellow key 3 steps forward",0,False
+2,go forward,Target yellow key: 3 steps forward. Forward part is not 0 -> go forward.,"a wall 2 steps left
+a yellow key 2 steps forward",0,False
+3,go forward,Target yellow key: 2 steps forward. Forward part is not 0 -> go forward.,"a wall 2 steps left
+a yellow key 1 step forward",0,False
+4,pick up,Target yellow key: 1 step forward. Forward part is 1 -> pick up.,"You carry a yellow key
+a wall 4 steps forward
+a wall 2 steps left",0.9296875,True

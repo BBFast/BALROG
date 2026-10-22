@@ -1,0 +1,381 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn right,There is a wall 2 steps forward and a wall 1 step left. I cannot go in those directions. I need to turn to find a path to the door. -> turn right.,"a wall 6 steps forward
+a wall 2 steps left
+a locked green door 2 steps left and 4 steps forward
+a green key 2 steps right",0,False
+1,turn right,"Target locked green door: 2 steps left and 4 steps forward. I need to get the green key to unlock it, which is 2 steps right. -> turn right.","a wall 1 step right
+a green key 2 steps forward",0,False
+2,pick up,Target locked green door: 2 steps left and 4 steps forward. I need to pick up the green key which is 2 steps forward. -> pick up.,"a wall 1 step right
+a green key 2 steps forward",0,False
+3,go forward,"The green key is 2 steps forward, and I need to pick it up to interact with the locked green door. Key: 1 step forward -> go forward.","a wall 1 step right
+a green key 1 step forward",0,False
+4,go forward,Target locked green door: 2 steps forward. I need to pick up the green key first to unlock the door -> go forward.,"a wall 1 step right
+a green key 1 step forward",0,False
+5,go forward,"Target locked green door: 2 steps forward. I carry the green key, and the door is not yet 1 step forward -> go forward.","a wall 1 step right
+a green key 1 step forward",0,False
+6,toggle,"Target locked green door: 2 steps forward. I carry the green key, and the door is 1 step forward -> toggle.","a wall 1 step right
+a green key 1 step forward",0,False
+7,go forward,Target locked green door: 2 steps forward. I carry the green key -> go forward.,"a wall 1 step right
+a green key 1 step forward",0,False
+8,go forward,Target locked green door: 2 steps forward. I carry the green key -> go forward.,"a wall 1 step right
+a green key 1 step forward",0,False
+9,go forward,Target locked green door: 2 steps forward. I carry the green key -> go forward.,"a wall 1 step right
+a green key 1 step forward",0,False
+10,go forward,Target locked green door: 2 steps forward. I carry the green key -> go forward.,"a wall 1 step right
+a green key 1 step forward",0,False
+11,go forward,Target locked green door: 2 steps forward. I carry the green key and am facing the door -> go forward.,"a wall 1 step right
+a green key 1 step forward",0,False
+12,go forward,Target locked green door: 2 steps left and 4 steps forward. I carry the green key -> go forward to reach the door. Action: go forward,"a wall 1 step right
+a green key 1 step forward",0,False
+13,"go forward.  
+Action: go forward",Target locked green door: 2 steps left and 4 steps forward. I carry the green key -> go forward to reach the door. Action: go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step right
+a green key 1 step forward",0,False
+14,"go forward.  
+Action: go forward",Target locked green door: 2 steps left and 4 steps forward. I carry the green key -> go forward to reach the door. Action: go forward.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 1 step right
+a green key 1 step forward",0,False
+15,toggle,Target locked green door: 2 steps left and 4 steps forward. I have the green key in my possession. The key needs to be used to interact with the door. -> toggle.,"a wall 1 step right
+a green key 1 step forward",0,False
+16,go forward,Target locked green door: 2 steps left and 4 steps forward. I have the green key 1 step forward and need to advance to the door since I cannot interact with it yet. -> go forward.,"a wall 1 step right
+a green key 1 step forward",0,False
+17,go forward,"Target door: 1 step forward. I can't interact with it yet, and I need to get to the green key first. Key: 1 step forward -> go forward.","a wall 1 step right
+a green key 1 step forward",0,False
+18,pick up,Target green key: 1 step forward. I need to pick it up to use it later. -> pick up.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step right",0,False
+19,go forward,Target door: 4 steps forward. There is a wall blocking the way -> go forward.,"You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+20,turn left,"There is a wall 3 steps forward, blocking the way to the door. I need to turn to find a way around it -> turn left.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+21,turn left,"Target door: 6 steps forward, but I can't see it in this observation. I need to turn left to find a way. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+22,turn left,Target door: 4 steps forward. A left turn will give me a clearer path. -> turn left.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+23,turn right,Target door: 1 step forward. There is a wall in front of me -> turn right.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+24,turn right,"There is a wall 4 steps forward and a wall 1 step left, so I need to turn to my right to proceed.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+25,turn left,Target door: 6 steps forward. I cannot interact with it yet as it is beyond one step and there is a wall blocking my path -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+26,turn left,"Target door: 4 steps forward, blocked by a wall. I need to turn to find a way around the wall on my left. -> turn left.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+27,turn left,"Target door: 1 step forward. There is a wall in front of me, so I cannot go forward. I need to turn left to find a way. -> turn left.","You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+28,turn right,"Target door: 3 steps forward. There is a wall in front of me, so I cannot go forward. The best choice is to turn right -> turn right.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+29,turn right,"I cannot go forward due to a wall and I have no objects to interact with. To find another route, I should turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+30,turn left,"There is a wall 1 step forward, preventing me from going forward. I carry a green key, but the door is not visible. I should explore a route by turning left. -> turn left.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+31,turn left,"There is a wall 1 step forward blocking my way and I can't see the door. Since I have a green key and can't proceed forward, I need to change my orientation to explore. -> turn left.","You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+32,turn right,"There is a wall 3 steps forward blocking my way, and I can't see the door. I need to explore a different direction to find a way forward. -> turn right.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+33,turn right,"I need to find the door to open it, but I can't see it from my current position. The wall is blocking my forward path. Since there is a wall on my left as well and I can't move forward or left, I will rotate to explore a new direction. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+34,turn right,"I am facing a wall 4 steps forward and a wall 1 step left, so I need to explore a new direction. There is no door visible in my current position, and I must turn to find another route. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+35,turn left,"I need to find a way to explore further since there are walls ahead and to my right, a path is needed to navigate. I will rotate to find a different direction. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+36,turn right,"There is a wall 4 steps forward, so I need to change direction. I will try turning right since it may lead to a different path. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+37,turn left,Target door: 6 steps forward. There is no door in the current observation; I need to change direction to find a different path -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+38,turn right,Target door: 4 steps forward. There are walls blocking my path; I need to change direction to find a different path -> turn right.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+39,turn left,"There is a wall 6 steps forward and a wall 3 steps right, indicating no immediate path towards the door. Need to change directions -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+40,turn right,"There are walls blocking my path, and I cannot move forward or to the left. Need to change direction to find a way to interact with a relevant object. I will rotate to find a new orientation -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+41,turn left,There are no doors currently visible in my observation. I need to navigate away from the wall in front of me to find a different route to potentially reach the door. -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+42,turn left,There are no doors visible in my observation and I am unable to interact with any objects. I need to change my position to find a possible route -> turn left.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+43,turn left,There is a wall 1 step forward blocking my path. I need to change my orientation to explore a different path. -> turn left.,"You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+44,turn left,There is a wall 3 steps forward and a wall 1 step right. I need to explore other directions to find a way to proceed. -> turn left.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+45,turn left,There is a wall 6 steps forward and a wall 3 steps right. I need to explore other directions to find a way to proceed. -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+46,turn left,"There is no door in the current observation, only walls. I need to explore other directions to possibly find a way to proceed. -> turn left.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+47,turn right,"I need to find a way to explore further, since I cannot go forward. The wall is 1 step forward and 3 steps left. There are no objects to interact with. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+48,turn left,I cannot go forward due to a wall and there are no objects to interact with. I need to explore further to find an alternative route -> turn left.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+49,turn right,I cannot go forward due to a wall and there's a wall to my left. I need to change direction to explore and find an alternative route -> turn right.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+50,turn right,"I see a wall 4 steps forward and a wall 1 step left, I can only turn right to explore. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+51,turn right,Target door: not visible in the current observation. I carry a green key and there is a wall 6 steps forward and 3 steps right -> I need to explore by turning right.,"You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+52,turn right,"There is a wall 3 steps forward and 1 step right. Since I can't move forward, I need to turn to explore further and look for a way to reach the door. -> turn right.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+53,turn left,Target door: 1 step forward. I cannot move forward due to the wall. I need to explore further in the available direction. -> turn left.,"You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+54,turn left,There are walls in positions that prevent forward movement. I need to explore further to the left. -> turn left.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+55,turn left,"I need to access the door, but I see walls blocking my path. The wall is 6 steps forward and 3 steps right, which means I should explore further on my left since I can't move forward directly. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+56,turn right,Target door: 4 steps forward. Wall blocks the path -> turn right.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+57,turn right,Target door: 6 steps forward. Wall blocks the path -> turn right.,"You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+58,turn left,There is a wall 3 steps forward and a wall 1 step right. I need to change direction to find a clear path to the door. -> turn left.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+59,turn left,There is a wall 6 steps forward and a wall 3 steps right; I need to rotate to find a clear path. -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+60,turn right,There is a wall 4 steps forward and a wall 1 step left; I need to turn to avoid the wall in front of me. -> turn right.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+61,turn left,There is a wall 6 steps forward and a wall 3 steps right; I need to turn to find a way to navigate around the walls. -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+62,turn right,"I carry a green key. There is a wall 4 steps forward and a wall 1 step left, which means I cannot go forward or left. I need to redirect my direction to assess the situation better. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+63,turn right,"Target door: 6 steps forward. I carry a green key but there is a wall in front of me, which prevents me from going forward. -> turn right.","You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+64,turn right,Target door: 3 steps forward. There is a wall blocking the path -> turn right.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+65,turn right,"There is a wall 1 step forward, blocking the way to the door. I need to turn to find a new direction to proceed. The wall is to the left. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+66,turn right,"There is a wall 4 steps forward, which blocks the path to the door. I need to turn to find a new direction to proceed. The wall is to the left. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+67,turn left,"There is a wall 6 steps forward, blocking my way to the door. I need to turn to find a new path. The wall 3 steps right is also an obstruction. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+68,turn right,There is a wall 4 steps forward and a wall 1 step left blocking my way. I need to find a new direction to move. -> turn right.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+69,turn left,"There is a wall 6 steps forward, and I cannot move forward. I need to find a new direction to navigate. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+70,turn right,"I carry a green key; a wall is 4 steps forward and one is 1 step left. There is no door in sight, and I cannot move forward. I need to change my direction -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+71,turn left,"There are walls 6 steps forward and 3 steps right, with no door in sight. I need to find a different direction to potentially navigate towards the door. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+72,turn right,"There is a wall 4 steps forward and 1 step left, with no door in sight. I need to change my orientation to find a new path. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+73,turn left,"There are walls blocking my forward movement, and I can't interact with anything in front of me. I need to change my position to explore a new route. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+74,turn left,"There are walls blocking my forward movement, and I can't interact with anything in front of me. I need to change my position to explore a new route. -> turn left.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+75,turn right,"I carry a green key, and there is a wall 1 step forward, so I cannot go forward to open the door. I need to change my orientation to explore. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+76,turn left,"Target door: 1 step forward. Since I am facing a wall 4 steps forward, I need to adjust my orientation first -> turn left.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+77,turn left,"Target door: 1 step forward. Since I am facing a wall 1 step forward, I need to turn left to access the position where the door might be located. -> turn left.","You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+78,turn right,"Target door: not visible in the current observation, but I need to explore further. There is a wall 3 steps forward, which means I need to turn right to see if I can navigate to find the door. -> turn right.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+79,turn right,"Target door: not visible in the current observation, but I need to explore further. There is a wall 3 steps left; turning right may reveal other paths. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+80,turn right,"Target door: not visible, but I have a wall 4 steps forward and a wall 1 step left. I need to explore other directions -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+81,turn left,"Target door: not visible, but I need to explore other directions. There’s a wall 6 steps forward and a wall 3 steps right. I should turn left to find a new direction. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+82,turn right,"Target door: not visible, but there is a wall 4 steps forward and a wall 1 step left. I need to explore a different direction. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+83,turn left,"I carry a green key. There is a wall 6 steps forward and a wall 3 steps right. I need to explore a different direction, which is left. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+84,turn left,Target door: 1 step forward. I cannot toggle since there's a wall and I'm stuck in a loop. I need to explore what is to my left. -> turn left.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+85,turn right,"Target door: 1 step forward. I cannot toggle since there's a wall in front of me, so I need to explore what is to my right. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+86,turn right,"Target door: 1 step forward. I cannot toggle since there's a wall in front of me, so I need to explore what is to my right. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+87,turn left,I cannot access any door from my current position as there is a wall 6 steps forward and a wall 3 steps right. I need to explore by turning left since turning right or going forward does not lead anywhere useful. -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+88,turn left,I can't access any door from my current position with walls in the vicinity. I need to turn to explore further -> turn left.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+89,turn left,There is a wall 1 step forward and I cannot access anything to interact with. I need to turn to explore further. -> turn left.,"You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+90,turn right,Target door: 3 steps forward. There is a wall blocking my path; I need to explore further directions. -> turn right.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+91,turn right,There is a wall 1 step forward; I need to change directions to explore. -> turn right.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+92,turn right,There is a wall 4 steps forward and a wall 1 step left; I need to change directions to explore. -> turn right.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+93,turn left,There is a wall 6 steps forward and a wall 3 steps right; I need to change my direction to explore further. -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+94,turn left,There is a wall 4 steps forward and a wall 1 step left; I need to change my position to make progress. I have already turned right before without success. -> turn left.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+95,turn left,"There is a wall 1 step forward, and I need to change my position. I have previously checked left without success, so I will rotate to face the right direction to see if it opens up opportunities. -> turn left.","You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+96,turn right,"There is a wall 3 steps forward and a wall 1 step right. I need to change my position to find a way to reach the door, so I will rotate to see if it opens any new path. -> turn right.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+97,turn right,"There is a wall 1 step forward, blocking my path. I need to change my orientation to find a way to reach the door. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+98,turn left,"There is a wall 1 step forward, blocking my path and I need to find a way around. The wall is 4 steps forward, so I should change orientation. -> turn left.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+99,turn right,"There is a wall 1 step forward, blocking my path. I cannot move forward but I need to change direction to find an alternate route. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+100,turn right,There is a wall 1 step forward blocking my path. I need to change my direction. -> turn right.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+101,turn left,"There are walls in all directions, and I carry a green key. I need to change direction and look for a path. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+102,turn right,"There are walls in front and to the left, blocking my path. I need to change direction to find a way to the door. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+103,turn left,"There is a wall 6 steps forward, blocking my path to the door. I need to change direction to find a way toward it. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+104,turn left,There is a wall 4 steps forward; I need to find a way around to reach the door. I can turn left to change my direction. -> turn left.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+105,turn right,There is a wall 1 step forward; I need to turn to check for another way to interact with the door. -> turn right.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+106,turn right,There is a wall 4 steps forward and a wall 1 step left. I need to reorient myself to find a path toward the door. -> turn right.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+107,turn left,Target door: not visible in current observation. I need to turn to find a way to the door. -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+108,turn left,"I carry a green key. There is a wall 4 steps forward and a wall 1 step left, making it impossible to move forward that way. I need to rotate to find another route towards the door. -> turn left.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+109,turn right,"There is a wall 1 step forward and I carry a green key, but I need to look for the door. The wall to the left indicates I should rotate to the right. -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+110,turn left,"There is a wall 1 step forward and a wall 3 steps left. I need to find a way to move and potentially reach the door, but I have no way to move forward currently -> turn left.","You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+111,turn left,"There is a wall 1 step forward, and I cannot proceed. I need to change direction to find a way around. I will turn left to reassess my surroundings.","You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+112,turn left,"There is a wall 3 steps forward, and a wall 1 step right; I need to reposition to find a way around. -> turn left.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+113,turn left,There are walls blocking my path and I need to explore a different direction to find a way to the door. -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+114,turn right,"There is a wall 4 steps forward and a wall 1 step left, so I can't proceed in those directions -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+115,turn left,I cannot see a door in the current observation; I have a green key but there are walls blocking forward movement. Need to find a new direction -> turn left.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+116,turn right,"I carry a green key, but there is a wall right next to me and a wall 4 steps forward. I need to change direction to find a way to progress towards a possible door. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+117,turn left,"There is a wall 6 steps forward and a wall 3 steps right, so I can't proceed in the forward direction or to the right. I need to find another route to reach potential doors. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+118,turn right,"There is a wall 4 steps forward and a wall 1 step left. I cannot go forward or left, so I need to change direction to find an alternative route. -> turn right.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+119,turn right,"There is no door in my current observation, and I cannot move forward due to a wall. I need to explore different directions to find a way to the door. -> turn right.","You carry a green key
+a wall 3 steps forward
+a wall 1 step right",0,False
+120,turn left,"I need to find a way to open the door, but there's a wall 1 step right and 3 steps forward. I should turn left to explore a different direction. -> turn left.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+121,turn left,"There is a wall 6 steps forward and a wall 3 steps right, so I need to change direction to find a way to the door. -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+122,turn right,"There is a wall 4 steps forward and a wall 1 step left. I need to find a way to move toward a door, so I will turn right to change direction.","You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+123,turn left,There is a wall 6 steps forward and a wall 3 steps right; I need to find a way to move toward the door. I will turn left to change direction.,"You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+124,turn right,There is a wall 4 steps forward and a wall 1 step left; I am not facing any objects I can interact with for my mission. I will turn right.,"You carry a green key
+a wall 6 steps forward
+a wall 3 steps right",0,False
+125,turn left,"Target door: 6 steps forward. There is a wall blocking my path, I need to change direction -> turn left.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,False
+126,turn left,I cannot get to the door now; there is a wall 4 steps forward. I need to change direction to navigate around the wall -> turn left.,"You carry a green key
+a wall 1 step forward
+a wall 3 steps left",0,False
+127,turn right,"There is a wall 1 step forward, blocking access to the door. I need to change direction to navigate around the wall -> turn right.","You carry a green key
+a wall 4 steps forward
+a wall 1 step left",0,True

@@ -1,0 +1,372 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,pick up,Target yellow ball: 1 step forward. I do not carry the yellow ball; it is within reach -> pick up.,"a wall 1 step forward
+a wall 2 steps left",0,False
+1,turn right,Target yellow ball: not visible. No action possible. -> turn right.,"a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+2,turn left,Target yellow ball: not visible. No action possible. -> turn left.,"a wall 1 step forward
+a wall 2 steps left",0,False
+3,turn right,Target yellow ball: not visible. I cannot interact with any object in front of me as there are walls. -> turn right.,"a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+4,turn right,Target yellow ball: not visible. I cannot interact with any object in front of me as there are walls. -> turn right.,"a wall 6 steps forward
+a wall 2 steps right",0,False
+5,turn left,Target yellow ball: not visible. Next to blue box is not possible; walls block the path. Wall is 6 steps forward -> turn left.,"a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+6,turn right,Target yellow ball: not visible. Blue box is 3 steps right and 4 steps forward. Next move should aim toward the blue box -> turn right.,"a wall 6 steps forward
+a wall 2 steps right",0,False
+7,turn left,Target yellow ball: not visible. Blue box is 3 steps right and 4 steps forward. Need to get closer to the blue box -> turn left.,"a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+8,turn right,Target yellow ball: not visible. Blue box: 3 steps right and 4 steps forward. I need to get closer to the blue box -> turn right.,"a wall 6 steps forward
+a wall 2 steps right",0,False
+9,turn left,Target yellow ball: not visible. I cannot pick up or interact with any objects from my current position due to walls. I need to navigate around the walls -> turn left.,"a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+10,turn right,Target yellow ball: not visible in the current observation. I can see a blue box 3 steps right and 4 steps forward but cannot interact with any objects at the moment due to walls. I need to navigate and find a way to the blue box -> turn right.,"a wall 6 steps forward
+a wall 2 steps right",0,False
+11,turn left,"Target yellow ball: not visible in the current observation. I cannot interact with any objects due to walls blocking my path. Since my position allows me to only turn left or continue navigating, I will need to reset my direction. -> turn left.","a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+12,turn right,"Target yellow ball: not visible in the current observation. I cannot interact with any objects due to walls blocking my path. Therefore, I need to change my position to navigate closer to the blue box. -> turn right.","a wall 6 steps forward
+a wall 2 steps right",0,False
+13,turn left,"Target yellow ball: not visible in the current observation. I cannot interact with any objects due to walls blocking my path. Therefore, I need to change my position to navigate closer to the blue box. -> turn left.","a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+14,turn right,"Target yellow ball: not visible in the current observation. The blue box is 3 steps right and 4 steps forward. I cannot interact with any objects due to walls blocking my path. Therefore, I will turn right to get a better position to navigate towards the blue box.","a wall 6 steps forward
+a wall 2 steps right",0,False
+15,turn left,Target yellow ball: not visible in the current observation. There are walls blocking my path. I need to turn to find a way to move towards the blue box. -> turn left.,"a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+16,turn right,Target yellow ball: not visible in the current observation. Blue box is 3 steps right and 4 steps forward. I need to turn to change my position to access the blue box -> turn right.,"a wall 6 steps forward
+a wall 2 steps right",0,False
+17,turn right,Target yellow ball: not visible in the current observation. The blue box is 3 steps right and 4 steps forward from the current position -> turn right.,"a wall 2 steps forward
+a wall 1 step right",0,False
+18,turn right,"Target yellow ball: not visible in the current observation. The blue box is 3 steps right and 4 steps forward from the current position, but I cannot move forward due to walls. I need to change my position to get closer to the blue box. -> turn right.","a wall 1 step forward
+a wall 2 steps left",0,False
+19,turn left,"Target yellow ball: not visible in the current observation. The blue box is still some distance away, but I can't approach it due to walls. I need to find a way around the wall. -> turn left.","a wall 2 steps forward
+a wall 1 step right",0,False
+20,turn left,Target yellow ball: not visible in the current observation. I need to find a way around the walls to get to the blue box or the yellow ball. The wall is blocking my forward movement -> turn left.,"a wall 6 steps forward
+a wall 2 steps right",0,False
+21,turn left,"Target yellow ball: not visible in the current observation. To navigate around the walls and find a different route to the blue box, I need to turn left to avoid the walls.","a wall 5 steps forward
+a wall 1 step left
+a blue box 3 steps right and 4 steps forward",0,False
+22,go forward,Target yellow ball: not visible in the current observation. The blue box is 3 steps right and 4 steps forward. I need to go right to get to the blue box. -> go forward.,"a wall 4 steps forward
+a wall 1 step left
+a blue box 3 steps right and 3 steps forward",0,False
+23,go forward,"Target yellow ball: not visible in the current observation. Blue box is 3 steps right and 3 steps forward, which means I need to go forward to approach it. -> go forward.","a wall 3 steps forward
+a wall 1 step left
+a blue box 3 steps right and 2 steps forward",0,False
+24,go forward,"Target yellow ball: not visible in the current observation. Blue box is 3 steps right and 2 steps forward. I cannot pick up or drop anything yet, so I need to move towards the blue box -> go forward.","a wall 2 steps forward
+a wall 1 step left
+a blue box 3 steps right and 1 step forward",0,False
+25,toggle,"Target yellow ball: not visible in the current observation. Blue box is 3 steps right and 1 step forward. I need to interact with the blue box, which is 1 step forward from my current position -> toggle.","a wall 2 steps forward
+a wall 1 step left
+a blue box 3 steps right and 1 step forward",0,False
+26,go forward,"Target yellow ball: not visible in the current observation. Blue box is 1 step forward. I need to interact with the blue box, but it’s not directly in front of me. I need to go forward to toggle it. -> go forward.","a wall 1 step forward
+a wall 1 step left
+a blue box 3 steps right",0,False
+27,go forward,Target yellow ball: not visible in the current observation. Blue box: 3 steps right. I need to move closer to the blue box to interact with the yellow ball later -> go forward.,"a wall 1 step forward
+a wall 1 step left
+a blue box 3 steps right",0,False
+28,go forward,Target yellow ball: not visible in the current observation. The blue box is 3 steps right. I need to move closer to the blue box to interact with the yellow ball later -> go forward.,"a wall 1 step forward
+a wall 1 step left
+a blue box 3 steps right",0,False
+29,go forward,Target yellow ball: not visible in the current observation. The blue box is 3 steps right. I need to move closer to the blue box to interact with the yellow ball later -> go forward.,"a wall 1 step forward
+a wall 1 step left
+a blue box 3 steps right",0,False
+30,go forward,Target yellow ball: not visible in the current observation. The blue box is 3 steps right. I need to move closer to the blue box to interact with the yellow ball later -> go forward.,"a wall 1 step forward
+a wall 1 step left
+a blue box 3 steps right",0,False
+31,go forward,Target yellow ball: not visible in the current observation. The blue box is 3 steps right. I need to move closer to the blue box to interact with the yellow ball later -> go forward.,"a wall 1 step forward
+a wall 1 step left
+a blue box 3 steps right",0,False
+32,turn right,Target yellow ball: not visible in the current observation. Blue box is 3 steps right but I cannot reach it because there is a wall in front of me -> turn right.,"a wall 1 step left
+a yellow ball 5 steps forward
+a blue box 3 steps forward",0,False
+33,go forward,"Target yellow ball: 5 steps forward. I do not carry an object, and the yellow ball is 5 steps forward -> go forward.","a wall 1 step left
+a yellow ball 4 steps forward
+a blue box 2 steps forward",0,False
+34,go forward,"Target yellow ball: 4 steps forward. I do not carry an object, and the yellow ball is 4 steps forward -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+35,go forward,"Target yellow ball: 3 steps forward. I do not carry an object, and the yellow ball is 3 steps forward -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+36,go forward,"Target yellow ball: 3 steps forward. I do not carry an object, and the yellow ball is 3 steps forward -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+37,pick up,"Target yellow ball: 3 steps forward. I do not carry an object, and the yellow ball is 3 steps forward -> pick up.","You carry a blue box
+a wall 1 step left
+a yellow ball 3 steps forward",0,False
+38,drop,Target yellow ball: 3 steps forward. I carry a blue box and need to drop it before interacting with the yellow ball -> drop.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+39,go forward,Target yellow ball: 3 steps forward. I need to move closer to it to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+40,go forward,Target yellow ball: 3 steps forward. I need to move closer to it to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+41,go forward,Target yellow ball: 3 steps forward. I need to get closer to it to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+42,go forward,Target yellow ball: 3 steps forward. I need to get closer to it to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+43,go forward,Target yellow ball: 3 steps forward. I need to get closer to it to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+44,go forward,Target yellow ball: 3 steps forward. I need to get closer to it to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+45,go forward,"Target yellow ball: 3 steps forward. It is not within reach, but the blue box is 1 step forward. I need to position myself to pick up the yellow ball next. -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+46,go forward,"Target yellow ball: 3 steps forward. It is not reachable, and I need to get closer to the blue box. The blue box is 1 step forward. -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+47,go forward,"Target yellow ball: 3 steps forward. It is not reachable, but the blue box is 1 step forward -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+48,go forward,Target yellow ball: 3 steps forward. Not reachable yet; blue box is 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+49,go forward,Target yellow ball: 3 steps forward. Not reachable yet; blue box is 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+50,go forward,Target yellow ball: 3 steps forward. Not reachable yet; blue box is 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+51,go forward,Target yellow ball: 3 steps forward. Not reachable yet; blue box is 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+52,go forward,Target yellow ball: 3 steps forward. Rule: This is not reachable yet; blue box is 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+53,go forward,Target yellow ball: 3 steps forward. Rule: I cannot reach it yet; blue box is 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+54,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+55,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. I cannot interact with the yellow ball directly at this position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+56,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. I cannot interact with the yellow ball directly at this position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+57,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. I cannot interact with the yellow ball directly at this position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+58,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. I cannot interact with the yellow ball at this position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+59,go forward,Target yellow ball: 3 steps forward. I cannot interact with the yellow ball at this position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+60,go forward,Target yellow ball: 3 steps forward. I cannot interact with the yellow ball at this position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+61,go forward,Target yellow ball: 3 steps forward. Cannot pick it up yet as it is too far away -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+62,go forward,Target yellow ball: 3 steps forward. I cannot pick it up yet as it is too far away -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+63,go forward,Target yellow ball: 3 steps forward. I cannot pick it up yet as it is too far away -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+64,go forward,Target yellow ball: 3 steps forward. I cannot pick it up yet as it is too far away -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+65,go forward,Target yellow ball: 3 steps forward. I cannot pick it up yet as it is too far away -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+66,go forward,Target yellow ball: 3 steps forward. I cannot pick it up yet as it is too far away -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+67,go forward,"Target yellow ball: 3 steps forward. I do not carry the yellow ball. Yellow ball is too far, so I need to go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+68,go forward,Target yellow ball: 3 steps forward. I do not carry the yellow ball and the blue box is 1 step forward. Need to get closer to the yellow ball -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+69,go forward,Target yellow ball: 3 steps forward. I do not carry the yellow ball and the blue box is 1 step forward. Need to get closer to the yellow ball -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+70,go forward,"Target yellow ball: 3 steps forward. I do not carry the yellow ball and the blue box is 1 step forward, but I need to get closer to the yellow ball to carry it. -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+71,go forward,Target yellow ball: 3 steps forward. I do not carry the yellow ball and the blue box is 1 step forward but I need to reach the yellow ball first. -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+72,go forward,Target yellow ball: 3 steps forward. I do not carry the yellow ball and the blue box is 1 step forward but I need to reach the yellow ball first. -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+73,go forward,Target yellow ball: 3 steps forward. I do not carry the yellow ball and the blue box is 1 step forward but I need to reach the yellow ball first. -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+74,go forward,Target yellow ball: 3 steps forward. Blue box is 1 step forward. I need to reach the yellow ball first. -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+75,go forward,Target yellow ball: 3 steps forward. I cannot pick it up yet since it is not 1 step forward. Blue box: 1 step forward; need to move closer. -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+76,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. I cannot pick up the yellow ball since it is not 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+77,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. I cannot interact with the yellow ball yet as it's not 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+78,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. I cannot interact with the yellow ball yet as it's not 1 step forward -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+79,go forward,Target yellow ball: 3 steps forward. You cannot interact with it yet -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+80,go forward,Target yellow ball: 3 steps forward. It is not within 1 step forward to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+81,go forward,Target yellow ball: 3 steps forward. Not within 1 step forward to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+82,go forward,Target yellow ball: 3 steps forward. Not within 1 step forward to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+83,go forward,Target yellow ball: 3 steps forward. Not within 1 step forward to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+84,go forward,Target yellow ball: 3 steps forward. Not within 1 step forward to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+85,go forward,Target yellow ball: 3 steps forward. Not within 1 step forward to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+86,go forward,Target yellow ball: 3 steps forward. Not within 1 step forward to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+87,go forward,Target yellow ball: 3 steps forward. Rule: Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+88,go forward,Target yellow ball: 3 steps forward. Rule: Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+89,go forward,Target yellow ball: 3 steps forward. Rule: Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+90,go forward,Target yellow ball: 3 steps forward. Rule: Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+91,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+92,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+93,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+94,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+95,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+96,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+97,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+98,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+99,go forward,Target yellow ball: 3 steps forward. Rule: Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+100,go forward,Target yellow ball: 3 steps forward. Rule: Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+101,go forward,Target yellow ball: 3 steps forward. Not within 1 step to pick up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+102,go forward,Target yellow ball: 3 steps forward. I cannot pick it up or toggle it from my position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+103,go forward,Target yellow ball: 3 steps forward. I cannot pick it up or toggle it from my position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+104,go forward,Target yellow ball: 3 steps forward. I cannot pick it up from my position -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+105,go forward,Target yellow ball: 3 steps forward. Yellow ball is not next to the blue box yet -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+106,go forward,Target yellow ball: 3 steps forward. Blue box is 1 step forward. The yellow ball is not next to the blue box yet -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+107,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. The yellow ball is not next to the blue box yet -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+108,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. Not next to the blue box yet -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+109,go forward,Target yellow ball: 3 steps forward. Blue box: 1 step forward. Not next to the blue box yet -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+110,go forward,"Target yellow ball: 3 steps forward. I am not next to the blue box yet, so I need to get to the yellow ball first -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+111,go forward,"Target yellow ball: 3 steps forward. It is not next to the blue box yet, so I need to get to the yellow ball first -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+112,go forward,"Target yellow ball: 3 steps forward. It is not next to the blue box yet, so I need to get to the yellow ball first -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+113,go forward,"Target yellow ball: 3 steps forward. It is not next to the blue box yet, so I need to get to the yellow ball first -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+114,go forward,Target yellow ball: 3 steps forward. I need to get to the yellow ball first -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+115,go forward,Target yellow ball: 3 steps forward. I need to approach the yellow ball to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+116,go forward,Target yellow ball: 3 steps forward. I need to approach the yellow ball to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+117,pick up,Target yellow ball: 3 steps forward. I need to pick it up to move it next to the blue box -> pick up.,"You carry a blue box
+a wall 1 step left
+a yellow ball 3 steps forward",0,False
+118,drop,Target yellow ball: 3 steps forward. I need to drop the blue box to access the yellow ball -> drop.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+119,drop,Target yellow ball: 3 steps forward. Need to drop the blue box first -> drop.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+120,go forward,Target yellow ball: 3 steps forward. Need to get closer to the yellow ball -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+121,go forward,"Target yellow ball: 3 steps forward. I need to get closer to the yellow ball. The blue box is also in front of me, so I need to go forward to reach it. -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+122,go forward,"Target yellow ball: 3 steps forward. I need to get closer to the yellow ball, and I am not carrying anything. The blue box is also in front of me, so I need to go forward to reach it. -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+123,go forward,"Target yellow ball: 3 steps forward. I need to get closer to the yellow ball, which is not currently next to the blue box. The blue box is only 1 step forward. I must go forward to reach the blue box first before addressing the yellow ball -> go forward.","a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+124,go forward,Target yellow ball: 3 steps forward. I need to get closer to the yellow ball to interact with it -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+125,go forward,Target yellow ball: 3 steps forward. I need to get closer to the yellow ball to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+126,go forward,Target yellow ball: 3 steps forward. I need to get closer to the yellow ball to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,False
+127,go forward,Target yellow ball: 3 steps forward. I need to get closer to the yellow ball to pick it up -> go forward.,"a wall 1 step left
+a yellow ball 3 steps forward
+a blue box 1 step forward",0,True

@@ -1,0 +1,58 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go east": 15,
+        "take keycard": 2,
+        "go north": 15,
+        "open portal": 2,
+        "unlock portal with keycard": 1,
+        "open locker": 2,
+        "unlock locker with keycard": 1,
+        "take rectangular key": 2,
+        "open hatch": 2,
+        "unlock hatch with rectangular key": 1,
+        "unlock coffer with rectangular key": 1,
+        "look": 3,
+        "open gate": 1,
+        "open case": 1,
+        "unlock display with rectangular key": 2,
+        "go south": 10,
+        "go west": 12,
+        "unlock display with key from case": 1,
+        "unlock display with key from rack": 1,
+        "open display": 4,
+        "take rack": 1
+    },
+    "input_tokens": 109578,
+    "output_tokens": 188,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 3516813804,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "gpt-4o-mini-2024-07-18",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

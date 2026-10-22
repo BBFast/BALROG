@@ -1,0 +1,13 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn right,Target grey box: not visible in the current observation. Must first navigate around the walls to find it. Currently only walls are present. -> turn right.,"a wall 2 steps forward
+a wall 1 step left
+a grey box 3 steps right",0,False
+1,turn right,Target grey box: 3 steps right. I need to turn towards it and then move forward -> turn right.,"a wall 2 steps left
+a grey box 3 steps forward",0,False
+2,go forward,Target grey box: 3 steps forward. Forward part is not 0 -> go forward.,"a wall 2 steps left
+a grey box 2 steps forward",0,False
+3,go forward,Target grey box: 2 steps forward. Forward part is not 0 -> go forward.,"a wall 2 steps left
+a grey box 1 step forward",0,False
+4,pick up,Target grey box: 1 step forward. Forward part is 1 -> pick up.,"You carry a grey box
+a wall 4 steps forward
+a wall 2 steps left",0.9296875,True

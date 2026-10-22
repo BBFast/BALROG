@@ -1,0 +1,10 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn right,"Target blue box: not visible in current observation. Need to move forward to change the observation. There is a wall 4 steps forward, so I cannot go forward. I will try to find another way. The wall is also 1 step left, limiting my movement. I can’t turn left to see more. Therefore, I must turn right to explore further.","a wall 6 steps forward
+a wall 3 steps right
+a blue box 2 steps right and 1 step forward",0,False
+1,go forward,Target blue box: 2 steps right and 1 step forward. Forward part is not 0 -> go forward.,"a wall 5 steps forward
+a blue box 2 steps right",0,False
+2,turn right,Target blue box: 2 steps right. Forward part is still blocked by a wall -> turn right.,"a wall 2 steps right
+a blue box 2 steps forward",0,False
+3,go forward,Target blue box: 2 steps forward. Forward part is not 0 -> go forward.,"a wall 2 steps right
+a blue box 1 step forward",0.94375,True

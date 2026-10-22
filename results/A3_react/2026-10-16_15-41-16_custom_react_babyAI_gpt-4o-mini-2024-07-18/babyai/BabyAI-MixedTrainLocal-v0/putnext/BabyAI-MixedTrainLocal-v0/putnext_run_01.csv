@@ -1,0 +1,429 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,Target purple ball: 4 steps forward and 1 step left. Yellow key: 3 steps left and 1 step forward. I cannot pick up or drop anything yet -> go forward.,"a wall 3 steps forward
+a wall 1 step right
+a yellow key 3 steps left",0,False
+1,go forward,Target purple ball: 4 steps forward and 1 step left. Yellow key: 3 steps left. I cannot pick up or drop anything yet -> go forward.,"a wall 2 steps forward
+a wall 1 step right",0,False
+2,go forward,Target purple ball: 4 steps forward and 1 step left. Yellow key: 3 steps left. I cannot pick up or drop anything yet -> go forward.,"a wall 1 step forward
+a wall 1 step right",0,False
+3,turn left,Target purple ball: 4 steps forward and 1 step left. Yellow key: 3 steps left. I cannot pick up or drop anything yet -> turn left.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 2 steps left and 3 steps forward
+a purple ball 1 step left and 4 steps forward",0,False
+4,turn left,Target purple ball: 1 step left and 4 steps forward. Target yellow key: 2 steps left and 3 steps forward. The yellow key is 1 step forward and to the left from my current position. I cannot pick up or drop anything yet -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 2 steps forward",0,False
+5,go left,"Target purple ball: 1 step left and 4 steps forward. Target yellow key: 3 steps right and 2 steps forward. The yellow key is not immediately accessible, but I need to move towards the purple ball to pick it up first -> go left.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 1 step forward",0,False
+6,go forward,"Target purple ball: 1 step left and 4 steps forward. Target yellow key: 3 steps right and 1 step forward. Since the yellow key is reachable (3 steps right is fine), and I need to move toward the purple ball first -> go forward.","a wall 4 steps forward
+a wall 1 step left
+a yellow key 3 steps right",0,False
+7,go left,Target purple ball: 1 step left. Target yellow key: 3 steps right. I need to reach the purple ball first to move it next to the yellow key -> go left.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 1 step left",0,False
+8,go left,Target purple ball: 1 step left and 4 steps forward; target yellow key: 3 steps right. I need to reach the purple ball first -> go left.,"
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 1 step left",0,False
+9,go forward,Target purple ball: 1 step left and 4 steps forward; target yellow key: 3 steps right. I need to reach the purple ball first -> go forward.,"a wall 1 step forward
+a wall 1 step left",0,False
+10,go forward,"Target purple ball: 1 step left and 4 steps forward; target yellow key: 3 steps right. I need to reach the purple ball first, but currently there's a wall in my way -> go forward.","a wall 1 step forward
+a wall 1 step left",0,False
+11,turn right,Target purple ball: 1 step left and 4 steps forward; target yellow key: 3 steps right. I cannot move forward or left due to walls in the way -> go right.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+12,turn right,Target purple ball: 1 step left and 3 steps forward; target yellow key: 3 steps right and 3 steps forward. I cannot move forward or left due to walls in the way -> turn right.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+13,turn right,Target purple ball: 1 step left and 3 steps forward; target yellow key: 3 steps left and 3 steps forward. I need to turn around to face the right direction to reach the purple ball. -> turn right.,"a wall 1 step forward
+a wall 1 step right",0,False
+14,go forward,Target purple ball: 1 step left and 3 steps forward; target yellow key: 3 steps right and 3 steps forward. I need to move to interact with the yellow key. -> go forward.,"a wall 1 step forward
+a wall 1 step right",0,False
+15,go forward,Target purple ball: 1 step left and 3 steps forward; target yellow key: 3 steps right. I cannot interact with either object as they are not directly in front of me -> go forward.,"a wall 1 step forward
+a wall 1 step right",0,False
+16,go forward,Target purple ball: 1 step left and 3 steps forward; target yellow key: 3 steps right. Both are inaccessible; I cannot interact with either object directly. -> go forward.,"a wall 1 step forward
+a wall 1 step right",0,False
+17,turn left,Target purple ball: 1 step left and 3 steps forward; target yellow key: 3 steps right. Both are inaccessible due to walls -> turn left.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+18,turn left,Target purple ball: 1 step left and 3 steps forward; target yellow key: 3 steps left and 3 steps forward. Both objects are currently inaccessible due to walls -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+19,turn right,Target purple ball: 1 step left and 3 steps forward. Target yellow key: 3 steps right and 3 steps forward. Both objects are currently inaccessible due to walls. Move around to access the key -> turn right.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+20,turn right,"Target purple ball: 3 steps left and 3 steps forward from the yellow key's position. I cannot reach the purple ball yet, so I need to turn and reposition -> turn right.","a wall 1 step forward
+a wall 1 step right",0,False
+21,turn left,"Target purple ball: Not in current observation; I need to reposition to reach the purple ball later. Currently, I am blocked by a wall in front and to the right -> turn left.","a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+22,turn left,"Target purple ball: Not in current observation; I need to reach the yellow key to solve my mission later. Currently, I am blocked by a wall in front and to the right -> turn left.","a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+23,turn left,"Target purple ball: Not visible in the current observation. The yellow key is 3 steps right and 3 steps forward, but I am blocked by a wall to the left and also a wall 6 steps forward. My next step should be to try and reach a position where I can access the yellow key. I should go left first to navigate towards the yellow key -> turn left.","a wall 1 step forward
+a wall 1 step left",0,False
+24,turn right,Target purple ball: Not visible in the current observation. I cannot move forward or left due to walls. I need to find a way to navigate the walls to access positions with the yellow key and potentially find the purple ball later. I should try to turn right.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+25,turn right,Target purple ball: not visible in the current observation. Yellow key is 3 steps right and 3 steps forward. I need to approach the yellow key while dealing with the walls. I will turn right.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+26,turn left,Target purple ball: not visible in the current observation. Yellow key is 3 steps left and 3 steps forward. I need to turn towards the yellow key and go forward to reach it. -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+27,turn left,"Target purple ball: not visible in the current observation. Yellow key is 3 steps right and 3 steps forward, and I need to turn left to align myself to go towards the yellow key. -> turn left.","a wall 1 step forward
+a wall 1 step left",0,False
+28,turn right,"Target purple ball: not visible in the current observation. I am currently facing a wall in front and to the left, so I cannot move forward or left. -> turn right.","a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+29,turn right,"Target purple ball: not visible in the current observation. I need to reach the yellow key, which is 3 steps right and 3 steps forward. The wall in front and to the left blocks movement in those directions. So I will turn right to face a wall, then I will need to find a way to move towards the right. -> turn right.","a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+30,turn left,"Target purple ball: not visible in the current observation. To reach the yellow key, I must first align correctly. The yellow key is 3 steps left and 3 steps forward, and I need to adjust my position to facilitate this. The wall in front of me restricts movement forward. -> turn left.","a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+31,turn right,"Target purple ball: not visible in the current observation. To reach the yellow key, I must first align correctly. The yellow key is 3 steps right and 3 steps forward, but I am currently blocked by walls. I need to reorient myself -> turn right.","a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+32,turn left,"Target purple ball: not visible in the current observation. To reach the yellow key, I must first align correctly. The yellow key is 3 steps left and 3 steps forward, which does not require any action yet since I don't have the purple ball. I need to turn to access the yellow key -> turn left.","a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+33,turn left,"Target purple ball: not visible in the current observation. The yellow key is 3 steps right and 3 steps forward; first, I need to align correctly to pick up the purple ball. I need to turn to access the purple ball once I position myself correctly -> turn left.","a wall 1 step forward
+a wall 1 step left",0,False
+34,turn right,Target purple ball: not visible in the current observation. The yellow key is not reachable right now as there is a wall immediately in front of me. -> turn right.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+35,turn right,"Target purple ball: not visible in the current observation. The yellow key is reachable (3 steps right, 3 steps forward) but I cannot access it directly due to walls. I need to turn around to explore different directions -> turn right.","a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+36,turn right,Target purple ball: not visible in the current observation. The yellow key is reachable (3 steps left and 3 steps forward) but I cannot access it directly due to walls. Need to turn around and explore different directions to find the purple ball. -> turn right.,"a wall 1 step forward
+a wall 1 step right",0,False
+37,turn left,Target purple ball: not visible in the current observation. I need to turn around to explore other directions and potentially find the purple ball. -> turn left.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+38,turn left,Target purple ball: not visible in the current observation. The yellow key is 3 steps left and 3 steps forward from my current position. I need to explore further directions but I have no options to move forward. -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+39,turn left,"Target purple ball: not visible in the current observation. The yellow key is 3 steps right and 3 steps forward, but I cannot approach it directly due to the walls. My position is blocked from moving toward it -> turn left.","a wall 1 step forward
+a wall 1 step left",0,False
+40,turn right,Target purple ball: not visible in the current observation. The yellow key is unreachable due to walls -> turn right.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+41,turn right,Target purple ball: not visible in the current observation. The yellow key is reachable but currently in a position surrounded by walls -> turn right.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+42,turn left,Target purple ball: not visible in the current observation. The yellow key is located 3 steps left and 3 steps forward but is adjacent to walls. I need to turn again to reach the position where I can interact with the yellow key when maneuvering around the walls. -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+43,turn right,"Target purple ball: not visible in the current observation. The yellow key is located 3 steps right and 3 steps forward, but I cannot approach it due to walls. I should reposition myself to access it correctly -> turn right.","a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+44,turn right,"Target purple ball: not visible in the current observation. The yellow key is 3 steps left and 3 steps forward from my current position, but I cannot approach it due to walls. I need to rotate to access the yellow key -> turn right.","a wall 1 step forward
+a wall 1 step right",0,False
+45,turn left,Target purple ball: not visible in the current observation. The yellow key is 3 steps right and 3 steps forward. The wall prevents me from moving forward toward the yellow key -> turn left.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+46,turn left,Target purple ball: not visible in the current observation. The yellow key is 3 steps left and 3 steps forward. I cannot move forward because of the wall -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+47,turn left,Target purple ball: not visible in the current observation. The yellow key is 3 steps right and 3 steps forward. I cannot move forward because of the wall -> turn left.,"a wall 1 step forward
+a wall 1 step left",0,False
+48,turn right,Target purple ball: not visible in the current observation. The yellow key is not accessible because of the walls. I need to change my direction -> turn right.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+49,turn right,"Target purple ball: not visible in the current observation. The yellow key is 3 steps right and 3 steps forward, but I need to make my way around walls -> turn right.","a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+50,turn right,"Target purple ball: not visible in the current observation. The yellow key is 3 steps left and 3 steps forward, but I cannot access it due to walls. I need to change my orientation to navigate around the wall. -> turn right.","a wall 1 step forward
+a wall 1 step right",0,False
+51,turn left,"Target purple ball: not visible in the current observation. Yellow key is 3 steps left and 3 steps forward, but I cannot reach it because of the walls. I need to turn to access a new location. -> turn left.","a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+52,turn left,"Target purple ball: not visible in the current observation. The yellow key is 3 steps left and 3 steps forward, but I can't reach it due to walls. I need to reorient to navigate effectively. -> turn left.","a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+53,turn left,"Target purple ball: not visible in the current observation. The yellow key is 3 steps right and 3 steps forward. However, there is a wall 1 step left and cannot access it directly. I need to reposition to proceed. -> turn left.","a wall 1 step forward
+a wall 1 step left",0,False
+54,turn right,Target purple ball: not visible in the current observation. The yellow key is not interactable as it is 2 steps away. I am blocked by walls. I need to reposition -> turn right.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+55,turn right,Target purple ball: not visible in the current observation. The yellow key is 3 steps right and 3 steps forward -> turn right.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+56,turn right,Target purple ball: not visible in the current observation. The yellow key is 3 steps left and 3 steps forward -> turn right.,"a wall 1 step forward
+a wall 1 step right",0,False
+57,turn left,Target purple ball: not visible in the current observation. No interaction possible -> turn left.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+58,turn left,Target purple ball: not visible in the current observation. No interaction possible -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+59,turn left,Target purple ball: not visible in the current observation. No interaction possible -> turn left.,"a wall 1 step forward
+a wall 1 step left",0,False
+60,turn right,Target purple ball: not visible in the current observation. No interaction possible -> turn right.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+61,turn right,Target purple ball: not visible in the current observation. No interaction possible -> turn right.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+62,turn left,Target purple ball: not visible in the current observation. Yellow key is 3 steps left and 3 steps forward -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+63,turn left,Target purple ball: not visible in the current observation. Yellow key is 3 steps right and 3 steps forward -> turn left.,"a wall 1 step forward
+a wall 1 step left",0,False
+64,turn right,Target purple ball: not visible in the current observation. Yellow key: 1 step left. The purple ball is not in my current surroundings -> turn right.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+65,turn right,Target purple ball: not visible in the current observation. Yellow key: 3 steps right and 3 steps forward. The purple ball is not in my current surroundings -> turn right.,"a wall 6 steps forward
+a wall 1 step right
+a yellow key 3 steps left and 3 steps forward",0,False
+66,turn left,Target purple ball: not visible in the current observation. Yellow key: 3 steps left and 3 steps forward. I need to find a way to approach the yellow key -> turn left.,"a wall 6 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 3 steps forward",0,False
+67,go forward,Target purple ball: not visible in the current observation. Yellow key: 3 steps right and 3 steps forward. I need to find a way to approach the yellow key -> go forward.,"a wall 5 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 2 steps forward",0,False
+68,go forward,Target purple ball: not visible in the current observation. Yellow key: 3 steps right and 2 steps forward. I need to approach the yellow key -> go forward.,"a wall 4 steps forward
+a wall 1 step left
+a yellow key 3 steps right and 1 step forward",0,False
+69,go forward,Target purple ball: not visible in the current observation. Yellow key: 3 steps right and 1 step forward. I need to approach the yellow key -> go forward.,"a wall 3 steps forward
+a wall 1 step left
+a yellow key 3 steps right",0,False
+70,go forward,Target purple ball: not visible in the current observation. Yellow key: 3 steps right. I need to approach the yellow key -> go forward.,"a wall 2 steps forward
+a wall 1 step left",0,False
+71,go forward,Target purple ball: not visible in the current observation. Yellow key: 3 steps right. I cannot interact with the key yet as I need to move forward. I need to approach to find the purple ball -> go forward.,"a wall 1 step forward
+a wall 1 step left",0,False
+72,turn right,Target purple ball: not visible in the current observation. Yellow key: 3 steps right. Wall 1 step forward. I cannot interact with the key yet as I need to move to find the purple ball -> turn right.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 4 steps forward
+a yellow key 2 steps right and 3 steps forward",0,False
+73,pick up,Target purple ball: 1 step right and 4 steps forward. Target yellow key: 2 steps right and 3 steps forward. Need to pick up the purple ball -> pick up.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 4 steps forward
+a yellow key 2 steps right and 3 steps forward",0,False
+74,pick up,Target purple ball: 1 step right and 4 steps forward. Target yellow key: 2 steps right and 3 steps forward. Since I need to pick up the purple ball -> pick up.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 4 steps forward
+a yellow key 2 steps right and 3 steps forward",0,False
+75,go forward,"Target yellow key: 2 steps right and 3 steps forward. Purple ball is 1 step right and 4 steps forward, so I need to move closer -> go forward.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+76,pick up,"Target yellow key: 2 steps right and 2 steps forward. Purple ball is 1 step right and 3 steps forward, which is not next to the yellow key yet. I need to pick up the purple ball first. -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+77,pick up,"Target yellow key: 2 steps right and 2 steps forward. Purple ball is 1 step right and 3 steps forward, which is not next to the yellow key yet. I need to pick up the purple ball first. -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+78,pick up,"Target yellow key: 2 steps right and 2 steps forward. I need to carry the purple ball, which is 1 step right and 3 steps forward. Therefore, I will pick up the purple ball first -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+79,pick up,"Target yellow key: 2 steps right and 2 steps forward. I need to carry the purple ball, which is 1 step right and 3 steps forward. Therefore, I will pick up the purple ball first -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+80,pick up,"Target yellow key: 2 steps right and 2 steps forward. I need to carry the purple ball, which is 1 step right and 3 steps forward. Therefore, I will pick up the purple ball first -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+81,pick up,"Target yellow key: 2 steps right and 2 steps forward. I need to carry the purple ball, which is 1 step right and 3 steps forward. Therefore, I will pick up the purple ball first -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+82,pick up,"Target yellow key: 2 steps right and 2 steps forward. I need to carry the purple ball, which is 1 step right and 3 steps forward. Therefore, I will pick up the purple ball first. -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+83,pick up,"Target yellow key: 2 steps right and 2 steps forward. I need to carry the purple ball, which is 1 step right and 3 steps forward. Therefore, I will pick up the purple ball first. -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+84,pick up,"Target yellow key: 2 steps right and 2 steps forward. I need to put the purple ball next to it, which is currently 1 step right and 3 steps forward. I need to carry the purple ball first -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+85,pick up,"Target yellow key: 2 steps right and 2 steps forward. I need to put the purple ball next to it, which is currently 1 step right and 3 steps forward. I need to carry the purple ball first -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right and 3 steps forward
+a yellow key 2 steps right and 2 steps forward",0,False
+86,go forward,"Target yellow key: 2 steps right and 2 steps forward. I need to put the purple ball next to it, which is currently 1 step right and 3 steps forward. I need to go forward to get closer to the purple ball. -> go forward.","a wall 4 steps forward
+a wall 1 step left
+a purple ball 1 step right and 2 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+87,toggle,Target yellow key: 2 steps right and 1 step forward. Current purple ball is 1 step right and 2 steps forward -> toggle.,"a wall 4 steps forward
+a wall 1 step left
+a purple ball 1 step right and 2 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+88,toggle,Target yellow key: 2 steps right and 1 step forward. Current purple ball is 1 step right and 2 steps forward -> toggle.,"a wall 4 steps forward
+a wall 1 step left
+a purple ball 1 step right and 2 steps forward
+a yellow key 2 steps right and 1 step forward",0,False
+89,go forward,Target yellow key: 2 steps right and 1 step forward. Current purple ball is 1 step right and 2 steps forward. Need to move the purple ball to be next to the yellow key -> go forward.,"a wall 3 steps forward
+a wall 1 step left
+a purple ball 1 step right and 1 step forward
+a yellow key 2 steps right",0,False
+90,go forward,Target yellow key: 2 steps right. Current purple ball is 1 step right and 1 step forward. Need to move the purple ball next to the yellow key -> go forward.,"a wall 2 steps forward
+a wall 1 step left
+a purple ball 1 step right",0,False
+91,go forward,Target yellow key: 2 steps right. Current purple ball is 1 step right. I need to move the purple ball next to the yellow key -> go forward.,"a wall 1 step forward
+a wall 1 step left",0,False
+92,turn right,Target yellow key: not in current observation. Purple ball is nearby but cannot interact with it since walls block movement. I need to turn to find a way around. -> turn right.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+93,pick up,Target purple ball: 1 step right and 1 step forward. Target yellow key: 2 steps right and 2 steps forward. I need to pick up the purple ball -> pick up.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+94,pick up,Target purple ball: 1 step right and 1 step forward. Target yellow key: 2 steps right and 2 steps forward. I need to pick up the purple ball at 1 step forward -> pick up.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+95,pick up,Target purple ball: 1 step right and 1 step forward; Target yellow key: 2 steps right and 2 steps forward. I need to pick up the purple ball at 1 step right and 1 step forward -> pick up.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+96,pick up,Target yellow key: 2 steps right and 2 steps forward. I need to move the purple ball next to it. I need to pick up the purple ball which is 1 step forward -> pick up.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+97,pick up,Target yellow key: 2 steps right and 2 steps forward. Purple ball is 1 step right and 1 step forward from me. I need to pick up the purple ball which is 1 step forward -> pick up.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+98,pick up,Target yellow key: 2 steps right and 2 steps forward. Purple ball is 1 step right and 1 step forward from me. I need to pick up the purple ball which is 1 step right -> pick up.,"a wall 6 steps forward
+a wall 1 step left
+a purple ball 1 step right and 1 step forward
+a yellow key 2 steps right and 2 steps forward",0,False
+99,go forward,Target yellow key: 2 steps right and 2 steps forward. Purple ball is 1 step right and 1 step forward from me. I need to move the purple ball next to the yellow key. I will go forward to get closer. -> go forward.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+100,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right. I need to put the purple ball next to the yellow key. This requires picking up the purple ball first. -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+101,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right. I need to pick up the purple ball first -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+102,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right. I need to pick up the purple ball first -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+103,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right. I need to pick up the purple ball first -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+104,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right. I need to pick up the purple ball first -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+105,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right. I need to pick up the purple ball first -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+106,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+107,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+108,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+109,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+110,toggle,Target yellow key: 2 steps right and 1 step forward. The purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+111,toggle,Target yellow key: 2 steps right and 1 step forward. The purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+112,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+113,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+114,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+115,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+116,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+117,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+118,toggle,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> toggle.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+119,pick up,Target yellow key: 2 steps right and 1 step forward. I can pick up the purple ball which is 1 step right -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+120,pick up,"Target yellow key: 2 steps right and 1 step forward. I need to pick up the purple ball, which is 1 step right -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+121,pick up,"Target yellow key: 2 steps right and 1 step forward. I need to pick up the purple ball, which is 1 step right -> pick up.","a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+122,pick up,Target yellow key: 2 steps right and 1 step forward. I need to put the purple ball next to it. Purple ball is 1 step right -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+123,pick up,Target yellow key: 2 steps right and 1 step forward. I need to put the purple ball next to it. Purple ball is 1 step right -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+124,pick up,Target yellow key: 2 steps right and 1 step forward. The purple ball is 1 step right -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+125,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+126,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> pick up. Action: pick up,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,False
+127,pick up,Target yellow key: 2 steps right and 1 step forward. Purple ball is 1 step right -> pick up.,"a wall 5 steps forward
+a wall 1 step left
+a purple ball 1 step right
+a yellow key 2 steps right and 1 step forward",0,True
